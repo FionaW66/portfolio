@@ -4,7 +4,10 @@ author: "Fiona Wang"
 date: "2025-02-05"
 output: github_document
 ---
+
 In this Portfolio, we will be creating music together. First I would like to give credit to the following websites:
+https://r-music.rbind.io/posts/2021-04-03-gm/
+https://stackoverflow.com/questions/52838230/can-you-use-r-to-create-music-note-by-note-such-as-via-midi-or-another-format
 
 
 Let's load the package: gm. There are two interpretations of this package: grammar of music and generate music. This is the way to communicate with R about music representation. However, in order to generate the output in the note format as well as to play the audio, you will need to download and install a software called MuseScore. It's easy to download and you will have a lot of fun! Also, if you don't download MuseScore, you will get error messages and won't be able to generate results. 
@@ -18,8 +21,8 @@ library(gm)
 
 ```{r pure-notes}
 music <-   Music() +
-  Meter(4, 4) +
-  Line(c("C5", "D5", "E5", "F5"))
+  Meter(3, 4) +
+  Line(c("C5", "E5", "E5", "D5", "F5", "F5"))
   
 show(music)
 ```
