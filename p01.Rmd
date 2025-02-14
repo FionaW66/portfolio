@@ -6,23 +6,101 @@ output: html_document
 ---
 
 In this Portfolio, we will be creating music together. First I would like to give credit to the following websites:   
-https://r-music.rbind.io/posts/2021-04-03-gm/
-https://stackoverflow.com/questions/52838230/can-you-use-r-to-create-music-note-by-note-such-as-via-midi-or-another-format
+https://r-music.rbind.io/posts/2021-04-03-gm/.      
+
+https://stackoverflow.com/questions/52838230/can-you-use-r-to-create-music-note-by-note-such-as-via-midi-or-another-format.   
+
+https://flujoo.github.io/gm/articles/gm.html#timbre
 
 
 Let's load the package: gm. There are two interpretations of this package: grammar of music and generate music. This is the way to communicate with R about music representation. However, in order to generate the output in the note format as well as to play the audio, you will need to download and install a software called MuseScore. It's easy to download and you will have a lot of fun! Also, if you don't download MuseScore, you will get error messages and won't be able to generate results. 
 Download here: https://musescore.org/en/download
 
+We will need to install and load "gm" package.  
 ```{r load-packages, message=FALSE}
 #install and load gm package
 #install.packages("gm")
 library(gm)
 ```
 
+Now, let's create a couple notes. 
+The meter() function defines the 3/4 time signature, and the line() function sets the musical notes. Here, I am thinking of a waltz type of rhythm, so I set it to 3/4 time signature. Click the play button and listen to this short piece of music. 
 ```{r pure-notes}
-music <-   Music() +
+music <-  Music() +
   Meter(3, 4) +
   Line(c("C5", "E5", "E5", "D5", "F5", "F5"))
-  
 show(music)
 ```
+
+It sounds beautiful, but I would like the tempo to be a little slower.
+```{r tempo}
+music <- music + Tempo(90)
+show(music)
+```
+
+With only the high notes, I want something low in pitch to accompany that. So, let's add another musical line.
+```{r low}
+music <- music + 
+  (Line(c("C4", "C4", "C4", "D4", "D4", "D4")))
+show(music)
+```
+
+This is very harmonious! But, let's make things more sophisticated. Wouldn't it be more convenient if we can define each note's duration and create fancy rhythm!
+Let's try using pitch and durations.   
+```{r pitch_duration}
+pd <- Music() +
+  Meter(3, 4) +
+  Line(c("C5", "E5", "E5", "D5", "F5", "F5")) +
+  Line(
+    pitches = c("C4", "E4", "D4", "F4"),
+    durations = c(2, 1, 2, 1)
+  ) +
+  Tempo(90)
+show(pd)
+```
+
+Let's add a pedal to this beautiful piece.
+```{r pedal}
+pd <- pd + Pedal(1, 4)
+show(pd)
+```
+
+There is a slight reverb effect, but not much. I will not use pedal anymore.    
+I want something other than the sound of Piano. In order to make this easier, I will separately code the two musical lines and then add them together.
+```{r timbre}
+line1 <- Line(c("C5", "E5", "E5", "D5", "F5", "F5"))
+line2 <- Line(
+    pitches = c("C4", "E4", "D4", "F4"),
+    durations = c(2, 1, 2, 1)
+  )
+pd <- Music() + Meter(3, 4) + line1 + Instrument(41) + line2 + Instrument(43) + Tempo(100)
+show(pd)
+```
+
+Beautiful! I always love violin and cello! The loudness of the notes are the same, so it lacks a flow to it. Let's use the dynamic function to change the loudness.
+```{r dynamic}
+line1 <- Line(c("C5", "E5", "E5", "D5", "F5", "F5"))
+line2 <- Line(
+    pitches = c("C4", "E4", "D4", "F4"),
+    durations = c(2, 1, 2, 1)
+  )
+pd <- Music() + Meter(3, 4) + 
+  line1 + Instrument(41) + Dynamic("mf", 1) + Dynamic("mp", 2) + Dynamic("mp", 3) + 
+  line2 + Instrument(43) + Dynamic("mp", 1) + Dynamic("mp", 3) + Tempo(100)
+show(pd)
+```
+
+As we can see in the output, I have assigned the dynamic markings to the notes. If you like to listen to instrumental music, there are a lot of crescendo and descrescendo in a music piece. Let's add that to the high notes of our piece of music. 
+```{r crescendo}
+line1 <- Line(c("C5", "E5", "E5", "D5", "F5", "F5"))
+line2 <- Line(
+    pitches = c("C4", "E4", "D4", "F4"),
+    durations = c(2, 1, 2, 1)
+  )
+pd <- Music() + Meter(3, 4) + 
+  line1 + Instrument(41) + Dynamic("pp", 1) + Dynamic("mf", 6) + Hairpin("<", 2, 5) + 
+  line2 + Instrument(43) + Dynamic("pp", 1) + Dynamic("pp", 3) + Tempo(100)
+show(pd)
+```
+
+That's it for today!
