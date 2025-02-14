@@ -4,15 +4,12 @@ author: "Fiona Wang"
 date: "2025-02-05"
 output: github_document
 ---
-
-> The projects should be numbered consecutively (i.e., in the order in which you began them), and should include for each project a description of the goal, the product (computer program, hand graph, computer graph, etc.), the data, and some interpretation. Reports must be reproducible and of high quality in terms of writing, grammar, presentation, etc.
-
-
 In this Portfolio, we will be creating music together. First I would like to give credit to the following websites:
 
 
+Let's load the package: gm. There are two interpretations of this package: grammar of music and generate music. This is the way to communicate with R about music representation. However, in order to generate the output in the note format as well as to play the audio, you will need to download and install a software called MuseScore. It's easy to download and you will have a lot of fun! Also, if you don't download MuseScore, you will get error messages and won't be able to generate results. 
+Download here: https://musescore.org/en/download
 
-Let's load the package: gm. There are two interpretations of this package: grammar of music and generate music. This is the way to communicate with R about music representation. However, in order to generate the output in the note format as well as to play the audio, you will need to download and install a software called MuseScore. It's easy to download and you will have a lot of fun! Also, if you don't download MuseScore, you will get a lot of error messages. 
 ```{r load-packages, message=FALSE}
 #install and load gm package
 #install.packages("gm")
