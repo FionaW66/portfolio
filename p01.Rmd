@@ -2,10 +2,10 @@
 title: "Portfolio 1"
 author: "Fiona Wang"
 date: "2025-02-05"
-output: github_document
+output: html_document
 ---
 
-In this Portfolio, we will be creating music together. First I would like to give credit to the following websites:
+In this Portfolio, we will be creating music together. First I would like to give credit to the following websites:   
 https://r-music.rbind.io/posts/2021-04-03-gm/
 https://stackoverflow.com/questions/52838230/can-you-use-r-to-create-music-note-by-note-such-as-via-midi-or-another-format
 
