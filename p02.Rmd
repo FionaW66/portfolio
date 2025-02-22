@@ -1,5 +1,62 @@
 ---
-title: "Portfolio 2"
+title: "U.S. Professors salary during 2008-09"
+date: 2005-02-21
+output: html_document
 ---
 
-> The projects should be numbered consecutively (i.e., in the order in which you began them), and should include for each project a description of the goal, the product (computer program, hand graph, computer graph, etc.), the data, and some interpretation. Reports must be reproducible and of high quality in terms of writing, grammar, presentation, etc.
+I am at this time (Feb, 2025) in the process of applying to phd programs, as well as figuring out what I would like to do in the future. For people in the research track, becoming a professor seems to be at the end of this route. Whenever people ask me about future plans, I would say do research and teach, two major aspect of a professor's life. 
+
+While I was browsing through the packages in R in search of the topic for portfolio 2, I spotted this dataset about professors' salary. I am curious how much money professors earn back in 2008-09. 
+
+First, let's load the package carData and the dataset Salaries. 
+```{r message=FALSE}
+library(carData)
+library(tidyverse)
+library(car)
+prof <- Salaries
+```
+
+Next, let's take a look at the dataset. Like the labs we do, how many observations are there? What are the variables in this dataset?
+```{r}
+nrow(prof)
+names(prof)
+```
+
+There are 397 observations, and 6 variables. Variables include the rank of professors (i.e., assistant, associate, or prof), discipline these professors are in (i.e., theoretical or applied), years since earning PhD, years of being a professor, the sex of the professor (i.e., female or male), and the nin-month salary in dollars. 
+
+Are males' salary higher than females'?
+```{r}
+prof %>% 
+  filter(sex == "Male") %>% 
+  summary()
+prof %>% 
+  filter(sex == "Female") %>% 
+  summary()
+```
+
+First comment is that there were 358 male professors and only 39 female professors. The mean salary for female was 101,002, whereas the mean salary for male was 115,090. It was a 14,000 difference. Wow! Another comment, I would be happy with this salary.     
+I want to conduct a t-test to see if this difference is significant. First, run a couple assumption testing. Before t-test, check normality and equal variance.
+For test of normality, I consulted: https://www.sheffield.ac.uk/media/30585/download?attachment. 
+```{r}
+#create two separate variables, male_salary and female_salary, in order to run assumption testing. 
+male_salary <- prof %>% 
+  filter(sex == "Male") %>% 
+  pull(salary)
+female_salary <- prof %>% 
+  filter(sex == "Female") %>% 
+  pull(salary)
+#normality testing
+shapiro.test(male_salary)
+shapiro.test(female_salary)
+#equal variance testing, first change the sex column into numeric
+prof <- prof %>% 
+  mutate(sex_numeric = ifelse(sex == "Male", 0, 1)) 
+leveneTest(salary ~ sex, data = prof)
+```
+
+The normality test showed that male's is significant. This probably is fine because male has a large sample size, so it's very likely to be significant. Female's is normal distribution. In addition, we can assume equal variance. Now, let's run the t-test.
+```{r}
+t.test(male_salary, female_salary, var.equal = TRUE)
+```
+
+There is a significant difference between male and female professors.
