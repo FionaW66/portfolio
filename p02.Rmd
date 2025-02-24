@@ -13,6 +13,8 @@ First, let's load the package carData and the dataset Salaries.
 library(carData)
 library(tidyverse)
 library(car)
+library(scales)
+library(lavaan)
 prof <- Salaries
 ```
 
@@ -60,3 +62,57 @@ t.test(male_salary, female_salary, var.equal = TRUE)
 ```
 
 There is a significant difference between male and female professors.
+
+After comparing males to females in their salary, I am interested in the differences in salary across the ranking groups. I am assuming that professor will earn more than associate professor, and associate professor will earn more than assistant professor. To find out, we will calculate a mean score for each of the three groups. 
+```{r}
+prof %>% 
+  filter(rank == "Prof") %>% 
+  summarize(mean_salary = mean(salary, na.rm = TRUE))
+prof %>% 
+  filter(rank == "AssocProf") %>% 
+  summarize(mean_salary = mean(salary, na.rm = TRUE))
+prof %>% 
+  filter(rank == "AsstProf") %>% 
+  summarize(mean_salary = mean(salary, na.rm = TRUE))
+```
+
+The output actually has too much information than I really need. We can still read the table. The mean salary for professor is 126,772, the mean for associate professor is 93,876, and the mean for assistant professor is 80,776. That's really high salary, I am becoming more interested in becoming a professor. 
+
+Next, I want to know the sex difference in salary in each rank group by plotting a graph 
+```{r}
+prof %>% 
+  ggplot(mapping = aes(x = sex, y = salary, fill = sex)) + facet_wrap(~rank, nrow = 1) + 
+  stat_summary(fun = mean, geom = "bar") +
+  labs(title = "Sex difference in salary", subtitle = "by ranking", x = NULL) + 
+  scale_y_continuous(labels = dollar_format())
+```
+
+We got a beautiful graph here. This clearly shows that prof salary > assoc prof salary > assit prof salary. In addition, male salary is always higher than female salary. 
+
+Now, I am curious, if salary is positively correlated with yrs since graduate and yrs since service. 
+```{r}
+model1 <- lm(salary ~ yrs.since.phd, data = prof)
+summary(model1)
+```
+
+It seems like this model can explain 17.6% of the variance in salary. Years since phd is a significant predictor for salary. The slope is 985.3, meaning that with an additional year since phd, a person will earn an additional $985.3.     
+Let's try another model with more predictors. 
+```{r}
+model2 <- lm(salary ~ yrs.since.phd + yrs.service, data = prof)
+summary(model2)
+```
+
+Our model 2 shows some interesting results. The R^2 is 0.1883, meaning that our model explains 18.8% of the variance in salary. Originally, I hypothesized that years since phd and years of service are both going to positively explain salary, but the results showed otherwise. The slope for years since phd is 1562.9, way bigger than model1. The slope for years of service is -629.1, which is also significant. This means that with an additional year of service, a person's salary will drop $629.1, controlling for years since phd. I can't believe this is a negative relationship. I am interested in the zero order correlation now. 
+```{r}
+cor.test(prof$yrs.service, prof$salary, use = "complete.obs")
+```
+
+This is weird. Zero order correlation shows a positive relationship between years of service and salary. 
+
+What is I run a regression with only one variable - years of service. 
+```{r}
+model3 <- lm(salary ~ yrs.service, data = prof)
+summary(model3)
+```
+
+This is so strange. Years of service is now a positive predictor of salary. It is something that I can't explain. Years of service is a positive predictor of salary on its own, but when controlling for years since phd, it becomes a negative predictor. If you know why this is the case, please let me know!

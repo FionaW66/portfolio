@@ -310,6 +310,8 @@ curious how much money professors earn back in 2008-09.</p>
 <pre class="r"><code>library(carData)
 library(tidyverse)
 library(car)
+library(scales)
+library(lavaan)
 prof &lt;- Salaries</code></pre>
 <p>Next, let’s take a look at the dataset. Like the labs we do, how many
 observations are there? What are the variables in this dataset?</p>
@@ -413,6 +415,141 @@ equal variance. Now, let’s run the t-test.</p>
 ##  115090.4  101002.4</code></pre>
 <p>There is a significant difference between male and female
 professors.</p>
+<p>After comparing males to females in their salary, I am interested in
+the differences in salary across the ranking groups. I am assuming that
+professor will earn more than associate professor, and associate
+professor will earn more than assistant professor. To find out, we will
+calculate a mean score for each of the three groups.</p>
+<pre class="r"><code>prof %&gt;% 
+  filter(rank == &quot;Prof&quot;) %&gt;% 
+  summarize(mean_salary = mean(salary, na.rm = TRUE))</code></pre>
+<pre><code>##   mean_salary
+## 1    126772.1</code></pre>
+<pre class="r"><code>prof %&gt;% 
+  filter(rank == &quot;AssocProf&quot;) %&gt;% 
+  summarize(mean_salary = mean(salary, na.rm = TRUE))</code></pre>
+<pre><code>##   mean_salary
+## 1    93876.44</code></pre>
+<pre class="r"><code>prof %&gt;% 
+  filter(rank == &quot;AsstProf&quot;) %&gt;% 
+  summarize(mean_salary = mean(salary, na.rm = TRUE))</code></pre>
+<pre><code>##   mean_salary
+## 1    80775.99</code></pre>
+<p>The output actually has too much information than I really need. We
+can still read the table. The mean salary for professor is 126,772, the
+mean for associate professor is 93,876, and the mean for assistant
+professor is 80,776. That’s really high salary, I am becoming more
+interested in becoming a professor.</p>
+<p>Next, I want to know the sex difference in salary in each rank group
+by plotting a graph</p>
+<pre class="r"><code>prof %&gt;% 
+  ggplot(mapping = aes(x = sex, y = salary, fill = sex)) + facet_wrap(~rank, nrow = 1) + 
+  stat_summary(fun = mean, geom = &quot;bar&quot;) +
+  labs(title = &quot;Sex difference in salary&quot;, subtitle = &quot;by ranking&quot;, x = NULL) + 
+  scale_y_continuous(labels = dollar_format())</code></pre>
+<p><img src="p02_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p>We got a beautiful graph here. This clearly shows that prof salary
+&gt; assoc prof salary &gt; assit prof salary. In addition, male salary
+is always higher than female salary.</p>
+<p>Now, I am curious, if salary is positively correlated with yrs since
+graduate and yrs since service.</p>
+<pre class="r"><code>model1 &lt;- lm(salary ~ yrs.since.phd, data = prof)
+summary(model1)</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = salary ~ yrs.since.phd, data = prof)
+## 
+## Residuals:
+##    Min     1Q Median     3Q    Max 
+## -84171 -19432  -2858  16086 102383 
+## 
+## Coefficients:
+##               Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)    91718.7     2765.8  33.162   &lt;2e-16 ***
+## yrs.since.phd    985.3      107.4   9.177   &lt;2e-16 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 27530 on 395 degrees of freedom
+## Multiple R-squared:  0.1758, Adjusted R-squared:  0.1737 
+## F-statistic: 84.23 on 1 and 395 DF,  p-value: &lt; 2.2e-16</code></pre>
+<p>It seems like this model can explain 17.6% of the variance in salary.
+Years since phd is a significant predictor for salary. The slope is
+985.3, meaning that with an additional year since phd, a person will
+earn an additional $985.3.<br />
+Let’s try another model with more predictors.</p>
+<pre class="r"><code>model2 &lt;- lm(salary ~ yrs.since.phd + yrs.service, data = prof)
+summary(model2)</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = salary ~ yrs.since.phd + yrs.service, data = prof)
+## 
+## Residuals:
+##    Min     1Q Median     3Q    Max 
+## -79735 -19823  -2617  15149 106149 
+## 
+## Coefficients:
+##               Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)    89912.2     2843.6  31.620  &lt; 2e-16 ***
+## yrs.since.phd   1562.9      256.8   6.086 2.75e-09 ***
+## yrs.service     -629.1      254.5  -2.472   0.0138 *  
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 27360 on 394 degrees of freedom
+## Multiple R-squared:  0.1883, Adjusted R-squared:  0.1842 
+## F-statistic: 45.71 on 2 and 394 DF,  p-value: &lt; 2.2e-16</code></pre>
+<p>Our model 2 shows some interesting results. The R^2 is 0.1883,
+meaning that our model explains 18.8% of the variance in salary.
+Originally, I hypothesized that years since phd and years of service are
+both going to positively explain salary, but the results showed
+otherwise. The slope for years since phd is 1562.9, way bigger than
+model1. The slope for years of service is -629.1, which is also
+significant. This means that with an additional year of service, a
+person’s salary will drop $629.1, controlling for years since phd. I
+can’t believe this is a negative relationship. I am interested in the
+zero order correlation now.</p>
+<pre class="r"><code>cor.test(prof$yrs.service, prof$salary, use = &quot;complete.obs&quot;)</code></pre>
+<pre><code>## 
+##  Pearson&#39;s product-moment correlation
+## 
+## data:  prof$yrs.service and prof$salary
+## t = 7.0602, df = 395, p-value = 7.529e-12
+## alternative hypothesis: true correlation is not equal to 0
+## 95 percent confidence interval:
+##  0.2443740 0.4193506
+## sample estimates:
+##       cor 
+## 0.3347447</code></pre>
+<p>This is weird. Zero order correlation shows a positive relationship
+between years of service and salary.</p>
+<p>What is I run a regression with only one variable - years of
+service.</p>
+<pre class="r"><code>model3 &lt;- lm(salary ~ yrs.service, data = prof)
+summary(model3)</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = salary ~ yrs.service, data = prof)
+## 
+## Residuals:
+##    Min     1Q Median     3Q    Max 
+## -81933 -20511  -3776  16417 101947 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)  99974.7     2416.6   41.37  &lt; 2e-16 ***
+## yrs.service    779.6      110.4    7.06 7.53e-12 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 28580 on 395 degrees of freedom
+## Multiple R-squared:  0.1121, Adjusted R-squared:  0.1098 
+## F-statistic: 49.85 on 1 and 395 DF,  p-value: 7.529e-12</code></pre>
+<p>This is so strange. Years of service is now a positive predictor of
+salary. It is something that I can’t explain. Years of service is a
+positive predictor of salary on its own, but when controlling for years
+since phd, it becomes a negative predictor. If you know why this is the
+case, please let me know!</p>
 
 
 
