@@ -15,3 +15,5 @@ In terms of hobbies, I like reading books and reflecting on the values behind th
 This page is created for a course as an assignment. However, our instructor was very supportive and cool with us exploring creative things using R. I try to think about or learn about cool things I can do with R. I hope to add more content even after this course, so have fun exploring!
 
 p01: Music
+p02: Professor's salary
+p03:
