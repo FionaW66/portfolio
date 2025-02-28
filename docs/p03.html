@@ -9,11 +9,12 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
+<meta name="author" content="Yitong Wang" />
 
 
 <title>Portfolio 3</title>
 
-<script src="site_libs/header-attrs-2.13/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
@@ -141,11 +142,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -174,8 +179,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -183,16 +188,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -294,17 +292,97 @@ $(document).ready(function () {
 
 
 <h1 class="title toc-ignore">Portfolio 3</h1>
+<h4 class="author">Yitong Wang</h4>
 
 </div>
 
 
-<blockquote>
-<p>The projects should be numbered consecutively (i.e., in the order in
-which you began them), and should include for each project a description
-of the goal, the product (computer program, hand graph, computer graph,
-etc.), the data, and some interpretation. Reports must be reproducible
-and of high quality in terms of writing, grammar, presentation, etc.</p>
-</blockquote>
+<p>I want my portfolio to be as fun as possible. In this piece, I will
+be using R to generate creative drawings. First, I want to give credit
+to this github page:<br />
+<a href="https://github.com/koenderks/aRtsy"
+class="uri">https://github.com/koenderks/aRtsy</a><br />
+If you look at the package aRtsy description, you will see that the
+author who created the package, Koen Derks, is also the author of the
+website that I linked above. Let’s learn from the website!</p>
+<p>Let’s first install the package :)</p>
+<pre class="r"><code>#install.packages(&quot;aRtsy&quot;)
+library(aRtsy)</code></pre>
+<pre class="r"><code>artwork &lt;- canvas_strokes(colors = c(&quot;black&quot;, &quot;white&quot;))
+artwork</code></pre>
+<p><img src="p03_files/figure-html/example-1.png" width="672" /></p>
+<p>Cool that R can draw, but not something I was thinking.<br />
+There are a lot of drawings that this package can do. I’ll pick the
+patterns that I found artistic, and try them one-by-one.</p>
+<div id="langtons-ant" class="section level3">
+<h3>Langton’s ant</h3>
+<p>If you’d like to know what this is, check out ?canvas_ant in R.
+Basically, there is an initial position where you place an “ant”. The
+ant will turn 90 degrees and color the cells depending on whether it is
+colored or not and move forward. It’s like a drawing of the ant’s
+traces.</p>
+<pre class="r"><code>#website example
+set.seed(1)
+canvas_ant(colors = colorPalette(&quot;house&quot;))</code></pre>
+<p><img src="p03_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<pre class="r"><code>#My own art pieces
+set.seed(50) #determine the initial position, and that you will get the same drawing everytime
+canvas_ant(colors = colorPalette(&quot;jfa&quot;), background = &quot;#fde0dd&quot;)</code></pre>
+<p><img src="p03_files/figure-html/unnamed-chunk-2-2.png" width="672" /></p>
+<p>I feel like mine looks better.</p>
+</div>
+<div id="cobwebs" class="section level3">
+<h3>Cobwebs</h3>
+<pre class="r"><code>#website example
+set.seed(1)
+canvas_cobweb(colors = colorPalette(&quot;tuscany1&quot;))</code></pre>
+<p><img src="p03_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<pre class="r"><code>#My turn
+set.seed(123)
+canvas_cobweb(colors = colorPalette(&quot;blossom&quot;), background = &quot;#9ecae1&quot;, lines = 500, iterations = 100)</code></pre>
+<p><img src="p03_files/figure-html/unnamed-chunk-3-2.png" width="672" /></p>
+<pre class="r"><code>#The lines default is 300, iterations 100. I adjusted it. The higher value for lines, the clearer the pattern. The generation time is positively correlated with the value set for lines.</code></pre>
+<p>There is no winner in this, or in art.</p>
+</div>
+<div id="fractual-flames" class="section level3">
+<h3>Fractual flames</h3>
+<p>Check out ?canvas_flame for this one. There are a lot of arguments in
+this function. Below are my creations.</p>
+<pre class="r"><code>#My turn
+set.seed(60)
+canvas_flame(colors = &quot;#9ecae1&quot;, background = &quot;#390606&quot;,
+             variations = 4, symmetry = 6, iterations = 2000000, blend = TRUE, zoom = 2)</code></pre>
+<p><img src="p03_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p>By far, this function is my favorite. I want to explore the
+variations more.</p>
+<pre class="r"><code>set.seed(60)
+canvas_flame(colors = &quot;#f03b20&quot;, background = &quot;#f0f0f0&quot;,
+             variations = 42, symmetry = 1, iterations = 2000000, blend = TRUE)</code></pre>
+<p><img src="p03_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<pre class="r"><code>set.seed(60)
+canvas_flame(colors = colorPalette(&quot;blossom&quot;), background = &quot;#f0f0f0&quot;,
+             variations = 9, symmetry = 1, iterations = 2000000, blend = TRUE)</code></pre>
+<p><img src="p03_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+</div>
+<div id="functions" class="section level3">
+<h3>Functions</h3>
+<p>This function is called canvas_functions. For this, I checked out
+this website in search of a formula:<br />
+<a href="https://github.com/cutterkom/generativeart"
+class="uri">https://github.com/cutterkom/generativeart</a></p>
+<pre class="r"><code>my_formula &lt;- list(
+  x = quote(runif(1, -1, 1) * x_i^2 - sin(y_i^2)),
+  y = quote(runif(1, -1, 1) * y_i^3 - cos(x_i^2))
+)
+
+set.seed(1821)
+canvas_function(colors = colorPalette(&quot;neon2&quot;), background = &quot;#fee6ce&quot;, by = 0.01,
+                polar = TRUE, formula = my_formula)</code></pre>
+<p><img src="p03_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+</div>
+<div id="section" class="section level3">
+<h3></h3>
+</div>
 
 
 

@@ -1,5 +1,88 @@
 ---
 title: "Portfolio 3"
+author: "Yitong Wang"
+output: html_document
 ---
 
-> The projects should be numbered consecutively (i.e., in the order in which you began them), and should include for each project a description of the goal, the product (computer program, hand graph, computer graph, etc.), the data, and some interpretation. Reports must be reproducible and of high quality in terms of writing, grammar, presentation, etc.
+I want my portfolio to be as fun as possible. In this piece, I will be using R to generate creative drawings. First, I want to give credit to this github page:     
+https://github.com/koenderks/aRtsy      
+If you look at the package aRtsy description, you will see that the author who created the package, Koen Derks, is also the author of the website that I linked above. Let's learn from the website!
+
+Let's first install the package :)
+```{r}
+#install.packages("aRtsy")
+library(aRtsy)
+```
+
+```{r example}
+artwork <- canvas_strokes(colors = c("black", "white"))
+artwork
+```
+
+Cool that R can draw, but not something I was thinking.       
+There are a lot of drawings that this package can do. I'll pick the patterns that I found artistic, and try them one-by-one.    
+
+### Langton's ant
+If you'd like to know what this is, check out ?canvas_ant in R. Basically, there is an initial position where you place an "ant". The ant will turn 90 degrees and color the cells depending on whether it is colored or not and move forward. It's like a drawing of the ant's traces. 
+```{r}
+#website example
+set.seed(1)
+canvas_ant(colors = colorPalette("house"))
+
+#My own art pieces
+set.seed(50) #determine the initial position, and that you will get the same drawing everytime
+canvas_ant(colors = colorPalette("jfa"), background = "#fde0dd")
+```
+
+I feel like mine looks better. 
+
+### Cobwebs
+```{r}
+#website example
+set.seed(1)
+canvas_cobweb(colors = colorPalette("tuscany1"))
+#My turn
+set.seed(123)
+canvas_cobweb(colors = colorPalette("blossom"), background = "#9ecae1", lines = 500, iterations = 100)
+#The lines default is 300, iterations 100. I adjusted it. The higher value for lines, the clearer the pattern. The generation time is positively correlated with the value set for lines.
+```
+
+There is no winner in this, or in art. 
+
+### Fractual flames
+Check out ?canvas_flame for this one. There are a lot of arguments in this function. Below are my creations.
+```{r}
+#My turn
+set.seed(60)
+canvas_flame(colors = "#9ecae1", background = "#390606",
+             variations = 4, symmetry = 6, iterations = 2000000, blend = TRUE, zoom = 2)
+```
+
+By far, this function is my favorite. I want to explore the variations more.
+```{r}
+set.seed(60)
+canvas_flame(colors = "#f03b20", background = "#f0f0f0",
+             variations = 42, symmetry = 1, iterations = 2000000, blend = TRUE)
+```
+
+```{r}
+set.seed(60)
+canvas_flame(colors = colorPalette("blossom"), background = "#f0f0f0",
+             variations = 9, symmetry = 1, iterations = 2000000, blend = TRUE)
+```
+
+### Functions
+This function is called canvas_functions. For this, I checked out this website in search of a formula:    
+https://github.com/cutterkom/generativeart      
+```{r}
+my_formula <- list(
+  x = quote(runif(1, -1, 1) * x_i^2 - sin(y_i^2)),
+  y = quote(runif(1, -1, 1) * y_i^3 - cos(x_i^2))
+)
+
+set.seed(1821)
+canvas_function(colors = colorPalette("neon2"), background = "#fee6ce", by = 0.01,
+                polar = TRUE, formula = my_formula)
+```
+
+###
