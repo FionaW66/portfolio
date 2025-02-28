@@ -324,11 +324,11 @@ traces.</p>
 <pre class="r"><code>#website example
 set.seed(1)
 canvas_ant(colors = colorPalette(&quot;house&quot;))</code></pre>
-<p><img src="p03_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p><img src="p03_files/figure-html/ant-1.png" width="672" /></p>
 <pre class="r"><code>#My own art pieces
 set.seed(50) #determine the initial position, and that you will get the same drawing everytime
 canvas_ant(colors = colorPalette(&quot;jfa&quot;), background = &quot;#fde0dd&quot;)</code></pre>
-<p><img src="p03_files/figure-html/unnamed-chunk-2-2.png" width="672" /></p>
+<p><img src="p03_files/figure-html/ant-2.png" width="672" /></p>
 <p>I feel like mine looks better.</p>
 </div>
 <div id="cobwebs" class="section level3">
@@ -336,11 +336,11 @@ canvas_ant(colors = colorPalette(&quot;jfa&quot;), background = &quot;#fde0dd&qu
 <pre class="r"><code>#website example
 set.seed(1)
 canvas_cobweb(colors = colorPalette(&quot;tuscany1&quot;))</code></pre>
-<p><img src="p03_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p><img src="p03_files/figure-html/Cobwebs-1.png" width="672" /></p>
 <pre class="r"><code>#My turn
 set.seed(123)
 canvas_cobweb(colors = colorPalette(&quot;blossom&quot;), background = &quot;#9ecae1&quot;, lines = 500, iterations = 100)</code></pre>
-<p><img src="p03_files/figure-html/unnamed-chunk-3-2.png" width="672" /></p>
+<p><img src="p03_files/figure-html/Cobwebs-2.png" width="672" /></p>
 <pre class="r"><code>#The lines default is 300, iterations 100. I adjusted it. The higher value for lines, the clearer the pattern. The generation time is positively correlated with the value set for lines.</code></pre>
 <p>There is no winner in this, or in art.</p>
 </div>
@@ -352,17 +352,17 @@ this function. Below are my creations.</p>
 set.seed(60)
 canvas_flame(colors = &quot;#9ecae1&quot;, background = &quot;#390606&quot;,
              variations = 4, symmetry = 6, iterations = 2000000, blend = TRUE, zoom = 2)</code></pre>
-<p><img src="p03_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p><img src="p03_files/figure-html/flames1-1.png" width="672" /></p>
 <p>By far, this function is my favorite. I want to explore the
 variations more.</p>
 <pre class="r"><code>set.seed(60)
 canvas_flame(colors = &quot;#f03b20&quot;, background = &quot;#f0f0f0&quot;,
              variations = 42, symmetry = 1, iterations = 2000000, blend = TRUE)</code></pre>
-<p><img src="p03_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p><img src="p03_files/figure-html/flames2-1.png" width="672" /></p>
 <pre class="r"><code>set.seed(60)
 canvas_flame(colors = colorPalette(&quot;blossom&quot;), background = &quot;#f0f0f0&quot;,
              variations = 9, symmetry = 1, iterations = 2000000, blend = TRUE)</code></pre>
-<p><img src="p03_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p><img src="p03_files/figure-html/flames3-1.png" width="672" /></p>
 </div>
 <div id="functions" class="section level3">
 <h3>Functions</h3>
@@ -378,7 +378,7 @@ class="uri">https://github.com/cutterkom/generativeart</a></p>
 set.seed(1821)
 canvas_function(colors = colorPalette(&quot;neon2&quot;), background = &quot;#fee6ce&quot;, by = 0.01,
                 polar = TRUE, formula = my_formula)</code></pre>
-<p><img src="p03_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p><img src="p03_files/figure-html/function-1.png" width="672" /></p>
 </div>
 <div id="segments" class="section level3">
 <h3>Segments</h3>
@@ -387,7 +387,7 @@ of drawing a vertical line segment. This is really neat.</p>
 <pre class="r"><code>set.seed(90)
 canvas_segments(colors = colorPalette(&quot;house&quot;), background = &quot;#f0f0f0&quot;, n = 600,
                 p = 0.5, H = 0.1, size = 0.3)</code></pre>
-<p><img src="p03_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<p><img src="p03_files/figure-html/segment-1.png" width="672" /></p>
 <p>I tried a couple times, and I think that p = 0.5 is the best, so that
 you have an equal amount of vertical and horizontal lines. This will
 make your drawing very beautiful.</p>
@@ -398,7 +398,7 @@ make your drawing very beautiful.</p>
 them. This function has only 3 arguments.</p>
 <pre class="r"><code>set.seed(1)
 canvas_mosaic(colors = c(&quot;#756bb1&quot;, &quot;#2c7fb8&quot;, &quot;#fde0dd&quot;, &quot;#f0f0f0&quot;), n = 1000, resolution = 1200)</code></pre>
-<p><img src="p03_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<p><img src="p03_files/figure-html/mosaic-1.png" width="672" /></p>
 </div>
 <div id="mazes" class="section level3">
 <h3>Mazes</h3>
@@ -407,7 +407,7 @@ canvas_maze(
   color = &quot;grey&quot;, walls = &quot;#756399&quot;, background = &quot;white&quot;,
   resolution = 100, polar = FALSE
 )</code></pre>
-<p><img src="p03_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+<p><img src="p03_files/figure-html/maze-1.png" width="672" /></p>
 <p>This looks like a very beautiful carpet.</p>
 <p>This is so fun! You can create art pieces if you are familiar with
 all these functions and arguments. For every type of pattern, I checked
