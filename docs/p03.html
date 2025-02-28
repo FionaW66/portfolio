@@ -380,8 +380,41 @@ canvas_function(colors = colorPalette(&quot;neon2&quot;), background = &quot;#fe
                 polar = TRUE, formula = my_formula)</code></pre>
 <p><img src="p03_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
 </div>
-<div id="section" class="section level3">
-<h3></h3>
+<div id="segments" class="section level3">
+<h3>Segments</h3>
+<p>In this function, there is an argument “p” which sets the probability
+of drawing a vertical line segment. This is really neat.</p>
+<pre class="r"><code>set.seed(90)
+canvas_segments(colors = colorPalette(&quot;house&quot;), background = &quot;#f0f0f0&quot;, n = 600,
+                p = 0.5, H = 0.1, size = 0.3)</code></pre>
+<p><img src="p03_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<p>I tried a couple times, and I think that p = 0.5 is the best, so that
+you have an equal amount of vertical and horizontal lines. This will
+make your drawing very beautiful.</p>
+</div>
+<div id="mosaics" class="section level3">
+<h3>Mosaics</h3>
+<p>This type of drawing is very popular and I’ve seen quite a lot of
+them. This function has only 3 arguments.</p>
+<pre class="r"><code>set.seed(1)
+canvas_mosaic(colors = c(&quot;#756bb1&quot;, &quot;#2c7fb8&quot;, &quot;#fde0dd&quot;, &quot;#f0f0f0&quot;), n = 1000, resolution = 1200)</code></pre>
+<p><img src="p03_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+</div>
+<div id="mazes" class="section level3">
+<h3>Mazes</h3>
+<pre class="r"><code>set.seed(990)
+canvas_maze(
+  color = &quot;grey&quot;, walls = &quot;#756399&quot;, background = &quot;white&quot;,
+  resolution = 100, polar = FALSE
+)</code></pre>
+<p><img src="p03_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+<p>This looks like a very beautiful carpet.</p>
+<p>This is so fun! You can create art pieces if you are familiar with
+all these functions and arguments. For every type of pattern, I checked
+out the functions in the Help section and it was indeed very helpful.
+When creating these drawings, I thought of a place where we can post our
+art pieces: LinkedIn banner. I think it is pretty fancy, and it shows
+that you are interested in R!</p>
 </div>
 
 

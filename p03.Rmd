@@ -85,4 +85,32 @@ canvas_function(colors = colorPalette("neon2"), background = "#fee6ce", by = 0.0
                 polar = TRUE, formula = my_formula)
 ```
 
-###
+### Segments
+In this function, there is an argument "p" which sets the probability of drawing a vertical line segment. This is really neat. 
+```{r}
+set.seed(90)
+canvas_segments(colors = colorPalette("house"), background = "#f0f0f0", n = 600,
+                p = 0.5, H = 0.1, size = 0.3)
+```
+
+I tried a couple times, and I think that p = 0.5 is the best, so that you have an equal amount of vertical and horizontal lines. This will make your drawing very beautiful. 
+
+### Mosaics
+This type of drawing is very popular and I've seen quite a lot of them. This function has only 3 arguments.
+```{r}
+set.seed(1)
+canvas_mosaic(colors = c("#756bb1", "#2c7fb8", "#fde0dd", "#f0f0f0"), n = 1000, resolution = 1200)
+```
+
+### Mazes
+```{r}
+set.seed(990)
+canvas_maze(
+  color = "grey", walls = "#756399", background = "white",
+  resolution = 100, polar = FALSE
+)
+```
+
+This looks like a very beautiful carpet. 
+
+This is so fun! You can create art pieces if you are familiar with all these functions and arguments. For every type of pattern, I checked out the functions in the Help section and it was indeed very helpful. When creating these drawings, I thought of a place where we can post our art pieces: LinkedIn banner. I think it is pretty fancy, and it shows that you are interested in R!
