@@ -10,8 +10,9 @@
 
 
 
+<meta name="date" content="2025-03-21" />
 
-<title>Portfolio 4</title>
+<title>Attack on titan</title>
 
 <script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -290,18 +291,208 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Portfolio 4</h1>
+<h1 class="title toc-ignore">Attack on titan</h1>
+<h4 class="date">2025-03-21</h4>
 
 </div>
 
 
-<blockquote>
-<p>The projects should be numbered consecutively (i.e., in the order in
-which you began them), and should include for each project a description
-of the goal, the product (computer program, hand graph, computer graph,
-etc.), the data, and some interpretation. Reports must be reproducible
-and of high quality in terms of writing, grammar, presentation, etc.</p>
-</blockquote>
+<p>In this portfoloio piece, I want to work with something related to my
+favorite anime – attack on titan. This is a great anime, check it out if
+you haven’t already. There are no large data frames for this anime. So,
+I asked chatgpt to generate a dataset that has 1000 observations. A
+thousand participants answered our survey. We ask about their gender,
+age, favorite character in the show, least favorite character in the
+show, their rating for the entire show, favorite season of the show,
+which faction they will join, the personality trait that best describes
+them, and which titan they want to be.</p>
+<p>You are probably asking becoming a titan?! If you haven’t seen the
+show, this is fair to question. I will be providing more background
+information as we go through the dataset.<br />
+<img src="begin.gif" alt="begin" /></p>
+<p>First step, load libraries and data.</p>
+<pre class="r"><code>library(readr)
+library(tidyverse)</code></pre>
+<pre><code>## ── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+## ✔ dplyr     1.1.4     ✔ purrr     1.0.4
+## ✔ forcats   1.0.0     ✔ stringr   1.5.1
+## ✔ ggplot2   3.5.1     ✔ tibble    3.2.1
+## ✔ lubridate 1.9.3     ✔ tidyr     1.3.1
+## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+## ✖ dplyr::filter() masks stats::filter()
+## ✖ dplyr::lag()    masks stats::lag()
+## ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+<pre class="r"><code>library(forcats)
+data &lt;- read_csv(&quot;aot_fan_dataset_v2.csv&quot;)</code></pre>
+<pre><code>## Rows: 1000 Columns: 10
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: &quot;,&quot;
+## chr (7): gender, fav_character, least_fav_character, favorite_aot_season, jo...
+## dbl (3): id, age, rating
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+<p>Since chatgpt generated this dataset, I assume it would be quite
+random, meaning that the age of the participants should be fairly spread
+out, and that the gender will probably be equal too. Just to see how
+chatgpt randomly create a dataset, let’s find out the distribution of
+gender and age.</p>
+<pre class="r"><code>summary(data$age)</code></pre>
+<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##   15.00   21.00   27.00   27.33   34.00   40.00</code></pre>
+<p>The smallest fan is 15 yo, and the oldest fan is 40 yo. I still want
+to find out if the distribution of the dataset is normal.</p>
+<pre class="r"><code>data %&gt;% 
+  ggplot(aes(x = age, color = &quot;black&quot;)) + geom_histogram(binwidth = 1)</code></pre>
+<p><img src="p04_files/figure-html/distributionage-1.png" width="672" /></p>
+<p>The answer is no, age is not normally distributed. It’s pretty random
+it seems like.</p>
+<pre class="r"><code>data %&gt;% 
+  count(gender)</code></pre>
+<pre><code>## # A tibble: 5 × 2
+##   gender                n
+##   &lt;chr&gt;             &lt;int&gt;
+## 1 F                   478
+## 2 M                   418
+## 3 NB                   47
+## 4 Other                36
+## 5 Prefer not to say    21</code></pre>
+<p>Okay, so there are more females than males in this dataset. Anyway,
+very fun to explore. Chatgpt is mysterious!</p>
+<p>Next, let’s explore people’s favorite character in the show. There
+are a lot of characters, and many of them are charming. My favorite
+character is probably Levi. Levi Ackerman is the captain of the survey
+corps special operations squad. He is very competent, extremely good at
+killing titans. He is very composed in fights. All in all, he is a very
+charismatic character. Here is Levi:<br />
+<img src="Levi.gif" width="100" alt="Levi being serious"></p>
+<pre class="r"><code>data %&gt;% 
+  count(fav_character) %&gt;% 
+  arrange(desc(n))</code></pre>
+<pre><code>## # A tibble: 13 × 2
+##    fav_character     n
+##    &lt;chr&gt;         &lt;int&gt;
+##  1 Connie           90
+##  2 Levi             89
+##  3 Sasha            83
+##  4 Hange            82
+##  5 Mikasa           79
+##  6 Eren             78
+##  7 Historia         78
+##  8 Jean             77
+##  9 Ymir             76
+## 10 Pieck            71
+## 11 Erwin            69
+## 12 Annie            66
+## 13 Armin            62</code></pre>
+<p>It’s a little surprising that Connie got the most vote.</p>
+<pre class="r"><code>data %&gt;% 
+  ggplot(aes(y = fct_rev(fct_infreq(fav_character)))) + geom_bar(fill = &quot;#99d8c9&quot;) + 
+  labs(title = &quot;Fans&#39; favorite character&quot;,
+       x = &quot;Count&quot;,
+       y = &quot;Characters&quot;)</code></pre>
+<p><img src="p04_files/figure-html/visualize_fav-1.png" width="672" /></p>
+<p>Here’s Connie:<br />
+<img src="connie.gif" width="150" alt="Connie talking"></p>
+<p>I want to create a new variable that’s the proportion of fan’s
+favorite character.</p>
+<pre class="r"><code>prop &lt;- data %&gt;%
+  count(fav_character) %&gt;%
+  mutate(proportion = n / sum(n))</code></pre>
+<p>Now let’s plot a pie chart with this new data frame.<br />
+I want to give credit to this video: <a
+href="https://www.youtube.com/watch?v=ueLozxgEnDc"
+class="uri">https://www.youtube.com/watch?v=ueLozxgEnDc</a></p>
+<pre class="r"><code>prop %&gt;% 
+  ggplot(aes(x = &quot;&quot;, y = n, fill = fav_character)) + geom_col(color = &quot;white&quot;) +
+  coord_polar(&quot;y&quot;) + 
+  labs(title = &quot;Pie chart: proportion of people&#39;s favorite characters&quot;,
+       x = NULL,
+       y = NULL,
+       fill = &quot;Favorite Character&quot;) + 
+  theme_minimal()</code></pre>
+<p><img src="p04_files/figure-html/pie-1.png" width="672" /></p>
+<p>I am interested in the least favorite character. I remember hating
+one character so much. Rationally speaking, this character has her
+reason for doing things. However, I am not on her side, so that’s why I
+hated her so much. There really is no right wrong objectively. You reach
+different conclusions when you change your standpoint. That’s what this
+show teaches me.</p>
+<pre class="r"><code>data %&gt;% 
+  count(least_fav_character) %&gt;% 
+  arrange(desc(n))</code></pre>
+<pre><code>## # A tibble: 11 × 2
+##    least_fav_character     n
+##    &lt;chr&gt;               &lt;int&gt;
+##  1 Bertholdt             106
+##  2 Zeke                  104
+##  3 Reiner                 96
+##  4 Rod Reiss              94
+##  5 Kenny                  92
+##  6 Gabi                   88
+##  7 Ymir                   87
+##  8 Floch                  85
+##  9 Nile                   85
+## 10 Grisha                 83
+## 11 Porco                  80</code></pre>
+<p>The least popular character is a little surprising to me as well.
+Bertholdt was okay to me. Also, Ymir appeared in both the favorite and
+the least favorite. SPOILERS ALERT: there are two Ymir in the show, so I
+don’t know which one is which.</p>
+<p>Let’s see people’s ratings!</p>
+<pre class="r"><code>data %&gt;% 
+  count(rating) %&gt;% 
+  arrange(desc(n))</code></pre>
+<pre><code>## # A tibble: 5 × 2
+##   rating     n
+##    &lt;dbl&gt; &lt;int&gt;
+## 1      9   353
+## 2      8   256
+## 3     10   239
+## 4      7   104
+## 5      6    48</code></pre>
+<pre class="r"><code>summary(data$rating)</code></pre>
+<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##   6.000   8.000   9.000   8.631   9.000  10.000</code></pre>
+<p>The ratings range from 6-10. The mean is 8.63, which I think is
+pretty high. The most frequent rating is 9. I would give it a 9.5, but
+there is no such point, so I will give it a 9. I am a little unhappy
+about the ending of the show.</p>
+<pre class="r"><code>data %&gt;% 
+  group_by(gender) %&gt;% 
+  summarise(
+    mean_rating = mean(rating),
+    sd_rating = sd(rating),
+    n = n())</code></pre>
+<pre><code>## # A tibble: 5 × 4
+##   gender            mean_rating sd_rating     n
+##   &lt;chr&gt;                   &lt;dbl&gt;     &lt;dbl&gt; &lt;int&gt;
+## 1 F                        8.65     1.09    478
+## 2 M                        8.63     1.11    418
+## 3 NB                       8.55     0.904    47
+## 4 Other                    8.56     1.16     36
+## 5 Prefer not to say        8.52     1.36     21</code></pre>
+<p>Looking at this result, I don’t think there is a significant
+difference between males and females in their rating.</p>
+<p>Which season is people’s favorite?</p>
+<pre class="r"><code>data %&gt;% 
+  count(favorite_aot_season) %&gt;% 
+  arrange(desc(n))</code></pre>
+<pre><code>## # A tibble: 6 × 2
+##   favorite_aot_season     n
+##   &lt;chr&gt;               &lt;int&gt;
+## 1 Season 4 Part 2       179
+## 2 Season 2              168
+## 3 Season 1              167
+## 4 Season 3              166
+## 5 Season 4 Part 1       166
+## 6 Final Chapters        154</code></pre>
+<p>I can’t recall the specific plots in season 4 part 2. The songs were
+really beautiful I think. My favorites are season 1, 2, 3. The latter
+ones are just as great, but it is very different. I strongly recommend
+the show!</p>
+<p>More analysis will be carried out in portfolio 5!<br />
+<img src="qxz.gif" width="300" alt="titans"></p>
 
 
 

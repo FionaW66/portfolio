@@ -1,0 +1,1001 @@
+id,age,gender,fav_character,least_fav_character,rating,favorite_aot_season,join_faction,personality,want_to_be_titan
+1,33,M,Erwin,Reiner,9,Final Chapters,Survey Corps,Logical,Attack Titan
+2,27,M,Historia,Porco,9,Season 1,Survey Corps,Logical,Beast Titan
+3,39,M,Ymir,Reiner,9,Season 2,Survey Corps,Reckless,Beast Titan
+4,18,F,Levi,Reiner,8,Final Chapters,Survey Corps,Loyal,Cart Titan
+5,34,F,Historia,Porco,9,Final Chapters,Survey Corps,Compassionate,None
+6,27,F,Erwin,Rod Reiss,9,Season 1,Garrison,Stoic,Cart Titan
+7,15,M,Pieck,Nile,8,Season 4 Part 1,Garrison,Logical,Jaw Titan
+8,37,M,Pieck,Floch,8,Season 4 Part 2,Garrison,Curious,Founding Titan
+9,39,M,Mikasa,Zeke,9,Season 2,Military Police,Curious,Founding Titan
+10,20,F,Hange,Gabi,7,Season 2,Survey Corps,Strategic,None
+11,25,M,Erwin,Ymir,9,Season 4 Part 1,Garrison,Protective,Attack Titan
+12,29,Other,Sasha,Grisha,9,Season 2,Survey Corps,Stoic,Attack Titan
+13,16,M,Sasha,Grisha,10,Final Chapters,Survey Corps,Compassionate,Attack Titan
+14,23,F,Ymir,Bertholdt,9,Season 3,Survey Corps,Logical,Armored Titan
+15,20,M,Levi,Nile,9,Season 1,Survey Corps,Protective,Armored Titan
+16,38,NB,Eren,Reiner,7,Season 4 Part 2,Survey Corps,Strategic,None
+17,20,M,Eren,Reiner,9,Season 3,Survey Corps,Stoic,Attack Titan
+18,30,M,Erwin,Bertholdt,9,Season 4 Part 1,Survey Corps,Curious,Founding Titan
+19,35,M,Mikasa,Nile,10,Season 4 Part 2,Garrison,Strategic,Founding Titan
+20,31,F,Levi,Ymir,8,Season 3,Military Police,Cold,None
+21,15,F,Levi,Rod Reiss,7,Season 4 Part 1,Garrison,Reckless,Armored Titan
+22,36,M,Mikasa,Bertholdt,8,Season 4 Part 2,Survey Corps,Cold,Armored Titan
+23,18,F,Erwin,Floch,7,Season 2,Survey Corps,Protective,Attack Titan
+24,19,M,Historia,Floch,6,Season 1,Survey Corps,Curious,None
+25,40,F,Annie,Porco,7,Season 3,Survey Corps,Logical,Cart Titan
+26,32,F,Historia,Floch,9,Season 4 Part 2,Survey Corps,Loyal,Jaw Titan
+27,31,F,Levi,Bertholdt,7,Season 1,Survey Corps,Stoic,Founding Titan
+28,38,M,Pieck,Grisha,6,Season 3,Survey Corps,Reckless,Founding Titan
+29,26,M,Sasha,Reiner,10,Season 4 Part 2,Survey Corps,Compassionate,Colossal Titan
+30,28,M,Sasha,Nile,9,Season 2,Survey Corps,Cold,Armored Titan
+31,15,F,Armin,Porco,9,Season 4 Part 1,Garrison,Strategic,Founding Titan
+32,16,F,Historia,Zeke,9,Season 1,Survey Corps,Logical,Attack Titan
+33,24,F,Hange,Zeke,6,Season 1,Garrison,Brave,Attack Titan
+34,28,F,Levi,Grisha,10,Season 4 Part 2,Survey Corps,Logical,Colossal Titan
+35,34,NB,Levi,Kenny,10,Season 3,Garrison,Curious,None
+36,24,M,Historia,Porco,10,Season 1,Garrison,Brave,Attack Titan
+37,25,F,Jean,Floch,10,Season 3,Survey Corps,Reckless,Colossal Titan
+38,19,M,Connie,Zeke,10,Final Chapters,Military Police,Stoic,Jaw Titan
+39,25,F,Eren,Rod Reiss,8,Season 4 Part 1,Survey Corps,Strategic,Colossal Titan
+40,25,M,Hange,Reiner,8,Season 4 Part 1,Garrison,Protective,Armored Titan
+41,30,M,Connie,Ymir,9,Season 3,Garrison,Compassionate,Attack Titan
+42,36,M,Jean,Floch,9,Final Chapters,Garrison,Compassionate,Jaw Titan
+43,20,M,Annie,Kenny,7,Season 3,Survey Corps,Strategic,Founding Titan
+44,25,F,Historia,Ymir,9,Season 3,Survey Corps,Reckless,Founding Titan
+45,35,F,Eren,Floch,8,Season 4 Part 2,Garrison,Curious,Armored Titan
+46,24,F,Armin,Nile,9,Season 4 Part 1,Military Police,Logical,Beast Titan
+47,20,M,Eren,Zeke,9,Season 1,Survey Corps,Logical,Attack Titan
+48,36,F,Jean,Gabi,10,Season 3,Survey Corps,Curious,Female Titan
+49,35,Other,Pieck,Ymir,10,Season 4 Part 2,Survey Corps,Strategic,Beast Titan
+50,32,M,Armin,Bertholdt,9,Season 4 Part 1,Survey Corps,Stoic,Armored Titan
+51,38,M,Mikasa,Kenny,8,Final Chapters,Military Police,Cold,Jaw Titan
+52,20,F,Ymir,Gabi,9,Season 1,Survey Corps,Logical,Jaw Titan
+53,35,Prefer not to say,Sasha,Gabi,8,Season 1,Garrison,Stoic,Attack Titan
+54,39,M,Jean,Gabi,9,Season 2,Garrison,Strategic,Armored Titan
+55,22,F,Hange,Zeke,9,Season 1,Survey Corps,Loyal,Jaw Titan
+56,21,M,Annie,Grisha,6,Final Chapters,Survey Corps,Strategic,Colossal Titan
+57,23,F,Jean,Nile,8,Season 3,Survey Corps,Compassionate,Female Titan
+58,28,M,Armin,Nile,9,Season 4 Part 2,Survey Corps,Stoic,Attack Titan
+59,39,F,Levi,Rod Reiss,10,Season 3,Military Police,Loyal,Attack Titan
+60,30,M,Sasha,Zeke,7,Final Chapters,Survey Corps,Protective,Cart Titan
+61,33,M,Ymir,Bertholdt,9,Season 1,Garrison,Loyal,Cart Titan
+62,23,F,Eren,Nile,10,Season 3,Survey Corps,Protective,Attack Titan
+63,37,F,Pieck,Ymir,8,Season 4 Part 1,Survey Corps,Reckless,Founding Titan
+64,30,M,Pieck,Kenny,7,Season 1,Garrison,Protective,Founding Titan
+65,40,F,Connie,Nile,10,Season 4 Part 2,Garrison,Curious,Armored Titan
+66,22,M,Jean,Zeke,9,Final Chapters,Survey Corps,Compassionate,Colossal Titan
+67,36,F,Annie,Zeke,10,Season 4 Part 1,Survey Corps,Reckless,Attack Titan
+68,33,F,Armin,Ymir,9,Season 4 Part 1,Survey Corps,Stoic,Armored Titan
+69,24,F,Mikasa,Bertholdt,7,Season 3,Garrison,Brave,Attack Titan
+70,15,M,Connie,Reiner,8,Season 3,Survey Corps,Curious,None
+71,17,Prefer not to say,Levi,Porco,8,Season 1,Garrison,Curious,Jaw Titan
+72,19,M,Jean,Ymir,10,Season 2,Survey Corps,Reckless,Colossal Titan
+73,15,F,Eren,Kenny,8,Season 2,Survey Corps,Cold,Colossal Titan
+74,17,M,Jean,Ymir,8,Season 4 Part 1,Garrison,Strategic,Attack Titan
+75,31,F,Eren,Nile,9,Season 1,Survey Corps,Protective,Female Titan
+76,32,M,Sasha,Ymir,10,Final Chapters,Survey Corps,Brave,Attack Titan
+77,30,Prefer not to say,Hange,Reiner,7,Season 4 Part 2,Survey Corps,Curious,Attack Titan
+78,37,M,Armin,Floch,8,Final Chapters,Survey Corps,Cold,Female Titan
+79,37,M,Hange,Bertholdt,9,Season 4 Part 2,Survey Corps,Strategic,Founding Titan
+80,19,NB,Armin,Gabi,10,Final Chapters,Garrison,Logical,Founding Titan
+81,38,M,Levi,Reiner,9,Season 4 Part 1,Garrison,Protective,Attack Titan
+82,34,F,Levi,Floch,8,Season 4 Part 1,Garrison,Brave,Founding Titan
+83,21,M,Historia,Reiner,8,Season 3,Military Police,Loyal,Jaw Titan
+84,26,M,Ymir,Zeke,9,Season 3,Garrison,Loyal,Cart Titan
+85,18,F,Connie,Ymir,9,Season 2,Military Police,Strategic,Colossal Titan
+86,19,F,Hange,Zeke,7,Season 3,Military Police,Protective,Jaw Titan
+87,29,M,Levi,Nile,8,Season 1,Survey Corps,Stoic,Female Titan
+88,15,NB,Connie,Zeke,8,Final Chapters,Military Police,Stoic,Cart Titan
+89,19,F,Pieck,Kenny,8,Season 4 Part 1,Survey Corps,Logical,Beast Titan
+90,40,F,Mikasa,Ymir,7,Final Chapters,Survey Corps,Curious,Jaw Titan
+91,27,M,Pieck,Gabi,10,Season 1,Survey Corps,Logical,Colossal Titan
+92,36,M,Annie,Bertholdt,10,Season 1,Garrison,Compassionate,Colossal Titan
+93,24,M,Levi,Floch,9,Season 4 Part 1,Survey Corps,Cold,Beast Titan
+94,33,F,Erwin,Ymir,9,Final Chapters,Survey Corps,Brave,Cart Titan
+95,15,M,Annie,Gabi,7,Final Chapters,Military Police,Loyal,None
+96,15,F,Annie,Zeke,8,Season 1,Survey Corps,Stoic,Armored Titan
+97,28,Other,Connie,Nile,9,Season 4 Part 2,Military Police,Curious,Colossal Titan
+98,16,M,Jean,Rod Reiss,6,Season 4 Part 1,Garrison,Protective,Colossal Titan
+99,37,M,Eren,Reiner,10,Season 3,Survey Corps,Reckless,Founding Titan
+100,38,M,Armin,Grisha,8,Season 4 Part 1,Garrison,Loyal,Beast Titan
+101,22,M,Hange,Kenny,9,Season 2,Military Police,Protective,Female Titan
+102,40,M,Erwin,Rod Reiss,9,Season 1,Survey Corps,Reckless,Attack Titan
+103,27,F,Historia,Floch,7,Season 1,Survey Corps,Reckless,Armored Titan
+104,22,M,Hange,Floch,9,Season 1,Survey Corps,Compassionate,Colossal Titan
+105,25,F,Connie,Gabi,8,Season 4 Part 2,Garrison,Logical,None
+106,29,F,Historia,Gabi,10,Season 2,Survey Corps,Strategic,Beast Titan
+107,18,Prefer not to say,Ymir,Nile,10,Season 4 Part 2,Garrison,Compassionate,Female Titan
+108,36,F,Sasha,Nile,10,Season 3,Survey Corps,Curious,Colossal Titan
+109,33,F,Connie,Reiner,10,Season 1,Garrison,Cold,Attack Titan
+110,31,Other,Pieck,Kenny,8,Season 1,Garrison,Logical,Beast Titan
+111,26,M,Ymir,Grisha,6,Final Chapters,Survey Corps,Strategic,Founding Titan
+112,23,M,Erwin,Gabi,10,Season 3,Survey Corps,Stoic,Female Titan
+113,18,M,Ymir,Floch,8,Season 4 Part 1,Military Police,Loyal,Founding Titan
+114,18,M,Levi,Ymir,10,Season 2,Survey Corps,Protective,Jaw Titan
+115,28,F,Annie,Reiner,10,Season 1,Military Police,Cold,None
+116,39,M,Erwin,Porco,10,Season 4 Part 2,Survey Corps,Logical,Founding Titan
+117,22,F,Ymir,Bertholdt,9,Final Chapters,Survey Corps,Curious,Founding Titan
+118,39,M,Erwin,Gabi,9,Season 4 Part 2,Survey Corps,Loyal,Beast Titan
+119,21,M,Historia,Nile,10,Season 1,Survey Corps,Logical,Colossal Titan
+120,36,M,Pieck,Floch,8,Season 1,Survey Corps,Curious,Armored Titan
+121,26,F,Ymir,Grisha,8,Season 4 Part 2,Survey Corps,Curious,Jaw Titan
+122,15,M,Pieck,Ymir,8,Season 1,Survey Corps,Stoic,Beast Titan
+123,30,M,Levi,Reiner,10,Season 4 Part 1,Survey Corps,Protective,Armored Titan
+124,36,F,Eren,Gabi,8,Season 4 Part 2,Survey Corps,Cold,Founding Titan
+125,29,F,Connie,Ymir,8,Season 4 Part 2,Survey Corps,Stoic,Attack Titan
+126,23,F,Sasha,Kenny,9,Season 3,Survey Corps,Cold,Beast Titan
+127,20,F,Sasha,Grisha,8,Final Chapters,Garrison,Brave,Jaw Titan
+128,23,M,Ymir,Reiner,9,Season 1,Garrison,Brave,Attack Titan
+129,26,F,Armin,Reiner,10,Season 3,Survey Corps,Loyal,None
+130,24,F,Historia,Kenny,10,Season 2,Survey Corps,Curious,Beast Titan
+131,26,F,Ymir,Reiner,8,Final Chapters,Survey Corps,Reckless,Female Titan
+132,26,M,Connie,Reiner,8,Season 2,Survey Corps,Protective,None
+133,28,F,Jean,Ymir,8,Season 3,Survey Corps,Brave,Cart Titan
+134,40,Prefer not to say,Eren,Reiner,10,Season 4 Part 2,Military Police,Brave,Female Titan
+135,33,F,Annie,Rod Reiss,8,Season 4 Part 1,Survey Corps,Brave,Colossal Titan
+136,22,F,Pieck,Bertholdt,7,Season 4 Part 2,Garrison,Strategic,Armored Titan
+137,26,F,Eren,Gabi,9,Season 3,Military Police,Strategic,Attack Titan
+138,24,F,Jean,Rod Reiss,8,Season 4 Part 1,Survey Corps,Loyal,Founding Titan
+139,32,F,Annie,Bertholdt,9,Season 4 Part 2,Survey Corps,Cold,None
+140,34,F,Annie,Bertholdt,9,Season 4 Part 1,Military Police,Compassionate,Founding Titan
+141,26,M,Ymir,Floch,10,Final Chapters,Survey Corps,Loyal,Jaw Titan
+142,21,Other,Connie,Zeke,9,Season 3,Military Police,Curious,Attack Titan
+143,19,F,Historia,Porco,9,Season 1,Survey Corps,Logical,Attack Titan
+144,21,M,Levi,Grisha,10,Season 4 Part 1,Survey Corps,Compassionate,Jaw Titan
+145,23,NB,Ymir,Ymir,9,Season 4 Part 1,Survey Corps,Protective,Colossal Titan
+146,34,M,Ymir,Kenny,10,Season 1,Survey Corps,Curious,None
+147,39,F,Connie,Rod Reiss,10,Season 1,Survey Corps,Curious,Colossal Titan
+148,36,M,Sasha,Grisha,9,Season 1,Survey Corps,Reckless,Armored Titan
+149,28,M,Hange,Kenny,8,Season 1,Garrison,Protective,Jaw Titan
+150,25,F,Connie,Rod Reiss,7,Final Chapters,Survey Corps,Stoic,Colossal Titan
+151,37,M,Connie,Ymir,10,Season 2,Survey Corps,Reckless,Cart Titan
+152,25,F,Historia,Bertholdt,9,Season 4 Part 2,Survey Corps,Stoic,Cart Titan
+153,34,Prefer not to say,Ymir,Floch,8,Season 4 Part 2,Military Police,Protective,Founding Titan
+154,37,F,Ymir,Gabi,9,Final Chapters,Survey Corps,Logical,Attack Titan
+155,16,F,Ymir,Nile,6,Season 1,Survey Corps,Reckless,Attack Titan
+156,28,F,Historia,Bertholdt,9,Season 4 Part 2,Survey Corps,Strategic,Beast Titan
+157,22,NB,Historia,Zeke,6,Season 4 Part 2,Survey Corps,Loyal,Cart Titan
+158,19,M,Annie,Gabi,8,Season 4 Part 2,Survey Corps,Curious,Founding Titan
+159,21,F,Armin,Reiner,6,Season 4 Part 2,Survey Corps,Logical,Jaw Titan
+160,22,M,Jean,Gabi,8,Season 4 Part 2,Survey Corps,Curious,None
+161,20,M,Connie,Rod Reiss,9,Season 4 Part 2,Survey Corps,Strategic,Founding Titan
+162,39,M,Connie,Grisha,9,Final Chapters,Survey Corps,Strategic,None
+163,36,F,Pieck,Bertholdt,10,Season 4 Part 2,Military Police,Logical,Cart Titan
+164,22,M,Ymir,Porco,10,Season 2,Survey Corps,Curious,Beast Titan
+165,23,M,Connie,Floch,10,Season 3,Military Police,Protective,None
+166,30,F,Annie,Bertholdt,9,Season 2,Garrison,Brave,Armored Titan
+167,28,F,Mikasa,Ymir,9,Season 1,Military Police,Loyal,Beast Titan
+168,17,NB,Hange,Kenny,8,Season 2,Military Police,Compassionate,Founding Titan
+169,40,F,Mikasa,Gabi,8,Season 4 Part 2,Survey Corps,Curious,Colossal Titan
+170,37,F,Jean,Zeke,6,Final Chapters,Survey Corps,Cold,Attack Titan
+171,19,F,Hange,Rod Reiss,9,Season 2,Survey Corps,Strategic,Armored Titan
+172,28,M,Levi,Bertholdt,8,Season 4 Part 2,Survey Corps,Cold,None
+173,18,M,Levi,Grisha,9,Season 3,Survey Corps,Protective,Attack Titan
+174,29,F,Annie,Bertholdt,10,Season 4 Part 2,Survey Corps,Reckless,Armored Titan
+175,37,F,Sasha,Rod Reiss,8,Season 4 Part 2,Military Police,Logical,Colossal Titan
+176,27,M,Annie,Zeke,8,Season 3,Survey Corps,Stoic,Beast Titan
+177,18,M,Historia,Ymir,7,Season 4 Part 2,Survey Corps,Reckless,Colossal Titan
+178,31,M,Mikasa,Kenny,10,Season 4 Part 1,Survey Corps,Cold,None
+179,35,F,Jean,Kenny,9,Season 2,Survey Corps,Brave,Attack Titan
+180,19,F,Connie,Nile,7,Season 4 Part 1,Survey Corps,Curious,Colossal Titan
+181,27,Other,Connie,Zeke,10,Season 1,Military Police,Stoic,Armored Titan
+182,21,F,Pieck,Ymir,7,Season 2,Survey Corps,Logical,Beast Titan
+183,19,M,Armin,Bertholdt,8,Season 4 Part 2,Survey Corps,Brave,Armored Titan
+184,24,F,Pieck,Reiner,10,Season 3,Military Police,Stoic,Armored Titan
+185,19,NB,Mikasa,Kenny,10,Season 3,Survey Corps,Protective,None
+186,26,M,Sasha,Zeke,9,Season 4 Part 2,Survey Corps,Strategic,Female Titan
+187,28,F,Ymir,Gabi,10,Final Chapters,Survey Corps,Stoic,Colossal Titan
+188,38,M,Jean,Kenny,10,Final Chapters,Garrison,Brave,Jaw Titan
+189,38,M,Ymir,Rod Reiss,9,Season 1,Survey Corps,Loyal,Colossal Titan
+190,25,F,Ymir,Rod Reiss,9,Season 1,Survey Corps,Cold,Jaw Titan
+191,24,F,Jean,Kenny,10,Season 2,Survey Corps,Loyal,Attack Titan
+192,39,M,Hange,Ymir,10,Season 3,Survey Corps,Logical,Attack Titan
+193,23,F,Jean,Reiner,9,Season 2,Survey Corps,Stoic,Armored Titan
+194,35,F,Levi,Rod Reiss,8,Season 1,Military Police,Loyal,Armored Titan
+195,28,F,Hange,Zeke,9,Season 4 Part 2,Military Police,Reckless,Jaw Titan
+196,40,F,Levi,Rod Reiss,9,Season 3,Survey Corps,Stoic,Colossal Titan
+197,38,M,Annie,Gabi,10,Season 3,Survey Corps,Stoic,Attack Titan
+198,36,M,Hange,Kenny,6,Season 4 Part 2,Survey Corps,Cold,Founding Titan
+199,40,F,Erwin,Grisha,9,Final Chapters,Survey Corps,Brave,None
+200,18,F,Eren,Bertholdt,10,Season 2,Military Police,Strategic,Cart Titan
+201,30,F,Ymir,Bertholdt,7,Season 1,Survey Corps,Reckless,Beast Titan
+202,20,F,Eren,Kenny,9,Season 4 Part 1,Survey Corps,Loyal,Cart Titan
+203,35,NB,Pieck,Reiner,9,Season 4 Part 1,Survey Corps,Brave,Cart Titan
+204,39,F,Mikasa,Nile,10,Season 1,Survey Corps,Reckless,Attack Titan
+205,23,M,Jean,Grisha,9,Season 4 Part 1,Garrison,Loyal,Founding Titan
+206,28,F,Hange,Ymir,10,Season 4 Part 2,Survey Corps,Protective,Founding Titan
+207,23,M,Connie,Nile,10,Final Chapters,Survey Corps,Protective,Attack Titan
+208,17,M,Sasha,Floch,8,Season 3,Garrison,Strategic,Colossal Titan
+209,29,M,Mikasa,Grisha,8,Season 2,Military Police,Protective,Founding Titan
+210,17,F,Mikasa,Bertholdt,8,Season 2,Survey Corps,Brave,Jaw Titan
+211,31,F,Mikasa,Grisha,9,Season 2,Survey Corps,Curious,Female Titan
+212,29,M,Eren,Porco,7,Final Chapters,Survey Corps,Reckless,Attack Titan
+213,40,F,Connie,Kenny,7,Final Chapters,Survey Corps,Protective,Attack Titan
+214,39,F,Erwin,Reiner,8,Season 3,Survey Corps,Cold,Female Titan
+215,18,F,Connie,Reiner,8,Season 4 Part 1,Survey Corps,Cold,Cart Titan
+216,16,F,Ymir,Zeke,9,Season 4 Part 2,Military Police,Logical,None
+217,25,Prefer not to say,Pieck,Rod Reiss,10,Season 1,Survey Corps,Reckless,None
+218,35,F,Sasha,Gabi,9,Season 4 Part 1,Survey Corps,Curious,Colossal Titan
+219,26,F,Historia,Gabi,9,Season 4 Part 2,Survey Corps,Curious,Beast Titan
+220,38,F,Hange,Ymir,10,Final Chapters,Garrison,Cold,None
+221,29,M,Annie,Bertholdt,9,Season 2,Military Police,Brave,Armored Titan
+222,30,M,Erwin,Kenny,8,Season 4 Part 2,Survey Corps,Curious,Colossal Titan
+223,27,M,Mikasa,Zeke,7,Season 4 Part 2,Survey Corps,Brave,Attack Titan
+224,24,F,Erwin,Ymir,8,Season 2,Survey Corps,Cold,Beast Titan
+225,24,M,Eren,Nile,7,Season 4 Part 1,Survey Corps,Cold,Attack Titan
+226,35,M,Connie,Rod Reiss,8,Season 3,Garrison,Strategic,Cart Titan
+227,16,M,Mikasa,Nile,8,Season 1,Survey Corps,Compassionate,None
+228,35,F,Connie,Floch,10,Season 2,Survey Corps,Protective,Female Titan
+229,29,F,Levi,Floch,9,Season 4 Part 2,Survey Corps,Compassionate,Cart Titan
+230,16,F,Armin,Ymir,10,Season 3,Survey Corps,Strategic,Jaw Titan
+231,29,F,Ymir,Nile,6,Season 4 Part 2,Survey Corps,Protective,Armored Titan
+232,37,Other,Eren,Kenny,10,Season 2,Survey Corps,Brave,Armored Titan
+233,27,M,Erwin,Gabi,8,Season 4 Part 2,Military Police,Logical,Attack Titan
+234,19,Other,Eren,Grisha,9,Season 4 Part 1,Survey Corps,Protective,Armored Titan
+235,25,M,Erwin,Zeke,8,Final Chapters,Survey Corps,Curious,None
+236,31,M,Jean,Nile,9,Season 4 Part 1,Military Police,Brave,Armored Titan
+237,37,M,Armin,Nile,9,Season 2,Garrison,Compassionate,Armored Titan
+238,22,M,Erwin,Kenny,8,Season 4 Part 1,Survey Corps,Loyal,Attack Titan
+239,34,M,Armin,Porco,9,Season 1,Survey Corps,Stoic,Colossal Titan
+240,22,F,Ymir,Kenny,8,Season 1,Garrison,Strategic,Beast Titan
+241,31,F,Levi,Rod Reiss,9,Season 2,Survey Corps,Brave,Founding Titan
+242,39,M,Hange,Grisha,9,Season 1,Survey Corps,Protective,Colossal Titan
+243,33,F,Sasha,Kenny,6,Season 4 Part 2,Survey Corps,Strategic,Beast Titan
+244,35,M,Eren,Floch,9,Season 3,Survey Corps,Curious,Founding Titan
+245,19,M,Ymir,Nile,10,Season 2,Garrison,Reckless,Cart Titan
+246,22,M,Erwin,Bertholdt,9,Season 4 Part 2,Survey Corps,Strategic,Beast Titan
+247,29,F,Hange,Kenny,8,Season 4 Part 1,Garrison,Strategic,Founding Titan
+248,26,M,Historia,Floch,6,Season 3,Garrison,Stoic,Jaw Titan
+249,27,F,Armin,Zeke,8,Season 3,Garrison,Stoic,Beast Titan
+250,31,M,Jean,Reiner,7,Season 3,Survey Corps,Loyal,Attack Titan
+251,35,F,Hange,Reiner,8,Final Chapters,Survey Corps,Loyal,Armored Titan
+252,36,M,Connie,Zeke,10,Season 3,Survey Corps,Cold,Cart Titan
+253,31,F,Levi,Bertholdt,9,Season 4 Part 2,Survey Corps,Cold,Jaw Titan
+254,15,M,Sasha,Kenny,7,Season 4 Part 1,Survey Corps,Cold,Colossal Titan
+255,18,F,Levi,Porco,6,Season 1,Garrison,Strategic,Attack Titan
+256,27,F,Armin,Rod Reiss,8,Season 1,Survey Corps,Curious,Beast Titan
+257,25,F,Jean,Gabi,7,Final Chapters,Survey Corps,Compassionate,Armored Titan
+258,24,M,Historia,Zeke,10,Final Chapters,Survey Corps,Reckless,None
+259,15,M,Connie,Floch,8,Season 4 Part 1,Survey Corps,Brave,Cart Titan
+260,25,F,Armin,Gabi,8,Season 4 Part 2,Survey Corps,Reckless,Female Titan
+261,22,F,Sasha,Bertholdt,9,Season 2,Garrison,Logical,Cart Titan
+262,33,F,Annie,Gabi,9,Season 2,Military Police,Logical,Jaw Titan
+263,18,M,Annie,Zeke,9,Final Chapters,Survey Corps,Protective,Armored Titan
+264,24,M,Levi,Kenny,10,Final Chapters,Survey Corps,Reckless,Founding Titan
+265,19,F,Jean,Rod Reiss,8,Season 4 Part 2,Survey Corps,Loyal,Beast Titan
+266,28,Prefer not to say,Annie,Grisha,8,Season 4 Part 1,Survey Corps,Logical,Founding Titan
+267,30,F,Connie,Floch,8,Final Chapters,Survey Corps,Reckless,None
+268,30,F,Connie,Gabi,9,Season 4 Part 2,Survey Corps,Curious,Jaw Titan
+269,34,F,Eren,Zeke,9,Season 4 Part 1,Military Police,Strategic,Armored Titan
+270,26,M,Hange,Zeke,6,Season 4 Part 1,Survey Corps,Logical,Cart Titan
+271,35,F,Historia,Gabi,10,Season 4 Part 1,Military Police,Protective,None
+272,37,M,Connie,Kenny,10,Season 3,Survey Corps,Reckless,Jaw Titan
+273,15,M,Mikasa,Grisha,9,Season 4 Part 2,Military Police,Compassionate,Colossal Titan
+274,35,F,Eren,Bertholdt,7,Season 4 Part 1,Survey Corps,Cold,Jaw Titan
+275,20,M,Historia,Kenny,6,Season 4 Part 2,Military Police,Reckless,Founding Titan
+276,28,F,Historia,Kenny,9,Final Chapters,Survey Corps,Curious,Cart Titan
+277,17,M,Armin,Floch,10,Season 2,Survey Corps,Brave,Beast Titan
+278,39,M,Mikasa,Kenny,8,Season 3,Survey Corps,Curious,Female Titan
+279,28,M,Historia,Floch,10,Season 4 Part 2,Survey Corps,Reckless,Founding Titan
+280,15,F,Historia,Nile,10,Season 4 Part 1,Survey Corps,Curious,Beast Titan
+281,19,Other,Jean,Gabi,8,Season 1,Survey Corps,Cold,Cart Titan
+282,33,F,Mikasa,Floch,10,Final Chapters,Survey Corps,Loyal,Armored Titan
+283,25,M,Levi,Bertholdt,10,Season 1,Survey Corps,Loyal,Cart Titan
+284,37,M,Eren,Ymir,6,Season 2,Garrison,Stoic,Jaw Titan
+285,21,F,Erwin,Kenny,9,Season 3,Garrison,Reckless,Armored Titan
+286,22,M,Hange,Ymir,9,Season 4 Part 2,Military Police,Logical,None
+287,34,F,Sasha,Zeke,9,Season 2,Survey Corps,Stoic,Founding Titan
+288,22,F,Sasha,Zeke,8,Season 2,Survey Corps,Protective,Jaw Titan
+289,28,M,Jean,Bertholdt,10,Season 2,Garrison,Reckless,Cart Titan
+290,16,F,Sasha,Rod Reiss,9,Season 4 Part 1,Survey Corps,Stoic,Armored Titan
+291,16,NB,Connie,Reiner,8,Season 4 Part 2,Survey Corps,Compassionate,Female Titan
+292,18,F,Connie,Nile,9,Season 4 Part 2,Military Police,Reckless,Beast Titan
+293,17,F,Erwin,Nile,9,Season 1,Garrison,Brave,Jaw Titan
+294,20,F,Mikasa,Zeke,8,Season 3,Military Police,Loyal,Jaw Titan
+295,22,Other,Annie,Floch,9,Season 4 Part 1,Survey Corps,Strategic,None
+296,39,F,Jean,Grisha,7,Season 4 Part 1,Survey Corps,Protective,None
+297,36,F,Mikasa,Rod Reiss,9,Season 2,Survey Corps,Strategic,Armored Titan
+298,19,M,Eren,Porco,7,Season 2,Survey Corps,Curious,Jaw Titan
+299,25,F,Ymir,Rod Reiss,9,Season 4 Part 2,Survey Corps,Reckless,Armored Titan
+300,38,F,Connie,Nile,10,Season 2,Survey Corps,Loyal,Female Titan
+301,23,M,Sasha,Gabi,8,Season 4 Part 2,Survey Corps,Logical,Attack Titan
+302,19,M,Hange,Floch,10,Season 4 Part 2,Survey Corps,Protective,None
+303,22,M,Historia,Floch,8,Season 1,Garrison,Brave,Beast Titan
+304,25,F,Pieck,Kenny,10,Season 4 Part 1,Survey Corps,Cold,Founding Titan
+305,25,M,Jean,Rod Reiss,8,Season 4 Part 2,Military Police,Logical,Beast Titan
+306,27,F,Eren,Floch,10,Season 3,Survey Corps,Cold,Attack Titan
+307,25,F,Sasha,Zeke,9,Final Chapters,Survey Corps,Reckless,Female Titan
+308,31,F,Hange,Nile,6,Final Chapters,Garrison,Brave,Jaw Titan
+309,18,Other,Armin,Rod Reiss,9,Season 4 Part 1,Survey Corps,Strategic,Cart Titan
+310,32,F,Erwin,Zeke,7,Season 4 Part 1,Survey Corps,Logical,Attack Titan
+311,27,M,Hange,Gabi,8,Season 3,Survey Corps,Logical,Attack Titan
+312,25,M,Hange,Rod Reiss,9,Final Chapters,Military Police,Strategic,Beast Titan
+313,22,F,Eren,Floch,10,Season 4 Part 1,Survey Corps,Curious,Attack Titan
+314,35,NB,Armin,Grisha,9,Final Chapters,Survey Corps,Curious,None
+315,35,F,Sasha,Grisha,9,Season 1,Survey Corps,Strategic,Cart Titan
+316,26,M,Erwin,Zeke,8,Season 4 Part 2,Survey Corps,Brave,Armored Titan
+317,25,F,Mikasa,Grisha,10,Season 4 Part 2,Survey Corps,Curious,Cart Titan
+318,21,F,Sasha,Zeke,8,Season 2,Survey Corps,Cold,Jaw Titan
+319,25,M,Mikasa,Porco,9,Season 4 Part 1,Survey Corps,Cold,Founding Titan
+320,33,F,Levi,Porco,7,Season 2,Survey Corps,Cold,None
+321,26,M,Hange,Grisha,10,Final Chapters,Survey Corps,Brave,Founding Titan
+322,21,F,Ymir,Ymir,8,Final Chapters,Survey Corps,Stoic,Colossal Titan
+323,21,M,Jean,Rod Reiss,8,Season 4 Part 2,Survey Corps,Logical,Beast Titan
+324,32,M,Eren,Reiner,10,Season 4 Part 1,Garrison,Loyal,None
+325,17,F,Jean,Ymir,9,Season 3,Garrison,Curious,Female Titan
+326,34,F,Sasha,Zeke,7,Season 4 Part 2,Survey Corps,Stoic,None
+327,21,F,Armin,Ymir,10,Season 1,Survey Corps,Reckless,Armored Titan
+328,15,M,Pieck,Ymir,7,Season 4 Part 1,Military Police,Curious,Armored Titan
+329,40,M,Sasha,Kenny,9,Season 4 Part 2,Garrison,Logical,Colossal Titan
+330,21,F,Pieck,Porco,8,Season 4 Part 1,Survey Corps,Compassionate,Attack Titan
+331,34,M,Sasha,Grisha,9,Season 4 Part 1,Survey Corps,Compassionate,Attack Titan
+332,27,F,Armin,Zeke,10,Final Chapters,Garrison,Protective,Jaw Titan
+333,37,F,Sasha,Porco,10,Season 4 Part 1,Survey Corps,Curious,Female Titan
+334,38,M,Mikasa,Porco,8,Season 4 Part 1,Survey Corps,Strategic,Beast Titan
+335,29,M,Hange,Zeke,9,Final Chapters,Survey Corps,Brave,Beast Titan
+336,31,M,Ymir,Ymir,9,Season 4 Part 2,Survey Corps,Loyal,Armored Titan
+337,30,F,Levi,Rod Reiss,8,Final Chapters,Survey Corps,Curious,Jaw Titan
+338,20,NB,Levi,Kenny,10,Season 2,Survey Corps,Compassionate,Attack Titan
+339,28,M,Erwin,Rod Reiss,6,Season 1,Garrison,Curious,None
+340,24,M,Connie,Bertholdt,9,Season 2,Survey Corps,Strategic,Attack Titan
+341,29,M,Pieck,Gabi,9,Season 3,Garrison,Stoic,Colossal Titan
+342,23,M,Pieck,Reiner,9,Season 2,Military Police,Compassionate,Founding Titan
+343,32,M,Annie,Reiner,7,Final Chapters,Survey Corps,Loyal,Cart Titan
+344,24,F,Annie,Zeke,10,Season 2,Garrison,Curious,Attack Titan
+345,38,M,Ymir,Gabi,9,Final Chapters,Survey Corps,Brave,Attack Titan
+346,31,M,Levi,Nile,8,Season 4 Part 2,Military Police,Compassionate,Beast Titan
+347,21,F,Eren,Bertholdt,10,Season 4 Part 1,Survey Corps,Curious,Cart Titan
+348,34,F,Historia,Rod Reiss,9,Final Chapters,Survey Corps,Cold,Colossal Titan
+349,33,Prefer not to say,Erwin,Gabi,7,Season 4 Part 1,Survey Corps,Stoic,Attack Titan
+350,36,M,Annie,Porco,8,Season 4 Part 1,Survey Corps,Loyal,Female Titan
+351,16,M,Sasha,Nile,9,Final Chapters,Military Police,Brave,Jaw Titan
+352,17,F,Pieck,Reiner,6,Season 1,Survey Corps,Brave,Colossal Titan
+353,23,M,Pieck,Ymir,10,Season 3,Survey Corps,Brave,None
+354,31,NB,Eren,Grisha,8,Season 1,Survey Corps,Compassionate,Female Titan
+355,38,M,Hange,Gabi,9,Season 4 Part 2,Garrison,Cold,Beast Titan
+356,39,NB,Armin,Reiner,9,Season 2,Survey Corps,Logical,Beast Titan
+357,18,M,Levi,Zeke,10,Season 1,Garrison,Stoic,Female Titan
+358,28,M,Pieck,Zeke,8,Season 1,Survey Corps,Protective,Jaw Titan
+359,23,M,Mikasa,Bertholdt,10,Season 4 Part 2,Survey Corps,Cold,Colossal Titan
+360,31,M,Erwin,Bertholdt,7,Final Chapters,Survey Corps,Strategic,Female Titan
+361,24,NB,Armin,Reiner,9,Final Chapters,Survey Corps,Cold,Founding Titan
+362,35,M,Levi,Grisha,9,Season 1,Garrison,Compassionate,Cart Titan
+363,22,M,Mikasa,Ymir,10,Final Chapters,Garrison,Brave,Founding Titan
+364,30,F,Annie,Floch,10,Season 2,Garrison,Loyal,None
+365,28,F,Annie,Nile,9,Season 2,Survey Corps,Strategic,Attack Titan
+366,36,M,Armin,Ymir,6,Season 3,Survey Corps,Stoic,Attack Titan
+367,40,M,Mikasa,Reiner,8,Season 1,Garrison,Compassionate,Female Titan
+368,30,M,Armin,Kenny,10,Season 2,Garrison,Reckless,Female Titan
+369,28,F,Levi,Rod Reiss,7,Season 3,Survey Corps,Logical,Beast Titan
+370,39,F,Eren,Zeke,9,Season 2,Garrison,Logical,None
+371,35,F,Annie,Bertholdt,9,Season 2,Garrison,Loyal,Female Titan
+372,20,F,Mikasa,Reiner,8,Season 4 Part 1,Survey Corps,Cold,Armored Titan
+373,24,F,Erwin,Reiner,9,Season 1,Military Police,Logical,Colossal Titan
+374,23,NB,Mikasa,Gabi,8,Season 2,Military Police,Curious,Jaw Titan
+375,28,M,Sasha,Floch,8,Final Chapters,Survey Corps,Compassionate,Attack Titan
+376,26,F,Sasha,Nile,9,Season 2,Survey Corps,Strategic,None
+377,28,F,Eren,Rod Reiss,8,Season 4 Part 1,Survey Corps,Compassionate,Beast Titan
+378,25,F,Armin,Porco,8,Final Chapters,Survey Corps,Reckless,Attack Titan
+379,23,M,Mikasa,Bertholdt,7,Season 4 Part 1,Garrison,Loyal,Founding Titan
+380,38,F,Jean,Bertholdt,6,Final Chapters,Military Police,Curious,Attack Titan
+381,15,M,Levi,Porco,10,Season 4 Part 2,Garrison,Loyal,Jaw Titan
+382,29,F,Connie,Grisha,9,Season 3,Military Police,Stoic,Beast Titan
+383,18,F,Eren,Grisha,9,Season 3,Survey Corps,Stoic,None
+384,27,F,Jean,Nile,10,Season 2,Military Police,Stoic,Colossal Titan
+385,29,M,Hange,Reiner,9,Season 4 Part 1,Survey Corps,Stoic,Founding Titan
+386,19,F,Hange,Floch,9,Final Chapters,Military Police,Logical,Colossal Titan
+387,28,M,Historia,Reiner,8,Season 4 Part 1,Survey Corps,Cold,Female Titan
+388,24,M,Connie,Rod Reiss,9,Season 4 Part 1,Military Police,Brave,Jaw Titan
+389,39,F,Ymir,Floch,9,Season 4 Part 2,Survey Corps,Reckless,Armored Titan
+390,34,M,Mikasa,Reiner,7,Season 2,Survey Corps,Reckless,Colossal Titan
+391,39,F,Hange,Ymir,10,Season 2,Garrison,Brave,Founding Titan
+392,25,F,Armin,Nile,7,Season 3,Garrison,Reckless,Jaw Titan
+393,32,F,Armin,Gabi,10,Season 4 Part 2,Garrison,Cold,Founding Titan
+394,30,F,Connie,Bertholdt,9,Season 4 Part 2,Survey Corps,Curious,None
+395,27,Other,Connie,Reiner,6,Season 2,Garrison,Curious,Attack Titan
+396,40,M,Eren,Rod Reiss,9,Final Chapters,Military Police,Strategic,None
+397,37,F,Pieck,Kenny,10,Season 1,Military Police,Strategic,Founding Titan
+398,22,F,Jean,Bertholdt,8,Season 3,Survey Corps,Brave,Attack Titan
+399,38,F,Levi,Gabi,8,Season 2,Survey Corps,Curious,Founding Titan
+400,30,F,Hange,Floch,9,Season 3,Survey Corps,Brave,Founding Titan
+401,26,F,Mikasa,Floch,8,Season 3,Survey Corps,Protective,Founding Titan
+402,35,M,Jean,Nile,9,Season 4 Part 1,Garrison,Protective,Armored Titan
+403,34,M,Hange,Nile,8,Season 2,Survey Corps,Stoic,None
+404,31,M,Hange,Bertholdt,8,Season 1,Garrison,Reckless,Founding Titan
+405,39,F,Hange,Nile,10,Season 3,Survey Corps,Loyal,Attack Titan
+406,32,F,Mikasa,Rod Reiss,8,Season 4 Part 1,Survey Corps,Cold,Armored Titan
+407,29,NB,Erwin,Nile,8,Season 3,Survey Corps,Logical,Cart Titan
+408,29,F,Mikasa,Rod Reiss,8,Season 2,Survey Corps,Protective,Jaw Titan
+409,33,M,Hange,Gabi,9,Season 2,Military Police,Cold,Colossal Titan
+410,31,M,Historia,Porco,8,Season 3,Survey Corps,Reckless,Cart Titan
+411,25,F,Armin,Floch,8,Season 1,Military Police,Loyal,Attack Titan
+412,23,F,Erwin,Bertholdt,9,Season 1,Survey Corps,Logical,Beast Titan
+413,20,M,Jean,Ymir,7,Season 1,Military Police,Stoic,Beast Titan
+414,25,Prefer not to say,Jean,Zeke,6,Season 2,Survey Corps,Compassionate,Cart Titan
+415,24,F,Armin,Rod Reiss,8,Season 2,Military Police,Reckless,Founding Titan
+416,33,F,Eren,Floch,8,Season 4 Part 1,Survey Corps,Reckless,None
+417,26,F,Levi,Porco,8,Season 2,Survey Corps,Cold,Founding Titan
+418,37,F,Erwin,Floch,8,Season 4 Part 1,Survey Corps,Reckless,Founding Titan
+419,32,M,Armin,Ymir,10,Season 1,Survey Corps,Loyal,None
+420,29,F,Pieck,Zeke,9,Season 2,Garrison,Reckless,Armored Titan
+421,30,F,Erwin,Gabi,7,Season 3,Survey Corps,Logical,Armored Titan
+422,28,F,Pieck,Reiner,9,Season 3,Survey Corps,Stoic,Cart Titan
+423,29,F,Levi,Nile,10,Season 4 Part 1,Survey Corps,Curious,Colossal Titan
+424,20,F,Mikasa,Bertholdt,9,Season 1,Military Police,Logical,Cart Titan
+425,16,M,Historia,Zeke,10,Season 4 Part 2,Garrison,Stoic,Beast Titan
+426,17,Other,Jean,Rod Reiss,9,Final Chapters,Survey Corps,Curious,None
+427,39,F,Pieck,Grisha,9,Season 2,Military Police,Stoic,Cart Titan
+428,20,F,Levi,Bertholdt,8,Season 2,Survey Corps,Logical,None
+429,27,M,Sasha,Grisha,9,Season 2,Survey Corps,Stoic,Cart Titan
+430,19,F,Mikasa,Floch,9,Season 4 Part 1,Garrison,Stoic,Colossal Titan
+431,30,F,Connie,Zeke,9,Season 4 Part 2,Survey Corps,Stoic,Jaw Titan
+432,33,F,Connie,Porco,10,Season 1,Military Police,Logical,Jaw Titan
+433,36,F,Jean,Reiner,10,Season 4 Part 1,Survey Corps,Stoic,Attack Titan
+434,32,M,Sasha,Rod Reiss,10,Season 3,Survey Corps,Logical,Founding Titan
+435,24,F,Eren,Rod Reiss,9,Season 4 Part 1,Survey Corps,Cold,Beast Titan
+436,29,M,Historia,Nile,9,Season 1,Military Police,Strategic,Cart Titan
+437,23,M,Eren,Rod Reiss,10,Season 4 Part 2,Survey Corps,Compassionate,Colossal Titan
+438,22,NB,Levi,Rod Reiss,7,Season 2,Military Police,Compassionate,Founding Titan
+439,39,F,Mikasa,Grisha,8,Final Chapters,Garrison,Loyal,Jaw Titan
+440,25,M,Ymir,Kenny,10,Season 2,Survey Corps,Curious,Colossal Titan
+441,26,M,Historia,Ymir,10,Final Chapters,Survey Corps,Protective,Founding Titan
+442,24,NB,Connie,Nile,8,Season 4 Part 1,Survey Corps,Logical,Founding Titan
+443,15,F,Annie,Rod Reiss,8,Season 2,Survey Corps,Reckless,None
+444,16,M,Eren,Ymir,10,Season 4 Part 2,Survey Corps,Reckless,Cart Titan
+445,40,F,Ymir,Rod Reiss,9,Season 1,Garrison,Logical,Cart Titan
+446,39,M,Mikasa,Porco,7,Season 1,Survey Corps,Compassionate,Female Titan
+447,30,M,Ymir,Rod Reiss,9,Season 3,Military Police,Logical,Attack Titan
+448,38,M,Mikasa,Floch,9,Final Chapters,Survey Corps,Loyal,Armored Titan
+449,32,F,Levi,Reiner,6,Final Chapters,Garrison,Curious,Cart Titan
+450,27,NB,Sasha,Floch,8,Season 1,Survey Corps,Strategic,Founding Titan
+451,18,NB,Connie,Nile,8,Season 2,Survey Corps,Strategic,Jaw Titan
+452,22,M,Eren,Gabi,8,Season 3,Survey Corps,Logical,Jaw Titan
+453,29,F,Pieck,Grisha,9,Season 2,Survey Corps,Strategic,Female Titan
+454,35,F,Erwin,Nile,9,Season 4 Part 2,Survey Corps,Loyal,Colossal Titan
+455,25,M,Hange,Ymir,8,Season 4 Part 1,Garrison,Stoic,Female Titan
+456,26,F,Sasha,Floch,9,Season 1,Survey Corps,Curious,Founding Titan
+457,17,M,Connie,Rod Reiss,9,Season 4 Part 2,Garrison,Logical,Jaw Titan
+458,31,NB,Annie,Nile,9,Season 3,Survey Corps,Stoic,Colossal Titan
+459,21,F,Ymir,Bertholdt,6,Season 2,Military Police,Logical,None
+460,30,M,Connie,Porco,10,Final Chapters,Garrison,Logical,Attack Titan
+461,27,F,Levi,Porco,10,Season 4 Part 2,Survey Corps,Loyal,Attack Titan
+462,36,M,Annie,Kenny,10,Season 4 Part 1,Survey Corps,Logical,Attack Titan
+463,26,M,Annie,Nile,10,Season 4 Part 2,Garrison,Loyal,Founding Titan
+464,24,Other,Erwin,Gabi,9,Season 3,Survey Corps,Strategic,Attack Titan
+465,28,M,Mikasa,Nile,7,Season 2,Survey Corps,Loyal,Beast Titan
+466,18,F,Eren,Floch,6,Season 1,Garrison,Protective,Founding Titan
+467,19,F,Pieck,Ymir,9,Season 1,Survey Corps,Protective,Attack Titan
+468,19,M,Pieck,Reiner,10,Season 3,Survey Corps,Compassionate,Attack Titan
+469,28,F,Ymir,Porco,9,Season 4 Part 2,Garrison,Compassionate,None
+470,24,F,Mikasa,Nile,10,Season 1,Survey Corps,Brave,Cart Titan
+471,36,M,Jean,Kenny,8,Season 4 Part 2,Military Police,Reckless,Beast Titan
+472,20,Other,Historia,Floch,9,Season 4 Part 2,Survey Corps,Compassionate,Founding Titan
+473,17,M,Mikasa,Gabi,8,Season 2,Military Police,Stoic,Beast Titan
+474,19,F,Levi,Floch,10,Season 4 Part 1,Garrison,Compassionate,Colossal Titan
+475,39,NB,Erwin,Grisha,10,Final Chapters,Survey Corps,Curious,Beast Titan
+476,39,M,Erwin,Zeke,10,Season 1,Military Police,Curious,Beast Titan
+477,34,Other,Hange,Reiner,7,Final Chapters,Survey Corps,Cold,Founding Titan
+478,37,F,Pieck,Porco,9,Season 3,Garrison,Protective,Beast Titan
+479,34,Prefer not to say,Ymir,Bertholdt,8,Season 4 Part 2,Garrison,Cold,Colossal Titan
+480,38,M,Pieck,Porco,9,Season 4 Part 1,Garrison,Brave,Cart Titan
+481,22,F,Sasha,Grisha,9,Season 4 Part 1,Survey Corps,Strategic,Colossal Titan
+482,25,F,Ymir,Kenny,8,Season 1,Garrison,Brave,Female Titan
+483,25,F,Levi,Kenny,9,Season 4 Part 2,Survey Corps,Compassionate,Armored Titan
+484,22,F,Erwin,Rod Reiss,8,Season 2,Military Police,Brave,Founding Titan
+485,34,M,Mikasa,Ymir,9,Season 3,Survey Corps,Brave,Jaw Titan
+486,21,Other,Eren,Bertholdt,10,Season 1,Garrison,Protective,Jaw Titan
+487,16,M,Ymir,Grisha,8,Season 4 Part 2,Survey Corps,Protective,Colossal Titan
+488,27,F,Armin,Nile,7,Season 4 Part 2,Survey Corps,Protective,Jaw Titan
+489,40,M,Mikasa,Porco,9,Season 1,Military Police,Brave,None
+490,16,F,Sasha,Ymir,9,Season 1,Survey Corps,Logical,Colossal Titan
+491,34,M,Sasha,Ymir,10,Final Chapters,Survey Corps,Strategic,Founding Titan
+492,36,M,Levi,Floch,9,Season 4 Part 2,Garrison,Brave,Colossal Titan
+493,27,M,Jean,Rod Reiss,8,Season 4 Part 2,Military Police,Cold,Armored Titan
+494,37,M,Hange,Ymir,7,Season 2,Military Police,Reckless,None
+495,24,M,Erwin,Ymir,7,Season 4 Part 1,Garrison,Protective,Cart Titan
+496,32,M,Levi,Ymir,9,Final Chapters,Military Police,Stoic,Founding Titan
+497,39,F,Hange,Reiner,9,Season 2,Garrison,Protective,Founding Titan
+498,22,M,Annie,Reiner,7,Season 3,Garrison,Protective,None
+499,16,M,Ymir,Floch,8,Season 1,Survey Corps,Strategic,Cart Titan
+500,25,F,Ymir,Floch,7,Season 4 Part 2,Survey Corps,Compassionate,Jaw Titan
+501,36,F,Sasha,Bertholdt,8,Season 2,Garrison,Protective,Armored Titan
+502,26,F,Erwin,Reiner,9,Season 2,Survey Corps,Curious,Female Titan
+503,29,F,Pieck,Kenny,8,Final Chapters,Survey Corps,Curious,Attack Titan
+504,15,F,Jean,Grisha,8,Season 2,Military Police,Brave,Jaw Titan
+505,37,F,Eren,Reiner,10,Season 4 Part 2,Survey Corps,Compassionate,Cart Titan
+506,20,M,Pieck,Kenny,6,Season 1,Survey Corps,Reckless,Female Titan
+507,31,F,Historia,Zeke,10,Season 4 Part 1,Survey Corps,Loyal,Attack Titan
+508,35,M,Hange,Porco,9,Final Chapters,Survey Corps,Loyal,None
+509,18,M,Pieck,Ymir,7,Season 2,Military Police,Protective,Beast Titan
+510,21,M,Erwin,Reiner,10,Season 4 Part 1,Military Police,Protective,None
+511,22,F,Hange,Bertholdt,9,Season 4 Part 2,Military Police,Stoic,Founding Titan
+512,34,Prefer not to say,Eren,Bertholdt,9,Season 4 Part 2,Garrison,Logical,Beast Titan
+513,30,Prefer not to say,Sasha,Grisha,10,Season 1,Survey Corps,Reckless,Founding Titan
+514,35,F,Levi,Rod Reiss,10,Final Chapters,Survey Corps,Compassionate,Jaw Titan
+515,37,F,Eren,Nile,10,Season 4 Part 1,Survey Corps,Cold,None
+516,19,M,Pieck,Rod Reiss,7,Season 4 Part 1,Survey Corps,Logical,Founding Titan
+517,23,F,Erwin,Kenny,10,Season 2,Survey Corps,Compassionate,Female Titan
+518,38,M,Pieck,Ymir,8,Season 3,Survey Corps,Strategic,Founding Titan
+519,21,M,Jean,Grisha,10,Season 4 Part 2,Garrison,Loyal,None
+520,25,F,Armin,Reiner,7,Final Chapters,Survey Corps,Cold,Attack Titan
+521,22,F,Pieck,Rod Reiss,9,Season 3,Garrison,Protective,Cart Titan
+522,21,F,Levi,Reiner,8,Season 4 Part 2,Military Police,Loyal,Attack Titan
+523,26,F,Jean,Bertholdt,9,Season 4 Part 1,Garrison,Curious,Beast Titan
+524,24,F,Armin,Reiner,10,Season 3,Military Police,Logical,Colossal Titan
+525,28,M,Annie,Bertholdt,6,Final Chapters,Survey Corps,Cold,Founding Titan
+526,32,F,Annie,Kenny,9,Season 4 Part 2,Military Police,Compassionate,Armored Titan
+527,16,M,Hange,Porco,8,Season 4 Part 1,Survey Corps,Stoic,Attack Titan
+528,17,M,Annie,Gabi,7,Season 4 Part 1,Garrison,Brave,Founding Titan
+529,29,M,Pieck,Kenny,10,Season 3,Survey Corps,Strategic,Attack Titan
+530,15,F,Hange,Rod Reiss,9,Final Chapters,Garrison,Brave,Founding Titan
+531,26,F,Connie,Bertholdt,9,Final Chapters,Military Police,Protective,Jaw Titan
+532,36,M,Hange,Ymir,8,Season 4 Part 2,Survey Corps,Curious,Cart Titan
+533,19,M,Pieck,Kenny,9,Season 4 Part 1,Survey Corps,Loyal,Jaw Titan
+534,22,M,Armin,Kenny,9,Season 4 Part 2,Survey Corps,Loyal,Colossal Titan
+535,20,F,Ymir,Gabi,7,Season 4 Part 2,Survey Corps,Strategic,None
+536,36,M,Pieck,Rod Reiss,8,Season 4 Part 2,Military Police,Stoic,Colossal Titan
+537,18,Other,Pieck,Rod Reiss,8,Season 1,Survey Corps,Brave,Founding Titan
+538,22,M,Historia,Kenny,7,Season 3,Survey Corps,Compassionate,Founding Titan
+539,38,F,Mikasa,Floch,10,Final Chapters,Survey Corps,Reckless,Beast Titan
+540,26,NB,Mikasa,Zeke,9,Final Chapters,Garrison,Curious,Cart Titan
+541,28,M,Connie,Rod Reiss,8,Season 2,Military Police,Strategic,Cart Titan
+542,17,M,Erwin,Grisha,9,Season 1,Survey Corps,Loyal,None
+543,18,M,Hange,Reiner,9,Season 2,Survey Corps,Strategic,Colossal Titan
+544,30,M,Pieck,Bertholdt,9,Season 2,Survey Corps,Strategic,Female Titan
+545,27,F,Levi,Rod Reiss,10,Season 4 Part 2,Survey Corps,Loyal,Jaw Titan
+546,24,F,Eren,Reiner,10,Season 3,Military Police,Cold,Armored Titan
+547,15,Other,Erwin,Grisha,10,Season 3,Survey Corps,Cold,Armored Titan
+548,16,F,Hange,Floch,10,Season 3,Survey Corps,Logical,Beast Titan
+549,19,F,Hange,Bertholdt,10,Season 1,Survey Corps,Curious,Armored Titan
+550,40,F,Sasha,Floch,7,Final Chapters,Survey Corps,Stoic,Armored Titan
+551,32,F,Armin,Kenny,8,Season 4 Part 2,Military Police,Reckless,Jaw Titan
+552,25,F,Historia,Porco,9,Season 2,Survey Corps,Loyal,Jaw Titan
+553,36,F,Connie,Reiner,8,Season 2,Survey Corps,Logical,Armored Titan
+554,16,F,Connie,Rod Reiss,9,Season 4 Part 1,Survey Corps,Protective,Attack Titan
+555,38,M,Connie,Grisha,10,Season 1,Garrison,Cold,None
+556,33,F,Sasha,Bertholdt,9,Season 3,Survey Corps,Brave,Beast Titan
+557,21,F,Armin,Nile,7,Season 3,Survey Corps,Brave,Colossal Titan
+558,18,M,Hange,Porco,10,Final Chapters,Garrison,Protective,Female Titan
+559,40,Other,Eren,Ymir,9,Season 3,Garrison,Logical,Armored Titan
+560,22,M,Sasha,Zeke,10,Season 2,Military Police,Logical,Beast Titan
+561,20,F,Connie,Kenny,8,Season 4 Part 2,Garrison,Curious,Female Titan
+562,38,Prefer not to say,Eren,Kenny,6,Season 3,Survey Corps,Loyal,Beast Titan
+563,27,F,Historia,Porco,10,Season 2,Survey Corps,Strategic,Attack Titan
+564,27,NB,Sasha,Rod Reiss,8,Season 4 Part 2,Garrison,Reckless,Armored Titan
+565,17,M,Levi,Grisha,9,Season 4 Part 2,Survey Corps,Cold,Armored Titan
+566,28,F,Sasha,Bertholdt,8,Season 4 Part 1,Garrison,Logical,Attack Titan
+567,20,F,Jean,Grisha,6,Season 1,Survey Corps,Reckless,Armored Titan
+568,23,F,Hange,Rod Reiss,10,Season 4 Part 2,Survey Corps,Reckless,Attack Titan
+569,37,F,Pieck,Bertholdt,10,Season 4 Part 1,Survey Corps,Stoic,Beast Titan
+570,33,M,Armin,Bertholdt,9,Season 2,Survey Corps,Curious,Attack Titan
+571,20,M,Pieck,Ymir,9,Season 4 Part 1,Survey Corps,Strategic,Founding Titan
+572,31,M,Armin,Kenny,9,Final Chapters,Survey Corps,Brave,Founding Titan
+573,37,F,Ymir,Floch,9,Season 3,Survey Corps,Curious,Armored Titan
+574,37,M,Pieck,Floch,8,Final Chapters,Garrison,Cold,Attack Titan
+575,18,F,Levi,Porco,9,Final Chapters,Garrison,Curious,Female Titan
+576,26,F,Mikasa,Kenny,9,Season 4 Part 2,Survey Corps,Logical,Colossal Titan
+577,15,NB,Annie,Bertholdt,7,Season 4 Part 1,Survey Corps,Cold,Attack Titan
+578,35,M,Erwin,Zeke,10,Season 4 Part 2,Survey Corps,Loyal,Jaw Titan
+579,34,M,Connie,Nile,10,Season 4 Part 2,Garrison,Curious,Cart Titan
+580,16,F,Hange,Bertholdt,9,Final Chapters,Survey Corps,Strategic,Armored Titan
+581,20,M,Ymir,Bertholdt,8,Season 2,Military Police,Brave,Beast Titan
+582,26,NB,Historia,Bertholdt,8,Season 2,Survey Corps,Loyal,Cart Titan
+583,40,F,Annie,Nile,10,Season 4 Part 1,Survey Corps,Reckless,Armored Titan
+584,17,M,Erwin,Gabi,10,Season 2,Survey Corps,Cold,Colossal Titan
+585,30,Other,Sasha,Bertholdt,9,Season 2,Military Police,Logical,Jaw Titan
+586,19,F,Mikasa,Porco,9,Final Chapters,Survey Corps,Curious,Attack Titan
+587,35,F,Armin,Reiner,10,Season 3,Survey Corps,Strategic,Attack Titan
+588,16,F,Levi,Ymir,10,Season 4 Part 1,Garrison,Cold,Armored Titan
+589,22,F,Levi,Rod Reiss,9,Season 4 Part 1,Military Police,Stoic,Colossal Titan
+590,16,F,Sasha,Ymir,9,Final Chapters,Survey Corps,Protective,Cart Titan
+591,40,M,Hange,Zeke,10,Season 3,Survey Corps,Reckless,Attack Titan
+592,29,F,Historia,Zeke,9,Season 1,Survey Corps,Reckless,Attack Titan
+593,36,F,Pieck,Reiner,9,Season 3,Survey Corps,Curious,Colossal Titan
+594,26,M,Eren,Bertholdt,9,Season 4 Part 1,Survey Corps,Loyal,Attack Titan
+595,28,F,Erwin,Reiner,10,Final Chapters,Survey Corps,Reckless,Cart Titan
+596,25,F,Ymir,Reiner,6,Season 3,Military Police,Brave,Armored Titan
+597,40,M,Jean,Zeke,8,Season 3,Survey Corps,Cold,Jaw Titan
+598,30,Prefer not to say,Erwin,Zeke,9,Season 1,Garrison,Reckless,Cart Titan
+599,33,M,Armin,Zeke,10,Season 2,Survey Corps,Strategic,Armored Titan
+600,39,Other,Pieck,Ymir,6,Season 1,Survey Corps,Loyal,Jaw Titan
+601,34,F,Levi,Rod Reiss,8,Season 2,Survey Corps,Stoic,None
+602,39,F,Levi,Bertholdt,10,Season 3,Survey Corps,Cold,Cart Titan
+603,24,F,Erwin,Reiner,10,Season 1,Garrison,Strategic,Female Titan
+604,40,M,Jean,Porco,9,Season 3,Survey Corps,Curious,Female Titan
+605,23,F,Connie,Gabi,7,Season 4 Part 1,Survey Corps,Loyal,Beast Titan
+606,24,M,Eren,Zeke,10,Season 4 Part 1,Survey Corps,Stoic,Beast Titan
+607,39,F,Mikasa,Reiner,9,Season 1,Garrison,Cold,Beast Titan
+608,40,F,Connie,Reiner,9,Season 3,Survey Corps,Cold,None
+609,37,NB,Pieck,Grisha,10,Season 4 Part 1,Survey Corps,Stoic,Cart Titan
+610,33,M,Annie,Kenny,8,Season 4 Part 1,Military Police,Strategic,Attack Titan
+611,33,F,Armin,Reiner,10,Season 1,Survey Corps,Stoic,Armored Titan
+612,32,F,Erwin,Rod Reiss,8,Season 4 Part 2,Military Police,Brave,Armored Titan
+613,15,F,Eren,Ymir,8,Season 1,Garrison,Loyal,Armored Titan
+614,29,M,Mikasa,Ymir,6,Season 3,Survey Corps,Cold,Beast Titan
+615,31,M,Historia,Grisha,8,Final Chapters,Survey Corps,Cold,Female Titan
+616,25,M,Levi,Zeke,10,Season 4 Part 1,Garrison,Protective,Founding Titan
+617,16,M,Pieck,Kenny,9,Season 4 Part 1,Survey Corps,Protective,Armored Titan
+618,27,Other,Eren,Kenny,8,Season 1,Survey Corps,Curious,Founding Titan
+619,31,F,Connie,Porco,10,Season 4 Part 1,Survey Corps,Compassionate,None
+620,24,M,Connie,Reiner,8,Season 1,Survey Corps,Cold,Armored Titan
+621,38,M,Connie,Floch,10,Season 1,Survey Corps,Logical,Jaw Titan
+622,37,M,Armin,Nile,9,Season 4 Part 2,Garrison,Logical,Armored Titan
+623,15,M,Ymir,Grisha,9,Season 4 Part 2,Survey Corps,Cold,Attack Titan
+624,20,F,Mikasa,Bertholdt,9,Season 4 Part 2,Survey Corps,Stoic,Attack Titan
+625,26,M,Mikasa,Rod Reiss,7,Season 2,Garrison,Strategic,Attack Titan
+626,37,F,Ymir,Bertholdt,9,Season 4 Part 1,Survey Corps,Reckless,Cart Titan
+627,21,F,Ymir,Reiner,8,Season 3,Military Police,Reckless,Beast Titan
+628,19,M,Historia,Zeke,10,Final Chapters,Survey Corps,Brave,Armored Titan
+629,25,M,Connie,Grisha,9,Season 4 Part 1,Garrison,Loyal,Cart Titan
+630,19,F,Pieck,Gabi,7,Season 2,Military Police,Brave,Colossal Titan
+631,34,F,Erwin,Zeke,6,Season 4 Part 1,Survey Corps,Strategic,Jaw Titan
+632,32,F,Mikasa,Floch,9,Season 2,Military Police,Stoic,Armored Titan
+633,28,M,Eren,Reiner,10,Season 1,Survey Corps,Loyal,Armored Titan
+634,24,M,Historia,Rod Reiss,9,Season 2,Survey Corps,Brave,Armored Titan
+635,36,F,Sasha,Grisha,10,Season 4 Part 1,Survey Corps,Brave,Beast Titan
+636,18,M,Jean,Reiner,6,Season 1,Garrison,Logical,Jaw Titan
+637,30,M,Levi,Gabi,10,Season 3,Military Police,Reckless,Jaw Titan
+638,27,F,Pieck,Reiner,7,Final Chapters,Survey Corps,Cold,Attack Titan
+639,36,M,Sasha,Kenny,7,Season 4 Part 2,Survey Corps,Compassionate,Jaw Titan
+640,15,M,Connie,Bertholdt,9,Season 1,Survey Corps,Protective,Female Titan
+641,40,M,Levi,Floch,8,Season 4 Part 1,Military Police,Cold,Attack Titan
+642,26,M,Ymir,Floch,8,Season 4 Part 2,Garrison,Loyal,Founding Titan
+643,29,M,Erwin,Bertholdt,9,Season 3,Survey Corps,Stoic,Jaw Titan
+644,32,M,Mikasa,Kenny,9,Season 3,Survey Corps,Compassionate,Founding Titan
+645,26,M,Armin,Rod Reiss,8,Final Chapters,Survey Corps,Loyal,None
+646,26,M,Mikasa,Rod Reiss,10,Season 2,Survey Corps,Compassionate,Attack Titan
+647,32,M,Levi,Ymir,7,Season 4 Part 2,Survey Corps,Reckless,None
+648,17,M,Erwin,Rod Reiss,8,Season 4 Part 2,Garrison,Compassionate,Founding Titan
+649,39,Other,Jean,Gabi,9,Season 2,Survey Corps,Stoic,Founding Titan
+650,15,M,Historia,Reiner,8,Season 4 Part 1,Survey Corps,Reckless,Female Titan
+651,37,M,Levi,Grisha,7,Season 2,Survey Corps,Reckless,Beast Titan
+652,36,F,Levi,Rod Reiss,9,Final Chapters,Garrison,Logical,Cart Titan
+653,23,M,Mikasa,Porco,8,Final Chapters,Survey Corps,Brave,Female Titan
+654,34,NB,Historia,Reiner,8,Season 2,Garrison,Protective,Cart Titan
+655,23,M,Levi,Gabi,10,Season 1,Survey Corps,Protective,Attack Titan
+656,24,F,Jean,Nile,7,Final Chapters,Garrison,Compassionate,Founding Titan
+657,19,F,Erwin,Zeke,8,Season 2,Survey Corps,Cold,Armored Titan
+658,30,F,Levi,Rod Reiss,9,Season 2,Survey Corps,Reckless,Armored Titan
+659,31,F,Historia,Porco,9,Season 1,Survey Corps,Compassionate,Attack Titan
+660,38,M,Historia,Grisha,7,Season 1,Survey Corps,Stoic,None
+661,24,M,Levi,Bertholdt,8,Season 2,Survey Corps,Protective,Jaw Titan
+662,22,F,Sasha,Nile,10,Season 1,Survey Corps,Compassionate,Female Titan
+663,35,F,Sasha,Grisha,8,Season 4 Part 1,Survey Corps,Stoic,None
+664,26,M,Pieck,Nile,10,Season 3,Survey Corps,Stoic,Attack Titan
+665,38,M,Mikasa,Reiner,10,Final Chapters,Garrison,Reckless,Colossal Titan
+666,40,F,Sasha,Kenny,9,Season 2,Survey Corps,Strategic,Jaw Titan
+667,28,F,Annie,Floch,10,Season 2,Garrison,Cold,Armored Titan
+668,17,F,Annie,Nile,10,Season 2,Survey Corps,Curious,Armored Titan
+669,32,Other,Ymir,Bertholdt,9,Season 3,Garrison,Stoic,Armored Titan
+670,18,M,Jean,Ymir,8,Season 3,Survey Corps,Protective,Jaw Titan
+671,35,M,Mikasa,Kenny,7,Season 3,Survey Corps,Protective,Colossal Titan
+672,32,F,Hange,Grisha,10,Season 4 Part 1,Survey Corps,Strategic,Founding Titan
+673,31,NB,Hange,Kenny,9,Final Chapters,Survey Corps,Cold,Attack Titan
+674,25,M,Eren,Ymir,10,Season 4 Part 1,Survey Corps,Protective,Attack Titan
+675,30,M,Armin,Zeke,7,Season 1,Garrison,Loyal,Attack Titan
+676,22,M,Eren,Kenny,9,Season 3,Garrison,Cold,Female Titan
+677,21,F,Historia,Bertholdt,9,Season 4 Part 2,Survey Corps,Stoic,Jaw Titan
+678,27,F,Annie,Ymir,10,Season 3,Survey Corps,Cold,Founding Titan
+679,36,M,Connie,Porco,6,Season 1,Military Police,Logical,Founding Titan
+680,35,F,Mikasa,Porco,8,Final Chapters,Garrison,Protective,Female Titan
+681,29,M,Erwin,Reiner,7,Season 1,Survey Corps,Logical,None
+682,32,M,Eren,Porco,7,Season 4 Part 1,Survey Corps,Strategic,Attack Titan
+683,19,M,Sasha,Porco,7,Season 3,Military Police,Strategic,Armored Titan
+684,22,M,Connie,Rod Reiss,8,Final Chapters,Survey Corps,Reckless,Colossal Titan
+685,24,F,Historia,Zeke,8,Season 4 Part 1,Survey Corps,Strategic,Colossal Titan
+686,29,F,Pieck,Rod Reiss,8,Season 1,Garrison,Stoic,Jaw Titan
+687,38,M,Eren,Porco,8,Season 4 Part 2,Survey Corps,Cold,None
+688,24,Other,Jean,Ymir,9,Season 2,Survey Corps,Reckless,Colossal Titan
+689,34,F,Sasha,Nile,7,Season 2,Survey Corps,Curious,Founding Titan
+690,40,M,Armin,Grisha,9,Final Chapters,Survey Corps,Brave,Attack Titan
+691,24,M,Armin,Zeke,10,Final Chapters,Military Police,Logical,Armored Titan
+692,18,F,Ymir,Porco,10,Final Chapters,Military Police,Stoic,Jaw Titan
+693,28,M,Hange,Rod Reiss,10,Season 4 Part 2,Military Police,Strategic,None
+694,33,F,Mikasa,Gabi,9,Final Chapters,Survey Corps,Compassionate,Founding Titan
+695,36,Other,Historia,Kenny,8,Season 1,Survey Corps,Strategic,Attack Titan
+696,33,F,Levi,Porco,6,Season 4 Part 2,Survey Corps,Cold,Attack Titan
+697,32,NB,Sasha,Zeke,9,Season 2,Garrison,Reckless,None
+698,22,M,Connie,Zeke,9,Season 4 Part 2,Survey Corps,Reckless,Attack Titan
+699,26,M,Armin,Gabi,9,Season 2,Survey Corps,Brave,Armored Titan
+700,20,M,Sasha,Nile,9,Season 1,Survey Corps,Loyal,Beast Titan
+701,37,M,Hange,Bertholdt,8,Season 4 Part 2,Garrison,Cold,Founding Titan
+702,31,F,Eren,Gabi,10,Season 3,Survey Corps,Protective,Female Titan
+703,22,NB,Connie,Nile,9,Season 3,Survey Corps,Reckless,Armored Titan
+704,28,F,Eren,Zeke,9,Season 1,Survey Corps,Reckless,Founding Titan
+705,31,F,Levi,Zeke,8,Season 4 Part 1,Survey Corps,Compassionate,Beast Titan
+706,23,M,Levi,Rod Reiss,8,Season 4 Part 1,Military Police,Curious,Jaw Titan
+707,29,F,Levi,Ymir,7,Season 3,Survey Corps,Curious,Founding Titan
+708,31,F,Eren,Grisha,9,Season 1,Garrison,Protective,Founding Titan
+709,23,M,Eren,Zeke,8,Final Chapters,Survey Corps,Curious,Beast Titan
+710,22,M,Mikasa,Gabi,8,Season 4 Part 2,Survey Corps,Logical,Attack Titan
+711,23,F,Hange,Porco,9,Season 1,Survey Corps,Loyal,Female Titan
+712,36,M,Sasha,Porco,9,Season 2,Survey Corps,Stoic,Jaw Titan
+713,39,F,Connie,Zeke,8,Season 1,Survey Corps,Brave,Attack Titan
+714,15,F,Historia,Nile,9,Season 1,Garrison,Loyal,Founding Titan
+715,31,M,Connie,Grisha,8,Final Chapters,Survey Corps,Brave,Jaw Titan
+716,17,M,Mikasa,Reiner,9,Season 3,Survey Corps,Protective,Founding Titan
+717,19,M,Annie,Ymir,10,Season 4 Part 2,Survey Corps,Loyal,Attack Titan
+718,40,F,Hange,Gabi,10,Season 2,Survey Corps,Stoic,Colossal Titan
+719,19,F,Sasha,Nile,8,Season 2,Survey Corps,Stoic,Beast Titan
+720,37,F,Jean,Bertholdt,9,Season 4 Part 2,Survey Corps,Protective,Cart Titan
+721,21,F,Eren,Nile,7,Season 4 Part 2,Survey Corps,Brave,Attack Titan
+722,37,M,Mikasa,Nile,7,Final Chapters,Survey Corps,Logical,Colossal Titan
+723,27,F,Connie,Grisha,6,Season 4 Part 1,Survey Corps,Cold,None
+724,22,Other,Historia,Ymir,8,Final Chapters,Military Police,Curious,None
+725,39,M,Annie,Floch,7,Final Chapters,Survey Corps,Reckless,Jaw Titan
+726,25,M,Erwin,Floch,10,Season 2,Military Police,Logical,Attack Titan
+727,22,F,Pieck,Reiner,8,Season 1,Military Police,Compassionate,Jaw Titan
+728,35,F,Sasha,Kenny,8,Season 1,Military Police,Curious,Attack Titan
+729,35,M,Connie,Gabi,10,Season 3,Garrison,Curious,Beast Titan
+730,35,F,Eren,Porco,8,Season 4 Part 2,Survey Corps,Logical,Jaw Titan
+731,25,F,Levi,Kenny,9,Season 3,Survey Corps,Loyal,Founding Titan
+732,23,F,Levi,Kenny,8,Final Chapters,Military Police,Stoic,Colossal Titan
+733,16,F,Mikasa,Porco,9,Season 3,Garrison,Protective,Female Titan
+734,17,F,Hange,Porco,9,Season 1,Military Police,Cold,None
+735,34,M,Mikasa,Bertholdt,9,Season 4 Part 1,Survey Corps,Strategic,Beast Titan
+736,15,F,Historia,Nile,8,Season 4 Part 2,Survey Corps,Cold,Beast Titan
+737,39,M,Historia,Floch,9,Season 1,Survey Corps,Strategic,Jaw Titan
+738,25,F,Jean,Grisha,9,Season 4 Part 1,Military Police,Cold,Attack Titan
+739,18,M,Erwin,Rod Reiss,8,Season 4 Part 1,Survey Corps,Loyal,Founding Titan
+740,19,F,Levi,Rod Reiss,7,Season 1,Survey Corps,Logical,None
+741,36,F,Historia,Zeke,9,Final Chapters,Garrison,Reckless,Attack Titan
+742,25,F,Armin,Ymir,9,Season 1,Survey Corps,Logical,Attack Titan
+743,24,M,Ymir,Floch,7,Season 2,Survey Corps,Stoic,Founding Titan
+744,39,M,Levi,Porco,10,Season 4 Part 1,Garrison,Strategic,Armored Titan
+745,35,F,Eren,Porco,9,Season 3,Survey Corps,Compassionate,Founding Titan
+746,16,F,Sasha,Rod Reiss,10,Season 4 Part 1,Garrison,Cold,Cart Titan
+747,15,F,Levi,Zeke,7,Final Chapters,Survey Corps,Protective,Colossal Titan
+748,31,M,Ymir,Zeke,8,Season 4 Part 2,Survey Corps,Curious,Attack Titan
+749,19,M,Annie,Bertholdt,10,Season 2,Survey Corps,Strategic,Jaw Titan
+750,20,M,Annie,Zeke,8,Season 4 Part 2,Survey Corps,Brave,Colossal Titan
+751,16,F,Annie,Grisha,10,Season 3,Garrison,Strategic,Colossal Titan
+752,19,F,Connie,Gabi,8,Season 4 Part 1,Survey Corps,Reckless,Jaw Titan
+753,15,M,Mikasa,Kenny,9,Season 1,Survey Corps,Protective,Female Titan
+754,21,F,Mikasa,Zeke,9,Final Chapters,Survey Corps,Logical,Beast Titan
+755,39,F,Connie,Porco,9,Season 4 Part 2,Survey Corps,Protective,Attack Titan
+756,20,M,Sasha,Porco,6,Season 4 Part 1,Survey Corps,Cold,Colossal Titan
+757,28,Other,Jean,Gabi,10,Season 2,Military Police,Cold,Attack Titan
+758,28,F,Mikasa,Zeke,9,Season 4 Part 2,Garrison,Compassionate,Female Titan
+759,34,F,Historia,Bertholdt,9,Season 4 Part 2,Military Police,Protective,Female Titan
+760,38,F,Ymir,Nile,10,Season 3,Military Police,Protective,Jaw Titan
+761,39,F,Hange,Zeke,8,Season 2,Survey Corps,Compassionate,Attack Titan
+762,18,M,Hange,Bertholdt,9,Season 4 Part 1,Military Police,Brave,None
+763,26,M,Jean,Kenny,9,Season 3,Survey Corps,Loyal,None
+764,33,M,Eren,Ymir,9,Final Chapters,Survey Corps,Compassionate,None
+765,26,F,Levi,Reiner,8,Season 1,Survey Corps,Brave,Founding Titan
+766,38,F,Annie,Nile,10,Season 4 Part 1,Military Police,Strategic,Jaw Titan
+767,30,M,Ymir,Nile,9,Final Chapters,Survey Corps,Logical,Founding Titan
+768,23,M,Historia,Porco,8,Season 1,Garrison,Cold,Cart Titan
+769,18,F,Ymir,Gabi,9,Season 3,Survey Corps,Stoic,Attack Titan
+770,15,F,Ymir,Bertholdt,10,Season 1,Survey Corps,Strategic,Attack Titan
+771,19,NB,Sasha,Porco,9,Season 1,Garrison,Strategic,Jaw Titan
+772,39,F,Erwin,Ymir,8,Season 4 Part 1,Survey Corps,Strategic,Cart Titan
+773,31,M,Mikasa,Kenny,8,Season 4 Part 2,Garrison,Reckless,Founding Titan
+774,32,F,Hange,Nile,6,Season 2,Military Police,Curious,Founding Titan
+775,34,NB,Jean,Rod Reiss,9,Season 3,Survey Corps,Reckless,Founding Titan
+776,19,F,Annie,Rod Reiss,7,Season 2,Survey Corps,Loyal,Founding Titan
+777,15,F,Armin,Ymir,8,Season 1,Survey Corps,Cold,Beast Titan
+778,17,F,Ymir,Reiner,8,Season 4 Part 1,Survey Corps,Strategic,Jaw Titan
+779,28,F,Erwin,Bertholdt,9,Season 3,Military Police,Protective,Colossal Titan
+780,31,M,Annie,Porco,10,Season 3,Survey Corps,Strategic,None
+781,36,F,Historia,Grisha,10,Season 3,Survey Corps,Reckless,Attack Titan
+782,25,M,Hange,Zeke,9,Season 1,Survey Corps,Protective,Colossal Titan
+783,18,F,Hange,Kenny,9,Season 4 Part 2,Survey Corps,Loyal,Armored Titan
+784,17,M,Connie,Zeke,9,Season 2,Survey Corps,Compassionate,Colossal Titan
+785,15,M,Sasha,Zeke,9,Season 1,Survey Corps,Stoic,Cart Titan
+786,26,M,Mikasa,Porco,8,Final Chapters,Survey Corps,Reckless,None
+787,32,F,Mikasa,Floch,10,Season 3,Survey Corps,Logical,Beast Titan
+788,18,M,Armin,Bertholdt,10,Season 4 Part 1,Survey Corps,Reckless,Founding Titan
+789,33,Other,Historia,Ymir,6,Season 1,Survey Corps,Stoic,None
+790,24,F,Historia,Zeke,7,Season 3,Survey Corps,Logical,Female Titan
+791,17,F,Eren,Rod Reiss,8,Season 3,Military Police,Compassionate,Cart Titan
+792,40,F,Armin,Floch,6,Season 3,Survey Corps,Cold,None
+793,35,F,Levi,Zeke,8,Season 4 Part 2,Garrison,Compassionate,Colossal Titan
+794,31,M,Ymir,Bertholdt,9,Season 3,Garrison,Compassionate,Female Titan
+795,19,F,Historia,Porco,10,Final Chapters,Military Police,Strategic,Beast Titan
+796,15,M,Hange,Grisha,9,Season 3,Garrison,Strategic,Attack Titan
+797,19,M,Hange,Grisha,8,Season 3,Survey Corps,Loyal,Cart Titan
+798,32,Other,Annie,Grisha,9,Season 2,Survey Corps,Reckless,Attack Titan
+799,35,M,Eren,Gabi,8,Season 4 Part 1,Survey Corps,Stoic,Founding Titan
+800,17,M,Erwin,Floch,9,Season 4 Part 2,Military Police,Loyal,Beast Titan
+801,34,NB,Jean,Kenny,9,Season 3,Survey Corps,Protective,Jaw Titan
+802,15,Prefer not to say,Ymir,Nile,9,Season 4 Part 1,Garrison,Reckless,Armored Titan
+803,35,F,Pieck,Bertholdt,9,Season 1,Survey Corps,Brave,Founding Titan
+804,21,M,Jean,Bertholdt,10,Season 4 Part 2,Military Police,Compassionate,Attack Titan
+805,30,F,Historia,Reiner,10,Season 2,Survey Corps,Cold,Female Titan
+806,33,F,Sasha,Bertholdt,9,Season 2,Survey Corps,Strategic,Jaw Titan
+807,40,F,Connie,Porco,8,Season 1,Garrison,Brave,Colossal Titan
+808,38,NB,Historia,Zeke,9,Season 4 Part 1,Survey Corps,Cold,Beast Titan
+809,21,M,Sasha,Kenny,6,Season 2,Survey Corps,Strategic,None
+810,39,F,Mikasa,Floch,10,Season 2,Survey Corps,Protective,Female Titan
+811,17,Other,Pieck,Bertholdt,8,Season 2,Survey Corps,Curious,None
+812,27,F,Annie,Nile,8,Season 3,Garrison,Cold,Attack Titan
+813,24,F,Eren,Rod Reiss,8,Season 2,Survey Corps,Brave,Female Titan
+814,19,M,Connie,Bertholdt,10,Season 1,Military Police,Reckless,None
+815,39,M,Jean,Porco,8,Season 4 Part 1,Survey Corps,Curious,Colossal Titan
+816,20,F,Armin,Grisha,9,Final Chapters,Survey Corps,Strategic,Armored Titan
+817,38,M,Mikasa,Zeke,8,Season 4 Part 1,Survey Corps,Strategic,Founding Titan
+818,17,M,Erwin,Bertholdt,7,Season 2,Survey Corps,Cold,Cart Titan
+819,35,F,Connie,Zeke,8,Season 2,Survey Corps,Loyal,Attack Titan
+820,29,M,Eren,Gabi,9,Season 4 Part 2,Survey Corps,Reckless,Colossal Titan
+821,35,M,Historia,Rod Reiss,9,Season 3,Military Police,Brave,Armored Titan
+822,25,F,Jean,Zeke,8,Season 4 Part 2,Military Police,Brave,None
+823,19,NB,Sasha,Bertholdt,9,Final Chapters,Survey Corps,Strategic,Founding Titan
+824,15,F,Levi,Nile,10,Season 1,Survey Corps,Compassionate,Colossal Titan
+825,36,F,Annie,Reiner,10,Season 2,Military Police,Cold,Beast Titan
+826,21,F,Armin,Zeke,9,Final Chapters,Garrison,Brave,Armored Titan
+827,34,F,Erwin,Kenny,9,Season 4 Part 2,Garrison,Compassionate,Armored Titan
+828,35,M,Historia,Nile,9,Final Chapters,Survey Corps,Loyal,Colossal Titan
+829,23,M,Connie,Porco,8,Final Chapters,Survey Corps,Protective,Jaw Titan
+830,35,NB,Sasha,Grisha,8,Season 4 Part 1,Survey Corps,Protective,None
+831,37,M,Ymir,Ymir,8,Final Chapters,Garrison,Cold,Cart Titan
+832,21,F,Annie,Porco,8,Final Chapters,Survey Corps,Reckless,Attack Titan
+833,25,F,Ymir,Kenny,9,Season 2,Survey Corps,Compassionate,None
+834,31,M,Armin,Rod Reiss,7,Season 3,Survey Corps,Curious,Attack Titan
+835,30,M,Connie,Bertholdt,9,Season 3,Garrison,Reckless,Jaw Titan
+836,24,M,Levi,Gabi,8,Season 2,Survey Corps,Reckless,Colossal Titan
+837,33,F,Levi,Kenny,8,Season 3,Survey Corps,Reckless,Attack Titan
+838,33,M,Eren,Gabi,9,Season 4 Part 1,Survey Corps,Strategic,Attack Titan
+839,20,NB,Historia,Kenny,8,Final Chapters,Survey Corps,Strategic,Armored Titan
+840,29,Prefer not to say,Erwin,Gabi,7,Season 2,Garrison,Cold,Armored Titan
+841,35,M,Levi,Zeke,9,Season 4 Part 2,Survey Corps,Protective,Attack Titan
+842,19,M,Sasha,Porco,8,Season 2,Survey Corps,Curious,Jaw Titan
+843,25,Prefer not to say,Connie,Porco,10,Season 3,Survey Corps,Protective,Founding Titan
+844,38,M,Ymir,Nile,9,Season 3,Survey Corps,Strategic,Jaw Titan
+845,24,F,Ymir,Floch,8,Final Chapters,Survey Corps,Strategic,Colossal Titan
+846,30,F,Historia,Gabi,10,Season 1,Survey Corps,Strategic,Attack Titan
+847,39,F,Sasha,Gabi,9,Season 2,Garrison,Strategic,Attack Titan
+848,16,Prefer not to say,Sasha,Bertholdt,10,Season 1,Survey Corps,Brave,Armored Titan
+849,26,F,Pieck,Ymir,7,Final Chapters,Survey Corps,Loyal,Beast Titan
+850,27,F,Jean,Gabi,9,Season 1,Survey Corps,Strategic,Cart Titan
+851,24,NB,Connie,Floch,9,Season 1,Survey Corps,Protective,Jaw Titan
+852,34,Prefer not to say,Hange,Reiner,10,Season 2,Survey Corps,Stoic,None
+853,33,F,Hange,Nile,10,Season 3,Garrison,Reckless,Founding Titan
+854,37,F,Jean,Gabi,8,Season 1,Garrison,Cold,None
+855,20,F,Historia,Bertholdt,10,Season 4 Part 2,Garrison,Stoic,Beast Titan
+856,19,F,Jean,Gabi,7,Season 1,Survey Corps,Cold,None
+857,17,F,Sasha,Floch,9,Final Chapters,Military Police,Reckless,Founding Titan
+858,31,F,Jean,Floch,10,Season 4 Part 1,Military Police,Protective,Female Titan
+859,26,F,Jean,Rod Reiss,10,Season 3,Military Police,Strategic,None
+860,18,F,Jean,Gabi,10,Season 4 Part 1,Survey Corps,Protective,Beast Titan
+861,34,F,Annie,Zeke,10,Season 3,Survey Corps,Stoic,Attack Titan
+862,19,M,Eren,Bertholdt,10,Season 1,Survey Corps,Protective,Female Titan
+863,16,M,Levi,Porco,9,Final Chapters,Survey Corps,Curious,Colossal Titan
+864,19,M,Jean,Grisha,10,Season 3,Military Police,Strategic,Armored Titan
+865,15,F,Annie,Nile,9,Season 1,Survey Corps,Strategic,None
+866,31,M,Ymir,Grisha,9,Season 4 Part 2,Survey Corps,Reckless,Founding Titan
+867,34,F,Ymir,Zeke,9,Season 4 Part 2,Survey Corps,Logical,Cart Titan
+868,19,NB,Eren,Porco,9,Season 4 Part 1,Garrison,Loyal,Cart Titan
+869,32,NB,Historia,Zeke,9,Season 1,Survey Corps,Curious,Colossal Titan
+870,28,F,Erwin,Zeke,9,Season 4 Part 2,Military Police,Strategic,Attack Titan
+871,26,F,Hange,Reiner,9,Season 3,Survey Corps,Stoic,Colossal Titan
+872,33,Other,Eren,Porco,8,Season 4 Part 1,Survey Corps,Protective,Female Titan
+873,15,F,Hange,Reiner,10,Final Chapters,Garrison,Reckless,Jaw Titan
+874,23,M,Eren,Nile,8,Season 4 Part 2,Garrison,Stoic,Armored Titan
+875,15,F,Erwin,Bertholdt,7,Final Chapters,Garrison,Protective,Attack Titan
+876,27,Other,Ymir,Gabi,7,Season 4 Part 1,Garrison,Loyal,Colossal Titan
+877,21,M,Ymir,Ymir,9,Final Chapters,Survey Corps,Strategic,Attack Titan
+878,37,F,Levi,Bertholdt,10,Season 3,Survey Corps,Strategic,Female Titan
+879,18,M,Jean,Gabi,9,Season 2,Military Police,Logical,Female Titan
+880,19,F,Eren,Ymir,9,Season 4 Part 2,Survey Corps,Compassionate,Attack Titan
+881,40,M,Historia,Reiner,8,Season 4 Part 2,Survey Corps,Logical,Jaw Titan
+882,27,F,Hange,Rod Reiss,10,Season 3,Survey Corps,Reckless,Beast Titan
+883,26,F,Levi,Ymir,9,Season 4 Part 1,Survey Corps,Strategic,Female Titan
+884,15,F,Historia,Nile,9,Final Chapters,Survey Corps,Stoic,Attack Titan
+885,27,F,Historia,Nile,9,Season 4 Part 1,Garrison,Brave,Attack Titan
+886,23,M,Annie,Kenny,9,Season 4 Part 1,Survey Corps,Loyal,Armored Titan
+887,26,F,Ymir,Bertholdt,8,Season 2,Military Police,Stoic,Jaw Titan
+888,31,M,Pieck,Grisha,8,Season 3,Garrison,Brave,Attack Titan
+889,15,NB,Ymir,Floch,8,Season 4 Part 2,Survey Corps,Brave,Female Titan
+890,27,M,Pieck,Floch,8,Season 3,Survey Corps,Compassionate,Colossal Titan
+891,40,M,Erwin,Gabi,10,Season 2,Military Police,Logical,Attack Titan
+892,17,F,Armin,Reiner,9,Season 1,Survey Corps,Loyal,None
+893,22,F,Connie,Zeke,10,Season 4 Part 2,Garrison,Reckless,Cart Titan
+894,32,F,Connie,Zeke,10,Season 1,Survey Corps,Brave,Founding Titan
+895,30,F,Hange,Reiner,10,Final Chapters,Survey Corps,Protective,Attack Titan
+896,16,F,Connie,Reiner,10,Season 3,Survey Corps,Logical,Armored Titan
+897,37,M,Historia,Gabi,7,Season 4 Part 2,Garrison,Reckless,Attack Titan
+898,23,M,Erwin,Floch,9,Season 4 Part 2,Military Police,Curious,None
+899,30,F,Hange,Porco,9,Season 2,Survey Corps,Logical,Cart Titan
+900,21,F,Jean,Bertholdt,8,Season 2,Survey Corps,Strategic,Colossal Titan
+901,22,F,Eren,Bertholdt,8,Final Chapters,Garrison,Strategic,Armored Titan
+902,33,F,Pieck,Bertholdt,8,Season 4 Part 2,Survey Corps,Reckless,Attack Titan
+903,35,M,Annie,Floch,9,Season 2,Survey Corps,Stoic,Female Titan
+904,32,M,Ymir,Ymir,9,Season 2,Survey Corps,Reckless,None
+905,25,F,Jean,Rod Reiss,9,Season 4 Part 1,Garrison,Reckless,Founding Titan
+906,15,F,Eren,Reiner,8,Season 4 Part 2,Military Police,Compassionate,Armored Titan
+907,39,M,Pieck,Zeke,7,Season 1,Survey Corps,Stoic,Armored Titan
+908,32,M,Ymir,Rod Reiss,9,Season 3,Garrison,Loyal,None
+909,24,F,Pieck,Porco,8,Season 4 Part 2,Military Police,Curious,Attack Titan
+910,26,F,Sasha,Rod Reiss,10,Season 2,Survey Corps,Stoic,Attack Titan
+911,33,M,Armin,Grisha,8,Season 4 Part 2,Military Police,Curious,Jaw Titan
+912,31,M,Jean,Rod Reiss,7,Season 3,Garrison,Brave,None
+913,32,F,Sasha,Nile,9,Final Chapters,Survey Corps,Cold,Colossal Titan
+914,21,F,Levi,Kenny,10,Final Chapters,Survey Corps,Curious,Jaw Titan
+915,35,F,Annie,Ymir,8,Season 3,Survey Corps,Strategic,Jaw Titan
+916,17,M,Sasha,Grisha,10,Season 3,Survey Corps,Brave,None
+917,26,F,Pieck,Floch,8,Season 1,Military Police,Cold,Female Titan
+918,34,M,Eren,Floch,7,Season 2,Survey Corps,Protective,Cart Titan
+919,22,M,Jean,Floch,8,Season 3,Survey Corps,Logical,Armored Titan
+920,23,F,Sasha,Nile,7,Season 2,Garrison,Loyal,Founding Titan
+921,24,M,Levi,Reiner,9,Season 4 Part 1,Survey Corps,Reckless,Beast Titan
+922,24,M,Levi,Bertholdt,9,Season 4 Part 1,Survey Corps,Compassionate,Cart Titan
+923,40,F,Connie,Floch,6,Season 4 Part 2,Survey Corps,Stoic,Armored Titan
+924,35,M,Pieck,Reiner,8,Season 4 Part 1,Survey Corps,Compassionate,Colossal Titan
+925,23,M,Levi,Reiner,7,Season 2,Survey Corps,Curious,Jaw Titan
+926,39,M,Sasha,Kenny,9,Season 2,Garrison,Compassionate,Founding Titan
+927,27,Other,Hange,Grisha,7,Season 1,Survey Corps,Stoic,Founding Titan
+928,24,F,Connie,Porco,10,Season 3,Survey Corps,Logical,Colossal Titan
+929,36,F,Jean,Nile,9,Season 4 Part 2,Survey Corps,Curious,Colossal Titan
+930,15,F,Mikasa,Ymir,8,Final Chapters,Survey Corps,Curious,Armored Titan
+931,30,M,Hange,Kenny,9,Final Chapters,Garrison,Stoic,Colossal Titan
+932,30,F,Historia,Porco,9,Season 1,Military Police,Strategic,Colossal Titan
+933,31,F,Historia,Reiner,6,Season 4 Part 1,Garrison,Brave,None
+934,24,F,Armin,Gabi,10,Final Chapters,Survey Corps,Stoic,Founding Titan
+935,31,F,Armin,Grisha,10,Season 3,Survey Corps,Reckless,Founding Titan
+936,22,M,Annie,Porco,10,Season 1,Survey Corps,Cold,Armored Titan
+937,40,M,Pieck,Gabi,7,Season 1,Military Police,Strategic,Attack Titan
+938,22,M,Mikasa,Gabi,9,Season 2,Survey Corps,Protective,Beast Titan
+939,16,M,Annie,Ymir,10,Season 3,Survey Corps,Stoic,Attack Titan
+940,18,F,Annie,Gabi,9,Season 4 Part 1,Survey Corps,Stoic,Attack Titan
+941,26,M,Annie,Kenny,10,Season 4 Part 1,Survey Corps,Logical,Colossal Titan
+942,27,F,Pieck,Floch,10,Season 4 Part 1,Survey Corps,Loyal,Beast Titan
+943,29,F,Pieck,Rod Reiss,9,Season 3,Garrison,Compassionate,Founding Titan
+944,16,F,Sasha,Zeke,9,Season 2,Survey Corps,Reckless,Cart Titan
+945,18,M,Sasha,Rod Reiss,7,Season 3,Military Police,Reckless,None
+946,36,M,Eren,Grisha,9,Final Chapters,Survey Corps,Cold,Attack Titan
+947,18,Other,Mikasa,Gabi,10,Season 1,Survey Corps,Loyal,Attack Titan
+948,35,M,Sasha,Reiner,8,Season 4 Part 1,Military Police,Curious,None
+949,26,F,Connie,Grisha,9,Final Chapters,Survey Corps,Cold,None
+950,17,M,Historia,Nile,8,Final Chapters,Survey Corps,Curious,Armored Titan
+951,35,F,Hange,Bertholdt,9,Season 4 Part 2,Garrison,Reckless,Colossal Titan
+952,29,M,Historia,Kenny,9,Final Chapters,Survey Corps,Stoic,Founding Titan
+953,33,NB,Jean,Grisha,7,Final Chapters,Garrison,Protective,Cart Titan
+954,35,F,Jean,Gabi,10,Season 2,Survey Corps,Stoic,Jaw Titan
+955,29,M,Connie,Floch,9,Season 1,Military Police,Logical,Attack Titan
+956,16,NB,Connie,Gabi,9,Season 1,Survey Corps,Cold,Armored Titan
+957,18,F,Armin,Zeke,8,Season 1,Survey Corps,Brave,Jaw Titan
+958,18,M,Hange,Grisha,10,Season 4 Part 1,Military Police,Loyal,None
+959,30,M,Levi,Zeke,10,Season 3,Survey Corps,Reckless,Armored Titan
+960,28,M,Levi,Grisha,9,Final Chapters,Survey Corps,Compassionate,Colossal Titan
+961,38,F,Connie,Kenny,9,Season 4 Part 1,Military Police,Strategic,Cart Titan
+962,21,M,Jean,Reiner,8,Final Chapters,Garrison,Reckless,Female Titan
+963,17,M,Levi,Porco,10,Season 4 Part 1,Survey Corps,Strategic,None
+964,36,F,Sasha,Grisha,8,Season 3,Survey Corps,Strategic,Jaw Titan
+965,34,F,Historia,Bertholdt,9,Season 3,Survey Corps,Curious,Cart Titan
+966,34,M,Hange,Grisha,9,Final Chapters,Survey Corps,Loyal,Attack Titan
+967,30,F,Erwin,Ymir,10,Season 4 Part 2,Survey Corps,Strategic,Armored Titan
+968,25,M,Ymir,Porco,9,Season 4 Part 1,Military Police,Loyal,Attack Titan
+969,39,F,Annie,Bertholdt,9,Final Chapters,Survey Corps,Protective,Beast Titan
+970,21,NB,Connie,Rod Reiss,9,Season 1,Garrison,Curious,Attack Titan
+971,27,F,Hange,Floch,8,Season 4 Part 2,Survey Corps,Curious,Cart Titan
+972,15,F,Hange,Kenny,8,Season 2,Garrison,Strategic,Attack Titan
+973,22,F,Pieck,Zeke,10,Season 4 Part 1,Survey Corps,Brave,Attack Titan
+974,37,F,Levi,Zeke,8,Season 3,Garrison,Curious,Attack Titan
+975,35,M,Connie,Floch,9,Season 4 Part 2,Survey Corps,Protective,Beast Titan
+976,21,F,Mikasa,Gabi,8,Final Chapters,Survey Corps,Cold,Attack Titan
+977,22,M,Connie,Gabi,10,Season 1,Survey Corps,Strategic,Armored Titan
+978,16,F,Jean,Zeke,8,Season 4 Part 2,Survey Corps,Stoic,Female Titan
+979,40,F,Ymir,Ymir,8,Season 4 Part 2,Garrison,Reckless,Beast Titan
+980,24,M,Erwin,Bertholdt,9,Season 1,Survey Corps,Stoic,Colossal Titan
+981,25,F,Historia,Gabi,9,Season 2,Survey Corps,Logical,Beast Titan
+982,21,M,Ymir,Rod Reiss,8,Season 4 Part 2,Military Police,Protective,Founding Titan
+983,22,F,Hange,Porco,8,Season 4 Part 2,Survey Corps,Cold,Attack Titan
+984,33,M,Sasha,Reiner,10,Season 4 Part 2,Military Police,Reckless,None
+985,32,M,Eren,Ymir,8,Season 4 Part 2,Garrison,Protective,Beast Titan
+986,33,M,Mikasa,Grisha,9,Season 4 Part 1,Survey Corps,Cold,Beast Titan
+987,35,M,Sasha,Kenny,9,Season 3,Survey Corps,Curious,Founding Titan
+988,28,NB,Erwin,Gabi,8,Season 4 Part 1,Military Police,Protective,None
+989,23,F,Armin,Zeke,6,Season 4 Part 1,Survey Corps,Strategic,Female Titan
+990,25,F,Erwin,Bertholdt,8,Season 1,Survey Corps,Logical,Founding Titan
+991,26,M,Connie,Zeke,10,Season 2,Survey Corps,Protective,Cart Titan
+992,29,Prefer not to say,Annie,Gabi,9,Season 3,Military Police,Protective,Beast Titan
+993,38,F,Annie,Grisha,7,Season 1,Garrison,Reckless,Colossal Titan
+994,31,F,Connie,Ymir,9,Season 4 Part 2,Military Police,Curious,Female Titan
+995,22,F,Jean,Kenny,9,Final Chapters,Survey Corps,Cold,Beast Titan
+996,26,F,Mikasa,Ymir,9,Season 1,Survey Corps,Loyal,Attack Titan
+997,31,F,Erwin,Gabi,8,Season 3,Survey Corps,Stoic,None
+998,38,F,Annie,Kenny,8,Final Chapters,Survey Corps,Loyal,Colossal Titan
+999,23,F,Eren,Bertholdt,9,Season 4 Part 2,Military Police,Loyal,Attack Titan
+1000,16,F,Jean,Kenny,9,Season 2,Military Police,Loyal,Attack Titan

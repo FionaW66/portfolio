@@ -1,5 +1,120 @@
 ---
-title: "Portfolio 4"
+title: "Attack on titan"
+date: 2025-03-21
+output: html_document
 ---
 
-> The projects should be numbered consecutively (i.e., in the order in which you began them), and should include for each project a description of the goal, the product (computer program, hand graph, computer graph, etc.), the data, and some interpretation. Reports must be reproducible and of high quality in terms of writing, grammar, presentation, etc.
+In this portfoloio piece, I want to work with something related to my favorite anime -- attack on titan. This is a great anime, check it out if you haven't already. There are no large data frames for this anime. So, I asked chatgpt to generate a dataset that has 1000 observations. A thousand participants answered our survey. We ask about their gender, age, favorite character in the show, least favorite character in the show, their rating for the entire show, favorite season of the show, which faction they will join, the personality trait that best describes them, and which titan they want to be. 
+
+You are probably asking becoming a titan?! If you haven't seen the show, this is fair to question. I will be providing more background information as we go through the dataset.      
+![begin](begin.gif)
+
+First step, load libraries and data.
+```{r load}
+library(readr)
+library(tidyverse)
+library(forcats)
+data <- read_csv("aot_fan_dataset_v2.csv")
+```
+
+Since chatgpt generated this dataset, I assume it would be quite random, meaning that the age of the participants should be fairly spread out, and that the gender will probably be equal too. Just to see how chatgpt randomly create a dataset, let's find out the distribution of gender and age.
+```{r age}
+summary(data$age)
+```
+
+The smallest fan is 15 yo, and the oldest fan is 40 yo. I still want to find out if the distribution of the dataset is normal.
+```{r distributionage}
+data %>% 
+  ggplot(aes(x = age, color = "black")) + geom_histogram(binwidth = 1)
+```
+
+The answer is no, age is not normally distributed. It's pretty random it seems like.
+```{r gender}
+data %>% 
+  count(gender)
+```
+Okay, so there are more females than males in this dataset. Anyway, very fun to explore. Chatgpt is mysterious!
+
+Next, let's explore people's favorite character in the show. There are a lot of characters, and many of them are charming. My favorite character is probably Levi. Levi Ackerman is the captain of the survey corps special operations squad. He is very competent, extremely good at killing titans. He is very composed in fights. All in all, he is a very charismatic character.
+Here is Levi:        
+<img src="Levi.gif" width="100" alt="Levi being serious">
+
+```{r favchr}
+data %>% 
+  count(fav_character) %>% 
+  arrange(desc(n))
+```
+
+It's a little surprising that Connie got the most vote. 
+```{r visualize_fav}
+data %>% 
+  ggplot(aes(y = fct_rev(fct_infreq(fav_character)))) + geom_bar(fill = "#99d8c9") + 
+  labs(title = "Fans' favorite character",
+       x = "Count",
+       y = "Characters")
+```
+
+Here's Connie:     
+<img src="Connie.gif" width="150" alt="Connie talking">
+
+I want to create a new variable that's the proportion of fan's favorite character. 
+```{r proportion}
+prop <- data %>%
+  count(fav_character) %>%
+  mutate(proportion = n / sum(n))
+```
+
+Now let's plot a pie chart with this new data frame.    
+I want to give credit to this video: https://www.youtube.com/watch?v=ueLozxgEnDc
+```{r pie}
+prop %>% 
+  ggplot(aes(x = "", y = n, fill = fav_character)) + geom_col(color = "white") +
+  coord_polar("y") + 
+  labs(title = "Pie chart: proportion of people's favorite characters",
+       x = NULL,
+       y = NULL,
+       fill = "Favorite Character") + 
+  theme_minimal()
+```
+
+I am interested in the least favorite character. I remember hating one character so much. Rationally speaking, this character has her reason for doing things. However, I am not on her side, so that's why I hated her so much. There really is no right wrong objectively. You reach different conclusions when you change your standpoint. That's what this show teaches me.
+```{r least}
+data %>% 
+  count(least_fav_character) %>% 
+  arrange(desc(n))
+```
+
+The least popular character is a little surprising to me as well. Bertholdt was okay to me. Also, Ymir appeared in both the favorite and the least favorite. SPOILERS ALERT: there are two Ymir in the show, so I don't know which one is which.
+
+Let's see people's ratings!
+```{r rating}
+data %>% 
+  count(rating) %>% 
+  arrange(desc(n))
+summary(data$rating)
+```
+
+The ratings range from 6-10. The mean is 8.63, which I think is pretty high. The most frequent rating is 9. I would give it a 9.5, but there is no such point, so I will give it a 9. I am a little unhappy about the ending of the show. 
+
+```{r genderrate}
+data %>% 
+  group_by(gender) %>% 
+  summarise(
+    mean_rating = mean(rating),
+    sd_rating = sd(rating),
+    n = n())
+```
+
+Looking at this result, I don't think there is a significant difference between males and females in their rating. 
+
+Which season is people's favorite?
+```{r season}
+data %>% 
+  count(favorite_aot_season) %>% 
+  arrange(desc(n))
+```
+
+I can't recall the specific plots in season 4 part 2. The songs were really beautiful I think. My favorites are season 1, 2, 3. The latter ones are just as great, but it is very different. I strongly recommend the show!
+
+More analysis will be carried out in portfolio 5!       
+<img src="qxz.gif" width="300" alt="titans">
