@@ -10,10 +10,11 @@
 
 
 
+<meta name="date" content="2025-05-01" />
 
 <title>Portfolio 6</title>
 
-<script src="site_libs/header-attrs-2.13/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
@@ -141,11 +142,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -174,8 +179,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -183,16 +188,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -294,17 +292,495 @@ $(document).ready(function () {
 
 
 <h1 class="title toc-ignore">Portfolio 6</h1>
+<h4 class="date">2025-05-01</h4>
 
 </div>
 
 
-<blockquote>
-<p>The projects should be numbered consecutively (i.e., in the order in
-which you began them), and should include for each project a description
-of the goal, the product (computer program, hand graph, computer graph,
-etc.), the data, and some interpretation. Reports must be reproducible
-and of high quality in terms of writing, grammar, presentation, etc.</p>
-</blockquote>
+<p>In this portfolio, I will be exploring the data for my thesis
+project. I am hoping to conduct path analysis. I used bootstrap 1000
+where it should be 10,000. However, 10,000 takes way too much time, so
+please bear with me.</p>
+<p>Let’s load the libraries and the data file.</p>
+<pre class="r"><code>library(haven)
+library(lavaan)
+library(tidyverse)
+library(semPlot)
+library(car)
+library(sjPlot)
+SYP &lt;- read_sav(&quot;composite204 4 copy.sav&quot;)</code></pre>
+<p>In my thesis, I was exploring the relationship between parental
+self-efficacy and cultural differences. It was found that PSE was
+significantly higher in parents from collectivistic cultures than
+parents from individualistic cultures during adolescence (Buchanan et
+al., 2024). In my study, I tried to explore the reason why this might be
+the case. This dataset was collected in 2025 by me. Let’s dive right
+in!</p>
+<p>I hypothesized that the relationship between parents’ cultural
+orientation (i.e., individualism and collectivism) and parental
+self-efficacy is mediated by parents’ expectations, autonomy and
+relatedness values for adolescents, and social support for parenting.
+So, I put two IVs, four mediators, and parental self-efficacy as the DV
+to run a path analysis.</p>
+<pre class="r"><code>set.seed(123)
+model1 &lt;- &#39;
+PSE_FD ~ c1*IND + c2*COL + b1*RASH_A + b2*RASH_R + b3*SocSup + b4*SSv2
+RASH_A ~ a1*IND + a2*COL
+RASH_R ~ a3*IND + a4*COL
+SocSup ~ a5*IND + a6*COL
+SSv2 ~ a7*IND + a8*COL
+
+#Rash A mediate IND and PSE
+ind1 := a1 * b1
+
+#Rash R mediate IND and PSE
+ind2 := a3 * b2
+
+#Socialsupport mediate IND and PSE
+ind3 := a5 * b3
+
+#Expectations mediate IND and PSE
+ind4 := a7 * b4
+
+#Rash A mediate COL and PSE
+ind5 := a2 * b1
+
+#Rash R mediate COL and PSE
+ind6 := a4 * b2
+
+#Social support mediate COL and PSE
+ind7 := a6 * b3
+
+#Expectations mediate COL and PSE
+ind8 := a8 * b4
+
+&#39;
+
+fit1 &lt;- sem(model1, data = SYP, se = &quot;bootstrap&quot;, bootstrap = 1000)
+summary(fit1, standardized = TRUE, fit.measures = TRUE, rsquare = TRUE)</code></pre>
+<pre><code>## lavaan 0.6-18 ended normally after 2 iterations
+## 
+##   Estimator                                         ML
+##   Optimization method                           NLMINB
+##   Number of model parameters                        19
+## 
+##   Number of observations                           204
+## 
+## Model Test User Model:
+##                                                       
+##   Test statistic                                44.331
+##   Degrees of freedom                                 6
+##   P-value (Chi-square)                           0.000
+## 
+## Model Test Baseline Model:
+## 
+##   Test statistic                               328.426
+##   Degrees of freedom                                20
+##   P-value                                        0.000
+## 
+## User Model versus Baseline Model:
+## 
+##   Comparative Fit Index (CFI)                    0.876
+##   Tucker-Lewis Index (TLI)                       0.586
+## 
+## Loglikelihood and Information Criteria:
+## 
+##   Loglikelihood user model (H0)              -1464.385
+##   Loglikelihood unrestricted model (H1)      -1442.220
+##                                                       
+##   Akaike (AIC)                                2966.770
+##   Bayesian (BIC)                              3029.815
+##   Sample-size adjusted Bayesian (SABIC)       2969.617
+## 
+## Root Mean Square Error of Approximation:
+## 
+##   RMSEA                                          0.177
+##   90 Percent confidence interval - lower         0.130
+##   90 Percent confidence interval - upper         0.227
+##   P-value H_0: RMSEA &lt;= 0.050                    0.000
+##   P-value H_0: RMSEA &gt;= 0.080                    1.000
+## 
+## Standardized Root Mean Square Residual:
+## 
+##   SRMR                                           0.072
+## 
+## Parameter Estimates:
+## 
+##   Standard errors                            Bootstrap
+##   Number of requested bootstrap draws             1000
+##   Number of successful bootstrap draws            1000
+## 
+## Regressions:
+##                    Estimate  Std.Err  z-value  P(&gt;|z|)   Std.lv  Std.all
+##   PSE_FD ~                                                              
+##     IND       (c1)    0.107    0.081    1.324    0.186    0.107    0.089
+##     COL       (c2)    0.225    0.096    2.341    0.019    0.225    0.220
+##     RASH_A    (b1)    0.130    0.062    2.089    0.037    0.130    0.150
+##     RASH_R    (b2)    0.005    0.095    0.054    0.957    0.005    0.004
+##     SocSup    (b3)    0.145    0.151    0.964    0.335    0.145    0.084
+##     SSv2      (b4)   -0.312    0.085   -3.655    0.000   -0.312   -0.303
+##   RASH_A ~                                                              
+##     IND       (a1)    0.491    0.089    5.537    0.000    0.491    0.355
+##     COL       (a2)    0.241    0.071    3.393    0.001    0.241    0.204
+##   RASH_R ~                                                              
+##     IND       (a3)    0.128    0.058    2.209    0.027    0.128    0.124
+##     COL       (a4)    0.480    0.063    7.641    0.000    0.480    0.549
+##   SocSup ~                                                              
+##     IND       (a5)    0.043    0.044    0.976    0.329    0.043    0.062
+##     COL       (a6)    0.273    0.044    6.158    0.000    0.273    0.463
+##   SSv2 ~                                                                
+##     IND       (a7)   -0.116    0.085   -1.374    0.169   -0.116   -0.099
+##     COL       (a8)   -0.319    0.073   -4.385    0.000   -0.319   -0.320
+## 
+## Variances:
+##                    Estimate  Std.Err  z-value  P(&gt;|z|)   Std.lv  Std.all
+##    .PSE_FD            1.197    0.191    6.270    0.000    1.197    0.692
+##    .RASH_A            1.853    0.184   10.068    0.000    1.853    0.811
+##    .RASH_R            0.833    0.096    8.707    0.000    0.833    0.662
+##    .SocSup            0.445    0.051    8.693    0.000    0.445    0.774
+##    .SSv2              1.438    0.153    9.389    0.000    1.438    0.878
+## 
+## R-Square:
+##                    Estimate
+##     PSE_FD            0.308
+##     RASH_A            0.189
+##     RASH_R            0.338
+##     SocSup            0.226
+##     SSv2              0.122
+## 
+## Defined Parameters:
+##                    Estimate  Std.Err  z-value  P(&gt;|z|)   Std.lv  Std.all
+##     ind1              0.064    0.030    2.100    0.036    0.064    0.053
+##     ind2              0.001    0.013    0.049    0.961    0.001    0.001
+##     ind3              0.006    0.012    0.514    0.607    0.006    0.005
+##     ind4              0.036    0.029    1.235    0.217    0.036    0.030
+##     ind5              0.031    0.018    1.790    0.073    0.031    0.031
+##     ind6              0.002    0.046    0.053    0.958    0.002    0.002
+##     ind7              0.040    0.043    0.932    0.351    0.040    0.039
+##     ind8              0.099    0.035    2.841    0.005    0.099    0.097</code></pre>
+<p>To determine whether what I proposed is indeed true, we should look
+at the model fit.<br />
+We can see that it is really a poor fit. CFI = .876, TLI = .586, RMSEA =
+.177, SRMR = .072. So, Let’s see if there is anything we can modify for
+the model.</p>
+<pre class="r"><code>modindices(fit1, sort = TRUE, minimum.value = 10)</code></pre>
+<pre><code>##       lhs op    rhs     mi    epc sepc.lv sepc.all sepc.nox
+## 45 RASH_R  ~ PSE_FD 19.695  0.667   0.667    0.783    0.783
+## 47 RASH_R  ~ SocSup 17.865  0.405   0.405    0.274    0.274
+## 38 RASH_R ~~ SocSup 17.865  0.180   0.180    0.296    0.296
+## 51 SocSup  ~ RASH_R 17.865  0.216   0.216    0.320    0.320
+## 56   SSv2  ~ SocSup 14.116 -0.473  -0.473   -0.280   -0.280
+## 40 SocSup ~~   SSv2 14.116 -0.210  -0.210   -0.263   -0.263
+## 52 SocSup  ~   SSv2 14.116 -0.146  -0.146   -0.247   -0.247
+## 49 SocSup  ~ PSE_FD 12.306  0.396   0.396    0.687    0.687</code></pre>
+<p>I would not add any regression path to my model because it will go
+against my theoretical background. However, the two covariation paths
+could be added.</p>
+<p>Given this advice, let’s improve our model.</p>
+<pre class="r"><code>set.seed(123)
+model2 &lt;- &#39;
+PSE_FD ~ c1*IND + c2*COL + b1*RASH_A + b2*RASH_R + b3*SocSup + b4*SSv2
+RASH_A ~ a1*IND + a2*COL
+RASH_R ~ a3*IND + a4*COL
+SocSup ~ a5*IND + a6*COL
+SSv2 ~ a7*IND + a8*COL
+
+#Rash A mediate IND and PSE
+ind1 := a1 * b1
+
+#Rash R mediate IND and PSE
+ind2 := a3 * b2
+
+#Socialsupport mediate IND and PSE
+ind3 := a5 * b3
+
+#Expectations mediate IND and PSE
+ind4 := a7 * b4
+
+#Rash A mediate COL and PSE
+ind5 := a2 * b1
+
+#Rash R mediate COL and PSE
+ind6 := a4 * b2
+
+#Social support mediate COL and PSE
+ind7 := a6 * b3
+
+#Expectations mediate COL and PSE
+ind8 := a8 * b4
+
+#adding covariation
+RASH_R ~~ SocSup
+SocSup ~~ SSv2
+&#39;
+
+fit2 &lt;- sem(model2, data = SYP, se = &quot;bootstrap&quot;, bootstrap = 1000)
+summary(fit2, standardized = TRUE, fit.measures = TRUE, rsquare = TRUE)</code></pre>
+<pre><code>## lavaan 0.6-18 ended normally after 12 iterations
+## 
+##   Estimator                                         ML
+##   Optimization method                           NLMINB
+##   Number of model parameters                        21
+## 
+##   Number of observations                           204
+## 
+## Model Test User Model:
+##                                                       
+##   Test statistic                                15.384
+##   Degrees of freedom                                 4
+##   P-value (Chi-square)                           0.004
+## 
+## Model Test Baseline Model:
+## 
+##   Test statistic                               328.426
+##   Degrees of freedom                                20
+##   P-value                                        0.000
+## 
+## User Model versus Baseline Model:
+## 
+##   Comparative Fit Index (CFI)                    0.963
+##   Tucker-Lewis Index (TLI)                       0.815
+## 
+## Loglikelihood and Information Criteria:
+## 
+##   Loglikelihood user model (H0)              -1449.912
+##   Loglikelihood unrestricted model (H1)      -1442.220
+##                                                       
+##   Akaike (AIC)                                2941.824
+##   Bayesian (BIC)                              3011.504
+##   Sample-size adjusted Bayesian (SABIC)       2944.970
+## 
+## Root Mean Square Error of Approximation:
+## 
+##   RMSEA                                          0.118
+##   90 Percent confidence interval - lower         0.060
+##   90 Percent confidence interval - upper         0.183
+##   P-value H_0: RMSEA &lt;= 0.050                    0.030
+##   P-value H_0: RMSEA &gt;= 0.080                    0.872
+## 
+## Standardized Root Mean Square Residual:
+## 
+##   SRMR                                           0.042
+## 
+## Parameter Estimates:
+## 
+##   Standard errors                            Bootstrap
+##   Number of requested bootstrap draws             1000
+##   Number of successful bootstrap draws            1000
+## 
+## Regressions:
+##                    Estimate  Std.Err  z-value  P(&gt;|z|)   Std.lv  Std.all
+##   PSE_FD ~                                                              
+##     IND       (c1)    0.107    0.081    1.324    0.186    0.107    0.089
+##     COL       (c2)    0.225    0.096    2.341    0.019    0.225    0.219
+##     RASH_A    (b1)    0.130    0.062    2.089    0.037    0.130    0.149
+##     RASH_R    (b2)    0.005    0.095    0.054    0.957    0.005    0.004
+##     SocSup    (b3)    0.145    0.151    0.964    0.335    0.145    0.083
+##     SSv2      (b4)   -0.312    0.085   -3.655    0.000   -0.312   -0.302
+##   RASH_A ~                                                              
+##     IND       (a1)    0.491    0.089    5.537    0.000    0.491    0.355
+##     COL       (a2)    0.241    0.071    3.393    0.001    0.241    0.204
+##   RASH_R ~                                                              
+##     IND       (a3)    0.128    0.058    2.209    0.027    0.128    0.124
+##     COL       (a4)    0.480    0.063    7.641    0.000    0.480    0.549
+##   SocSup ~                                                              
+##     IND       (a5)    0.043    0.044    0.976    0.329    0.043    0.062
+##     COL       (a6)    0.273    0.044    6.158    0.000    0.273    0.466
+##   SSv2 ~                                                                
+##     IND       (a7)   -0.116    0.085   -1.374    0.169   -0.116   -0.099
+##     COL       (a8)   -0.319    0.073   -4.385    0.000   -0.319   -0.320
+## 
+## Covariances:
+##                    Estimate  Std.Err  z-value  P(&gt;|z|)   Std.lv  Std.all
+##  .RASH_R ~~                                                             
+##    .SocSup            0.156    0.046    3.365    0.001    0.156    0.258
+##  .SocSup ~~                                                             
+##    .SSv2             -0.172    0.074   -2.315    0.021   -0.172   -0.217
+## 
+## Variances:
+##                    Estimate  Std.Err  z-value  P(&gt;|z|)   Std.lv  Std.all
+##    .PSE_FD            1.197    0.191    6.270    0.000    1.197    0.686
+##    .RASH_A            1.853    0.184   10.068    0.000    1.853    0.811
+##    .RASH_R            0.833    0.096    8.707    0.000    0.833    0.662
+##    .SocSup            0.436    0.049    8.837    0.000    0.436    0.770
+##    .SSv2              1.438    0.153    9.389    0.000    1.438    0.878
+## 
+## R-Square:
+##                    Estimate
+##     PSE_FD            0.314
+##     RASH_A            0.189
+##     RASH_R            0.338
+##     SocSup            0.230
+##     SSv2              0.122
+## 
+## Defined Parameters:
+##                    Estimate  Std.Err  z-value  P(&gt;|z|)   Std.lv  Std.all
+##     ind1              0.064    0.030    2.100    0.036    0.064    0.053
+##     ind2              0.001    0.013    0.049    0.961    0.001    0.001
+##     ind3              0.006    0.012    0.514    0.607    0.006    0.005
+##     ind4              0.036    0.029    1.235    0.217    0.036    0.030
+##     ind5              0.031    0.018    1.790    0.073    0.031    0.030
+##     ind6              0.002    0.046    0.053    0.958    0.002    0.002
+##     ind7              0.040    0.043    0.932    0.351    0.040    0.039
+##     ind8              0.099    0.035    2.841    0.005    0.099    0.097</code></pre>
+<p>This time, it still shows poor model fit: CFI = .963, TLI = .815,
+RMSEA = .118, SRMR = .042. It definitely improved from the last model,
+but still needs improvement.</p>
+<p>It could be the case that the model has quite a few insignificant
+pathways that sabotaged model fit. So, I would like to examine the
+relationship between these four mediators and the DV using a multiple
+regression.</p>
+<pre class="r"><code>model21 &lt;- lm(data = SYP,  PSE_FD ~ RASH_A + RASH_R + SocSup + SSv2)
+summary(model21)</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = PSE_FD ~ RASH_A + RASH_R + SocSup + SSv2, data = SYP)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -5.3632 -0.4259  0.1934  0.6655  2.4641 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)  3.51549    0.76744   4.581 8.16e-06 ***
+## RASH_A       0.17206    0.05582   3.083  0.00234 ** 
+## RASH_R       0.11370    0.08624   1.318  0.18889    
+## SocSup       0.23696    0.12444   1.904  0.05832 .  
+## SSv2        -0.33896    0.06872  -4.932 1.71e-06 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 1.136 on 199 degrees of freedom
+## Multiple R-squared:  0.2835, Adjusted R-squared:  0.2691 
+## F-statistic: 19.69 on 4 and 199 DF,  p-value: 1.14e-13</code></pre>
+<p>When putting all four variables in the same model, only autonomy
+values for adolescents and expectations for adolescents were
+significantly associated with PSE. To help improve the model fit for the
+mediation model, it might be helpful to take out the other two that were
+not significant in associating with PSE when holding other variables
+constant.</p>
+<p>Thus, model 3 includes two IVs (i.e., individualism and
+collectivism), two mediators (autonomy values and expectations for
+adolescents) and a DV (i.e., PSE).</p>
+<pre class="r"><code>set.seed(123)
+model3 &lt;- &#39;
+PSE_FD ~ c1*IND + c2*COL + b1*RASH_A + b2*SSv2
+RASH_A ~ a1*IND + a2*COL
+SSv2 ~ a3*IND + a4*COL
+
+#Rash A mediate IND and PSE
+ind1 := a1 * b1
+
+#Expectations mediate IND and PSE
+ind2 := a3 * b2
+
+#Rash A mediate COL and PSE
+ind3 := a2 * b1
+
+#Expectations mediate COL and PSE
+ind4 := a4 * b2
+
+&#39;
+
+fit3 &lt;- sem(model3, data = SYP, se = &quot;bootstrap&quot;, bootstrap = 1000)
+summary(fit3, standardized = TRUE, fit.measures = TRUE, rsquare = TRUE)</code></pre>
+<pre><code>## lavaan 0.6-18 ended normally after 1 iteration
+## 
+##   Estimator                                         ML
+##   Optimization method                           NLMINB
+##   Number of model parameters                        11
+## 
+##   Number of observations                           204
+## 
+## Model Test User Model:
+##                                                       
+##   Test statistic                                 0.671
+##   Degrees of freedom                                 1
+##   P-value (Chi-square)                           0.413
+## 
+## Model Test Baseline Model:
+## 
+##   Test statistic                               146.871
+##   Degrees of freedom                                 9
+##   P-value                                        0.000
+## 
+## User Model versus Baseline Model:
+## 
+##   Comparative Fit Index (CFI)                    1.000
+##   Tucker-Lewis Index (TLI)                       1.022
+## 
+## Loglikelihood and Information Criteria:
+## 
+##   Loglikelihood user model (H0)               -987.466
+##   Loglikelihood unrestricted model (H1)       -987.131
+##                                                       
+##   Akaike (AIC)                                1996.932
+##   Bayesian (BIC)                              2033.432
+##   Sample-size adjusted Bayesian (SABIC)       1998.580
+## 
+## Root Mean Square Error of Approximation:
+## 
+##   RMSEA                                          0.000
+##   90 Percent confidence interval - lower         0.000
+##   90 Percent confidence interval - upper         0.172
+##   P-value H_0: RMSEA &lt;= 0.050                    0.521
+##   P-value H_0: RMSEA &gt;= 0.080                    0.348
+## 
+## Standardized Root Mean Square Residual:
+## 
+##   SRMR                                           0.013
+## 
+## Parameter Estimates:
+## 
+##   Standard errors                            Bootstrap
+##   Number of requested bootstrap draws             1000
+##   Number of successful bootstrap draws            1000
+## 
+## Regressions:
+##                    Estimate  Std.Err  z-value  P(&gt;|z|)   Std.lv  Std.all
+##   PSE_FD ~                                                              
+##     IND       (c1)    0.111    0.081    1.381    0.167    0.111    0.092
+##     COL       (c2)    0.260    0.084    3.100    0.002    0.260    0.253
+##     RASH_A    (b1)    0.131    0.064    2.051    0.040    0.131    0.149
+##     SSv2      (b2)   -0.334    0.076   -4.379    0.000   -0.334   -0.323
+##   RASH_A ~                                                              
+##     IND       (a1)    0.491    0.089    5.537    0.000    0.491    0.355
+##     COL       (a2)    0.241    0.071    3.393    0.001    0.241    0.204
+##   SSv2 ~                                                                
+##     IND       (a3)   -0.116    0.085   -1.374    0.169   -0.116   -0.099
+##     COL       (a4)   -0.319    0.073   -4.385    0.000   -0.319   -0.320
+## 
+## Variances:
+##                    Estimate  Std.Err  z-value  P(&gt;|z|)   Std.lv  Std.all
+##    .PSE_FD            1.206    0.190    6.354    0.000    1.206    0.689
+##    .RASH_A            1.853    0.184   10.068    0.000    1.853    0.811
+##    .SSv2              1.438    0.153    9.389    0.000    1.438    0.878
+## 
+## R-Square:
+##                    Estimate
+##     PSE_FD            0.311
+##     RASH_A            0.189
+##     SSv2              0.122
+## 
+## Defined Parameters:
+##                    Estimate  Std.Err  z-value  P(&gt;|z|)   Std.lv  Std.all
+##     ind1              0.064    0.031    2.071    0.038    0.064    0.053
+##     ind2              0.039    0.030    1.275    0.202    0.039    0.032
+##     ind3              0.031    0.018    1.787    0.074    0.031    0.031
+##     ind4              0.106    0.034    3.150    0.002    0.106    0.103</code></pre>
+<p>Now, our model fit is great! CFI = 1.000, TLI = 1.022, RMSEA = 0.000,
+SRMR = .013. Yeah!<br />
+According to the output, indirect pathways individualism -&gt; autonomy
+values for adolescents -&gt; PSE and collectivism -&gt; expectations for
+adolescents -&gt; PSE were significant.</p>
+<p>I would like to visualize this!</p>
+<pre class="r"><code>semPaths(fit3, what = &quot;est&quot;, layout = &quot;spring&quot;, edge.label.cex=0.7, residuals = FALSE,
+         fade = FALSE,
+        asize = 5, esize = 2, edge.color = &quot;black&quot;, curvePivot = TRUE)</code></pre>
+<p><img src="p06_files/figure-html/visual-1.png" width="672" /></p>
+<p>I also tried draw.io because that gives me more freedom. <img
+src="secondmodel2.drawio.png" alt="Visualization" /></p>
+<p>I like this one better!</p>
 
 
 
