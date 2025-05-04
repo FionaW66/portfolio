@@ -159,7 +159,7 @@ semPaths(fit3, what = "est", layout = "spring", edge.label.cex=0.7, residuals = 
         asize = 5, esize = 2, edge.color = "black", curvePivot = TRUE)
 ```
 
-I also tried draw.io because that gives me more freedom.
+I also tried draw.io because that gives me more freedom.       
 ![Visualization](secondmodel2.drawio.png)
 
 I like this one better!
