@@ -1,5 +1,96 @@
 ---
 title: "Portfolio 7"
+date: 2025-05-04
+output: 
+  html_document: 
+    highlight: textmate
+    theme: cosmo
 ---
 
-> The projects should be numbered consecutively (i.e., in the order in which you began them), and should include for each project a description of the goal, the product (computer program, hand graph, computer graph, etc.), the data, and some interpretation. Reports must be reproducible and of high quality in terms of writing, grammar, presentation, etc.
+In this portfolio piece, I will be doing some factor analysis using my thesis data. 
+
+I have a variable called expectations for one's adolescent. In the previous portfolio, I used it as a composite score; there were originally five sub-scales -- upstanding/prosocial, internalizing, problem behaviors, risk-taking/rebellious, and friendly. The number of items differed in each scale, so the composite score was averaged across the 31 items, not the 5 subs-cales, so that the weight for each scale would correspond to the number of items. This has theoretical reasons for placing different weight on the sub-scales. I will not go into that now. 
+
+The goal of this portfolio is to conduct CFA and EFA to see whether it is true that these items load on 5 factors.
+
+Let's load the data first!
+
+```{r load, message = FALSE}
+library(haven)
+library(lavaan)
+library(tidyverse)
+library(semPlot)
+SYP <- read_sav("composite204 4 copy.sav")
+```
+
+Next, let's dive right in defining our five factors. 
+
+```{r definefactor1}
+set.seed(123)
+model1 <- '
+prosocial =~ SS_TargetII_1 + SS_TargetII_2 + SS_TargetII_3 + SS_TargetII_4 + SS_TargetII_5 + SS_TargetII_6
+internalizing =~ SS_TargetII_7 + SS_TargetII_8 + SS_TargetII_9 + SS_TargetII_10 + SS_TargetII_11 + SS_TargetII_12
+problem_behavior =~ SS_TargetII_13 + SS_TargetII_14 + SS_TargetII_15 + SS_Target_15 + SS_Target_16
+risk_taking =~ SS_Target_1 + SS_Target_2 + SS_Target_3 + SS_Target_4 + SS_Target_5 + SS_Target_6 + SS_Target_7 + SS_Target_8 + SS_Target_9
+friendly =~ SS_Target_10 + SS_Target_11 + SS_Target_12 + SS_Target_13 + SS_Target_14
+'
+
+fit1 <- cfa(model1, data = SYP)
+summary(fit1, fit.measures = TRUE, standardized = TRUE)
+```
+
+Given the table output, I first looked at the model fit indices. The model had a poor fit, meaning that it does not fit well with the data. CFI and TLI did not reach 0.9, whereas RMSEA and SRMR were higher than 0.7.      
+Next, I mainly looked at the latent variables std.all column to see the factor loadings. For prosocial, SS_TargetII_5 (inquisitive) has a factor loading of .472, which is pretty low. Internalizing all had pretty good/acceptable loadings. In problem behavior, SS_TargetII_13 (go on dates) had a poor loading, .403. For risk-taking, SS_Target_1 (take risks) had a poor loading, .344. Items in friendly load pretty well. 
+
+I would like to know how to improve the model fit. Not that I will be modifying the model, but I just want to see what advice R gives. 
+```{r modification}
+modindices(fit1) %>% 
+  arrange(-mi) 
+```
+
+Okay... It  seems to give some advice on covariation between the items, as well as loading some itmes on other factors. I don't plan on modifying it. However, I would like to do a EFA with my data. This step has no theoretical support nor implication, just for fun!
+
+Take a moment to credit this resource: https://rpubs.com/pjmurphy/758265!
+
+```{r EFA, message=FALSE}
+#install.packages("psych") 
+library(psych)
+Expectations <- SYP %>% 
+  select(SS_Target_1:SS_Target_16, SS_TargetII_1: SS_TargetII_15)
+Expectations_num <- Expectations %>% 
+  mutate(across(everything(), ~as.numeric(as.character(.))))
+cortest.bartlett(cor(Expectations_num), n = nrow(Expectations_num))
+KMO(cor(Expectations_num, use = "pairwise.complete.obs"))
+```
+
+The overall MSA = .89, indicating that it's suitable to conduct EFA. 
+
+First, determine the number of factors to extract
+```{r ev}
+ev <- eigen(cor(Expectations_num, use = "pairwise.complete.obs"))
+ev$values
+```
+
+There are 6 values that are bigger than 1. So, according to eigenvalue rule, we will extract 6 factors. Let' also look at the scree plot.
+```{r scree}
+scree(Expectations_num, pc=FALSE)
+```
+
+Scree plot seems to have this clear elbow at 3, so we should extract 2 factors. let's see which one works better. 
+
+```{r 2factors}
+Expectations_num <- na.omit(Expectations_num)
+Nfacs <- 2
+fit <- factanal(Expectations_num, Nfacs, rotation="promax")
+print(fit, cutoff = 0.3, digits = 3)
+```
+
+After looking at the table, I realize that the 31 items were largely divided into positive ones and negative ones. Friendly and prosocial subscales loaded on one factor along with the item take risks. Risk-taking, rebellious, and problem behaviors loaded on the other factor. The item 'take risks' is really strange. Anyhow! Let's try 6 factors.
+
+```{r 6factors}
+Nfacs <- 6
+fit <- factanal(Expectations_num, Nfacs, rotation="promax")
+print(fit, cutoff = 0.45, digits = 3)
+```
+
+Wow! This result almost aligns with the factors that we proposed. Only three items were "misplaced". Take risks and test limits should belong to the risk-taking factor, but the two of them ended up loading on one additional factor. Go on dates should belong to problem behaviors, but it didn't load well on any of the factors. These three items might be the reason why our CFA was not fitting well. 
