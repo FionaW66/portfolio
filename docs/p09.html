@@ -10,10 +10,11 @@
 
 
 
+<meta name="date" content="2025-05-04" />
 
 <title>Portfolio 9</title>
 
-<script src="site_libs/header-attrs-2.13/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
@@ -30,8 +31,6 @@
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
-<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -42,18 +41,109 @@
   ul.task-list{list-style: none;}
     </style>
 
-<style type="text/css">code{white-space: pre;}</style>
-<script type="text/javascript">
-if (window.hljs) {
-  hljs.configure({languages: []});
-  hljs.initHighlightingOnLoad();
-  if (document.readyState && document.readyState === "complete") {
-    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+
+
+<style type="text/css">
+  code {
+    white-space: pre;
   }
+  .sourceCode {
+    overflow: visible;
+  }
+</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
 }
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  { color: #cccccc; background-color: #303030; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ffcfaf; } /* Alert */
+code span.an { color: #7f9f7f; font-weight: bold; } /* Annotation */
+code span.at { } /* Attribute */
+code span.bn { color: #dca3a3; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #f0dfaf; } /* ControlFlow */
+code span.ch { color: #dca3a3; } /* Char */
+code span.cn { color: #dca3a3; font-weight: bold; } /* Constant */
+code span.co { color: #7f9f7f; } /* Comment */
+code span.cv { color: #7f9f7f; font-weight: bold; } /* CommentVar */
+code span.do { color: #7f9f7f; } /* Documentation */
+code span.dt { color: #dfdfbf; } /* DataType */
+code span.dv { color: #dcdccc; } /* DecVal */
+code span.er { color: #c3bf9f; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #c0bed1; } /* Float */
+code span.fu { color: #efef8f; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #7f9f7f; font-weight: bold; } /* Information */
+code span.kw { color: #f0dfaf; } /* Keyword */
+code span.op { color: #f0efd0; } /* Operator */
+code span.ot { color: #efef8f; } /* Other */
+code span.pp { color: #ffcfaf; font-weight: bold; } /* Preprocessor */
+code span.sc { color: #dca3a3; } /* SpecialChar */
+code span.ss { color: #cc9393; } /* SpecialString */
+code span.st { color: #cc9393; } /* String */
+code span.va { } /* Variable */
+code span.vs { color: #cc9393; } /* VerbatimString */
+code span.wa { color: #7f9f7f; font-weight: bold; } /* Warning */
+
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    var j = 0;
+    while (j < rules.length) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") {
+        j++;
+        continue;
+      }
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' && rule.style.backgroundColor === '') {
+        j++;
+        continue;
+      }
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
 </script>
-
-
 
 
 
@@ -141,11 +231,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -174,8 +268,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -183,16 +277,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -294,17 +381,138 @@ $(document).ready(function () {
 
 
 <h1 class="title toc-ignore">Portfolio 9</h1>
+<h4 class="date">2025-05-04</h4>
 
 </div>
 
 
-<blockquote>
-<p>The projects should be numbered consecutively (i.e., in the order in
-which you began them), and should include for each project a description
-of the goal, the product (computer program, hand graph, computer graph,
-etc.), the data, and some interpretation. Reports must be reproducible
-and of high quality in terms of writing, grammar, presentation, etc.</p>
-</blockquote>
+<p>I remember learning a cool way to plot moderation analysis. So, I
+want to try to do that using my thesis data again. I did not include
+these analyses in my thesis, but I could explore it here. First, load
+libraries and data.</p>
+<p>I would like to explore parents’ gender as a moderator of the
+relationship between individualism/collectivism and PSE.</p>
+<div id="data-preparation" class="section level3">
+<h3>Data Preparation</h3>
+<p>One thing to note that the levels for my gender variable is 1 and 2,
+so I will change that into 0 and 1 first.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a>SYP <span class="ot">&lt;-</span> SYP <span class="sc">%&gt;%</span> </span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a>    <span class="at">Gender01 =</span> <span class="fu">if_else</span>(Gender12 <span class="sc">==</span> <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>),</span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a>    <span class="at">Gender_label =</span> <span class="fu">factor</span>(Gender01, <span class="at">levels =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>), <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">&quot;male&quot;</span>, <span class="st">&quot;female&quot;</span>))</span>
+<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a>  )</span></code></pre></div>
+<p>Next, I will mean center the continuous variable, so that I can
+interpret it later.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a>SYP <span class="ot">&lt;-</span> SYP <span class="sc">%&gt;%</span> </span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">ind_c =</span> <span class="fu">scale</span>(IND, <span class="at">scale =</span> <span class="cn">FALSE</span>))</span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a>SYP <span class="ot">&lt;-</span> SYP <span class="sc">%&gt;%</span> </span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">col_c =</span> <span class="fu">as.numeric</span>(<span class="fu">scale</span>(COL, <span class="at">scale =</span> <span class="cn">FALSE</span>)))</span></code></pre></div>
+</div>
+<div id="individualism-and-pse" class="section level3">
+<h3>Individualism and PSE</h3>
+<p>Now, the data is ready for running moderation analysis.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a>model1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(<span class="at">data =</span> SYP, PSE_FD <span class="sc">~</span> ind_c <span class="sc">*</span> Gender01)</span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a><span class="fu">summary</span>(model1)</span></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = PSE_FD ~ ind_c * Gender01, data = SYP)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -4.7368 -0.7747  0.2517  0.9360  2.3258 
+## 
+## Coefficients:
+##                Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)     5.06912    0.13390  37.857   &lt;2e-16 ***
+## ind_c           0.22594    0.11710   1.929   0.0551 .  
+## Gender01        0.30946    0.18396   1.682   0.0941 .  
+## ind_c:Gender01  0.08475    0.16776   0.505   0.6140    
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 1.297 on 198 degrees of freedom
+##   (2 observations deleted due to missingness)
+## Multiple R-squared:  0.06846,    Adjusted R-squared:  0.05434 
+## F-statistic:  4.85 on 3 and 198 DF,  p-value: 0.002803</code></pre>
+<p>According to the output, we cannot conclude that fathers and mothers
+differed in the relationship between individualism and PSE.</p>
+</div>
+<div id="collectivism-and-pse" class="section level3">
+<h3>Collectivism and PSE</h3>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a>model2 <span class="ot">&lt;-</span> <span class="fu">lm</span>(<span class="at">data =</span> SYP, PSE_FD <span class="sc">~</span> col_c <span class="sc">*</span> Gender01)</span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a><span class="fu">summary</span>(model2)</span></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = PSE_FD ~ col_c * Gender01, data = SYP)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -4.3678 -0.6042  0.2497  0.8510  2.4008 
+## 
+## Coefficients:
+##                Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)      5.0335     0.1231  40.893  &lt; 2e-16 ***
+## col_c            0.5670     0.1000   5.668 5.06e-08 ***
+## Gender01         0.3804     0.1691   2.249   0.0256 *  
+## col_c:Gender01  -0.2462     0.1325  -1.858   0.0646 .  
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 1.2 on 198 degrees of freedom
+##   (2 observations deleted due to missingness)
+## Multiple R-squared:  0.2035, Adjusted R-squared:  0.1915 
+## F-statistic: 16.87 on 3 and 198 DF,  p-value: 8.497e-10</code></pre>
+<p><strong>The result shows that:<br />
+1. For males, 1-unit increase in collectivism (from the mean) was
+associated with 0.57-unite increase in PSE.<br />
+2. At the mean level of collectivism, females (coded as 1) were
+significantly higher in PSE than males (coded as 0).<br />
+3. The interaction term was marginally significant. The relationship
+between collectivism and PSE was weaker by -0.25-unit in females than
+males.</strong></p>
+<p>I will try to plot this relationship using ggeffects package.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a>colPSE <span class="ot">&lt;-</span> <span class="fu">ggpredict</span>(model2, <span class="at">terms =</span> <span class="fu">c</span>(<span class="st">&quot;col_c&quot;</span>, <span class="st">&quot;Gender01&quot;</span>))</span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a><span class="fu">plot</span>(colPSE) <span class="sc">+</span></span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Collectivism (centered)&quot;</span>, </span>
+<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;Parental Self-Efficacy&quot;</span>,</span>
+<span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a>       <span class="at">title =</span> <span class="st">&quot;Interaction between Collectivism and Gender on PSE&quot;</span>,</span>
+<span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a>       <span class="at">color =</span> <span class="st">&quot;Gender&quot;</span></span>
+<span id="cb7-7"><a href="#cb7-7" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb7-8"><a href="#cb7-8" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div>
+<p><img src="p09_files/figure-html/plot-1.png" width="672" /></p>
+<p>From the graph we can also see that the blue slope (female) is less
+steep than the red slope (male). Even though it’s only marginally
+significant, I still plotted it.</p>
+<p>What if I add SES as another moderator?</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a>model3 <span class="ot">&lt;-</span> <span class="fu">lm</span>(PSE_FD <span class="sc">~</span> col_c <span class="sc">*</span> Gender01 <span class="sc">*</span> SES01, <span class="at">data =</span> SYP)</span>
+<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a><span class="fu">summary</span>(model3)</span></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = PSE_FD ~ col_c * Gender01 * SES01, data = SYP)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -4.4072 -0.6768  0.2826  0.8526  2.0855 
+## 
+## Coefficients:
+##                      Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)           5.29728    0.21916  24.171   &lt;2e-16 ***
+## col_c                 0.36184    0.17466   2.072   0.0396 *  
+## Gender01              0.17621    0.28064   0.628   0.5308    
+## SES01                -0.37906    0.26485  -1.431   0.1540    
+## col_c:Gender01       -0.01933    0.21207  -0.091   0.9275    
+## col_c:SES01           0.29996    0.21306   1.408   0.1608    
+## Gender01:SES01        0.26858    0.35347   0.760   0.4483    
+## col_c:Gender01:SES01 -0.35135    0.27521  -1.277   0.2033    
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 1.199 on 194 degrees of freedom
+##   (2 observations deleted due to missingness)
+## Multiple R-squared:  0.2205, Adjusted R-squared:  0.1924 
+## F-statistic:  7.84 on 7 and 194 DF,  p-value: 2.334e-08</code></pre>
+<p>There is no significant three-way interaction.</p>
+</div>
 
 
 

@@ -1,5 +1,87 @@
 ---
 title: "Portfolio 9"
+date: 2025-05-04
+output: 
+  html_document: 
+    highlight: zenburn
 ---
 
-> The projects should be numbered consecutively (i.e., in the order in which you began them), and should include for each project a description of the goal, the product (computer program, hand graph, computer graph, etc.), the data, and some interpretation. Reports must be reproducible and of high quality in terms of writing, grammar, presentation, etc.
+I remember learning a cool way to plot moderation analysis. So, I want to try to do that using my thesis data again. I did not include these analyses in my thesis, but I could explore it here. First, load libraries and data. 
+
+```{r, echo = FALSE, message = FALSE, warning=FALSE}
+library(haven)
+library(lavaan)
+library(semTools)
+library(tidyverse)
+library(dplyr)
+library(interactions)
+library(ggeffects)
+library(ggplot2)
+SYP <- read_sav("composite204 4 copy.sav")
+```
+
+I would like to explore parents' gender as a moderator of the relationship between individualism/collectivism and PSE. 
+
+### Data Preparation
+One thing to note that the levels for my gender variable is 1 and 2, so I will change that into 0 and 1 first. 
+```{r mutategen}
+SYP <- SYP %>% 
+  mutate(
+    Gender01 = if_else(Gender12 == 1, 0, 1),
+    Gender_label = factor(Gender01, levels = c(0, 1), labels = c("male", "female"))
+  )
+```
+
+Next, I will mean center the continuous variable, so that I can interpret it later.
+```{r mc}
+SYP <- SYP %>% 
+  mutate(ind_c = scale(IND, scale = FALSE))
+SYP <- SYP %>% 
+  mutate(col_c = as.numeric(scale(COL, scale = FALSE)))
+```
+
+
+
+### Individualism and PSE
+Now, the data is ready for running moderation analysis.
+```{r mod_ind}
+model1 <- lm(data = SYP, PSE_FD ~ ind_c * Gender01)
+summary(model1)
+```
+
+According to the output, we cannot conclude that fathers and mothers differed in the relationship between individualism and PSE. 
+
+
+
+### Collectivism and PSE
+```{r mod_col}
+model2 <- lm(data = SYP, PSE_FD ~ col_c * Gender01)
+summary(model2)
+```
+
+__The result shows that:      
+1. For males, 1-unit increase in collectivism (from the mean) was associated with 0.57-unite increase in PSE.       
+2. At the mean level of collectivism, females (coded as 1) were significantly higher in PSE than males (coded as 0).      
+3. The interaction term was marginally significant. The relationship between collectivism and PSE was weaker by -0.25-unit in females than males.__        
+
+I will try to plot this relationship using ggeffects package. 
+```{r plot}
+colPSE <- ggpredict(model2, terms = c("col_c", "Gender01"))
+plot(colPSE) +
+  labs(x = "Collectivism (centered)", 
+       y = "Parental Self-Efficacy",
+       title = "Interaction between Collectivism and Gender on PSE",
+       color = "Gender"
+  ) +
+  theme_minimal()
+```
+
+From the graph we can also see that the blue slope (female) is less steep than the red slope (male). Even though it's only marginally significant, I still plotted it.
+
+What if I add SES as another moderator?
+```{r SES}
+model3 <- lm(PSE_FD ~ col_c * Gender01 * SES01, data = SYP)
+summary(model3)
+```
+
+There is no significant three-way interaction. 
