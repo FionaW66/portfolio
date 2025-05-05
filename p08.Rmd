@@ -1,5 +1,50 @@
 ---
 title: "Portfolio 8"
+date: 2025-05-04
+output: 
+  html_document: 
+    highlight: kate
+    theme: flatly
 ---
 
-> The projects should be numbered consecutively (i.e., in the order in which you began them), and should include for each project a description of the goal, the product (computer program, hand graph, computer graph, etc.), the data, and some interpretation. Reports must be reproducible and of high quality in terms of writing, grammar, presentation, etc.
+In this portfolio, I will be drawing a graph that captures my favorite 5 restaurants in the U.S.
+
+Let me first give credit to this website: 
+https://r-charts.com/spatial/interactive-maps-leaflet/.     
+
+First, let's load libraries
+```{r loadlib, message = FALSE}
+library(ggplot2)
+#install.packages("maps")
+library(maps)
+#install.packages("leaflet") 
+library(leaflet)
+```
+
+Then, I will need to create a data set that has the name of the restaurants, the coordinates, and my favorite dish from that restaurant. Favorite dish will pop up when you click on the location.
+```{r createdata}
+dining <- data.frame(
+  name = c("Young Cardinal Cafe and Co","Umiya Raleigh", "Lao Sze Chuan Chinese Restaurant and Bar", "Bostan Uyghur Cuisine", "I'm donut?"),
+  lat = c(36.097, 35.819, 40.116, 38.905, 40.757),
+  long = c(-80.248, -78.626, -88.243, -77.112, -73.984),
+  fav_dish = c("Benedict Egg", "Salmon Sashimi", "Crispy Japanese Tofu with Salted Egg Yolk", "Lagmen", "PB & J")
+)
+```
+
+
+Plotting an interacting map
+```{r plot}
+leaflet(dining) %>%
+  addProviderTiles(providers$CartoDB.Positron) %>%  # Clean and modern background
+  setView(lng = -85, lat = 38.5, zoom = 4.5) %>%     # Center on the U.S.
+  addMarkers(
+    lng = ~long,
+    lat = ~lat,
+    popup = ~paste0(
+      name, "<br>",
+      "Favorite Dish: ", fav_dish
+    )
+  )
+```
+
+There you have it!
