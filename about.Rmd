@@ -14,6 +14,13 @@ In terms of hobbies, I like reading books and reflecting on the values behind th
 ### Content of my portfolio
 This page is created for a course as an assignment. However, our instructor was very supportive and cool with us exploring creative things using R. I try to think about or learn about cool things I can do with R. I hope to add more content even after this course, so have fun exploring!
 
-p01: Music
-p02: Professor's salary
-p03:
+p01: Music       
+p02: Professor's salary      
+p03: Exploring aRtsy: drawing with R     
+p04: Attack on Titan - part 1       
+p05: Attack on Titan - part 2      
+p06: Thesis analysis 1       
+p07: Factor analysis with thesis data      
+p08: My top 5 restaurants in the U.S.        
+p09: Moderation analysis with thesis data      
+p10: Drug for sleep
