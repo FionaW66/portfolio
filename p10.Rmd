@@ -1,54 +1,58 @@
 ---
 title: "Portfolio 10"
 date: 2025-05-05
-output: html_document
-runtime: shiny
+output: 
+  html_document: 
+    highlight: zenburn
 ---
 
-Welcome to the last but not least piece of my portfolio!
+Welcome to my final portfolio piece! I appreciate you checking this out. Even though I aim to be more creative, I am little out of ideas for the last one. After trying multiple different things, I just decided to explore another dataset in R: sleep.
 
-```{r lib}
-library(shiny)
+
+```{r load}
+library(tidyverse)
 library(ggplot2)
+data(sleep)
 ```
 
-```{r quiz}
-fluidPage(
-  sliderInput("q1", "1. I set clear rules but also listen to my child's opinion:", 1, 5, 3),
-  sliderInput("q2", "2. I expect obedience without questioning:", 1, 5, 3),
-  sliderInput("q3", "3. I rarely enforce rules consistently:", 1, 5, 3),
-  sliderInput("q4", "4. I explain the reasons behind rules:", 1, 5, 3),
-  sliderInput("q5", "5. I believe in strict discipline:", 1, 5, 3),
-  sliderInput("q6", "6. I try to avoid conflict, even if it means bending the rules:", 1, 5, 3),
-  
-  h3("Your Parenting Style:"),
-  verbatimTextOutput("result")
-  
-)
+This data frame has `r nrow(sleep)` rows and 4 variables. This data shows the effect of two kinds of drugs on sleep on 10 patients. I don't know how this study is carried out. What concerns me is that each patient was given both drugs and measured their sleep time. I am going to assume that the researchers know what they were doing, and that the two drugs given and measured at different times. 
 
+So, my research question is, is the effect of the two drugs different? Is the difference significant?
+
+Let's do a paired t-test
+```{r tgroup}
+sleep %>%
+  group_by(group) %>%
+  summarize(mean_extra = mean(extra))
+
+drug1 <- sleep$extra[sleep$group == 1]
+drug2 <- sleep$extra[sleep$group == 2]
+
+t.test(drug1, drug2, paired = TRUE)
 ```
 
-```{r server, echo=FALSE}
-output$result <- renderText({
-  # Get responses
-  q1 <- input$q1
-  q2 <- input$q2
-  q3 <- input$q3
-  q4 <- input$q4
-  q5 <- input$q5
-  q6 <- input$q6
-  
-  # Score categories
-  authoritative <- q1 + q4
-  authoritarian <- q2 + q5
-  permissive <- q3 + q6
-  
-  scores <- c(Authoritative = authoritative,
-              Authoritarian = authoritarian,
-              Permissive = permissive)
-  
-  style <- names(which.max(scores))
-  
-  paste("You are a", style, "parent.")
-})
+We can see that the mean extra sleep time after using drug 1 is 0.75, and 2.33 for using drug 2. This differences was significant, t(9) = -4.06, p = .003. So, the effect of drug 2 is stronger than drug 1.
+
+Next, I want to use another way to calculate the same thing. First, a different formatting of the data is necessary. 
+```{r data}
+sleep_wide <- sleep %>%
+  pivot_wider(names_from = group, values_from = extra, names_prefix = "drug") 
+sleep_wide <- sleep_wide %>% 
+  mutate(diff = drug1 - drug2)
+```
+
+Then, let's run the analysis
+```{r tperson}
+t.test(sleep_wide$drug2, sleep_wide$drug1, paired = TRUE)
+```
+
+We got the same result. Finally, let's plot this t-test.
+```{r plot}
+ggplot(sleep, aes(x = factor(group), y = extra, fill = factor(group))) +
+  stat_summary(fun = mean, geom = "col", width = 0.6) +
+  labs(title = "Mean Extra Sleep Time by Drug",
+       x = "Drug",
+       y = "Mean Extra Sleep") +
+  scale_fill_manual(values = c("blue", "#fd8d3c")) +
+  theme_minimal()
 ```

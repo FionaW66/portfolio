@@ -31,8 +31,6 @@
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
-<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -43,18 +41,109 @@
   ul.task-list{list-style: none;}
     </style>
 
-<style type="text/css">code{white-space: pre;}</style>
-<script type="text/javascript">
-if (window.hljs) {
-  hljs.configure({languages: []});
-  hljs.initHighlightingOnLoad();
-  if (document.readyState && document.readyState === "complete") {
-    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+
+
+<style type="text/css">
+  code {
+    white-space: pre;
   }
+  .sourceCode {
+    overflow: visible;
+  }
+</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
 }
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  { color: #cccccc; background-color: #303030; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ffcfaf; } /* Alert */
+code span.an { color: #7f9f7f; font-weight: bold; } /* Annotation */
+code span.at { } /* Attribute */
+code span.bn { color: #dca3a3; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #f0dfaf; } /* ControlFlow */
+code span.ch { color: #dca3a3; } /* Char */
+code span.cn { color: #dca3a3; font-weight: bold; } /* Constant */
+code span.co { color: #7f9f7f; } /* Comment */
+code span.cv { color: #7f9f7f; font-weight: bold; } /* CommentVar */
+code span.do { color: #7f9f7f; } /* Documentation */
+code span.dt { color: #dfdfbf; } /* DataType */
+code span.dv { color: #dcdccc; } /* DecVal */
+code span.er { color: #c3bf9f; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #c0bed1; } /* Float */
+code span.fu { color: #efef8f; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #7f9f7f; font-weight: bold; } /* Information */
+code span.kw { color: #f0dfaf; } /* Keyword */
+code span.op { color: #f0efd0; } /* Operator */
+code span.ot { color: #efef8f; } /* Other */
+code span.pp { color: #ffcfaf; font-weight: bold; } /* Preprocessor */
+code span.sc { color: #dca3a3; } /* SpecialChar */
+code span.ss { color: #cc9393; } /* SpecialString */
+code span.st { color: #cc9393; } /* String */
+code span.va { } /* Variable */
+code span.vs { color: #cc9393; } /* VerbatimString */
+code span.wa { color: #7f9f7f; font-weight: bold; } /* Warning */
+
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    var j = 0;
+    while (j < rules.length) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") {
+        j++;
+        continue;
+      }
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' && rule.style.backgroundColor === '') {
+        j++;
+        continue;
+      }
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
 </script>
-
-
 
 
 
@@ -297,34 +386,86 @@ $(document).ready(function () {
 </div>
 
 
-<p>Welcome to the last but not least piece of my portfolio!</p>
-<pre class="r"><code>cat(&quot;Parenting Style Quiz (1 = Strongly Disagree to 5 = Strongly Agree)\n&quot;)</code></pre>
-<pre><code>## Parenting Style Quiz (1 = Strongly Disagree to 5 = Strongly Agree)</code></pre>
-<pre class="r"><code>q1 &lt;- as.numeric(readline(&quot;1. I set clear rules but also listen to my child&#39;s opinion: &quot;))</code></pre>
-<pre><code>## 1. I set clear rules but also listen to my child&#39;s opinion:</code></pre>
-<pre class="r"><code>q2 &lt;- as.numeric(readline(&quot;2. I expect obedience without questioning: &quot;))</code></pre>
-<pre><code>## 2. I expect obedience without questioning:</code></pre>
-<pre class="r"><code>q3 &lt;- as.numeric(readline(&quot;3. I rarely enforce rules consistently: &quot;))</code></pre>
-<pre><code>## 3. I rarely enforce rules consistently:</code></pre>
-<pre class="r"><code>q4 &lt;- as.numeric(readline(&quot;4. I explain the reasons behind rules: &quot;))</code></pre>
-<pre><code>## 4. I explain the reasons behind rules:</code></pre>
-<pre class="r"><code>q5 &lt;- as.numeric(readline(&quot;5. I believe in strict discipline: &quot;))</code></pre>
-<pre><code>## 5. I believe in strict discipline:</code></pre>
-<pre class="r"><code>q6 &lt;- as.numeric(readline(&quot;6. I try to avoid conflict, even if it means bending the rules: &quot;))</code></pre>
-<pre><code>## 6. I try to avoid conflict, even if it means bending the rules:</code></pre>
-<pre class="r"><code>authoritative &lt;- q1 + q4
-authoritarian &lt;- q2 + q5
-permissive &lt;- q3 + q6
-
-style_scores &lt;- c(Authoritative = authoritative,
-                  Authoritarian = authoritarian,
-                  Permissive = permissive)
-
-style_result &lt;- names(which.max(style_scores))
-
-cat(&quot;\nYour parenting style is:&quot;, style_result, &quot;\n&quot;)</code></pre>
+<p>Welcome to my final portfolio piece! I appreciate you checking this
+out. Even though I aim to be more creative, I am little out of ideas for
+the last one. After trying multiple different things, I just decided to
+explore another dataset in R: sleep.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div>
+<pre><code>## ── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+## ✔ dplyr     1.1.4     ✔ readr     2.1.5
+## ✔ forcats   1.0.0     ✔ stringr   1.5.1
+## ✔ ggplot2   3.5.1     ✔ tibble    3.2.1
+## ✔ lubridate 1.9.3     ✔ tidyr     1.3.1
+## ✔ purrr     1.0.4     
+## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+## ✖ dplyr::filter() masks stats::filter()
+## ✖ dplyr::lag()    masks stats::lag()
+## ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a><span class="fu">data</span>(sleep)</span></code></pre></div>
+<p>This data frame has 20 rows and 4 variables. This data shows the
+effect of two kinds of drugs on sleep on 10 patients. I don’t know how
+this study is carried out. What concerns me is that each patient was
+given both drugs and measured their sleep time. I am going to assume
+that the researchers know what they were doing, and that the two drugs
+given and measured at different times.</p>
+<p>So, my research question is, is the effect of the two drugs
+different? Is the difference significant?</p>
+<p>Let’s do a paired t-test</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a>sleep <span class="sc">%&gt;%</span></span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a>  <span class="fu">group_by</span>(group) <span class="sc">%&gt;%</span></span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">mean_extra =</span> <span class="fu">mean</span>(extra))</span></code></pre></div>
+<pre><code>## # A tibble: 2 × 2
+##   group mean_extra
+##   &lt;fct&gt;      &lt;dbl&gt;
+## 1 1           0.75
+## 2 2           2.33</code></pre>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a>drug1 <span class="ot">&lt;-</span> sleep<span class="sc">$</span>extra[sleep<span class="sc">$</span>group <span class="sc">==</span> <span class="dv">1</span>]</span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a>drug2 <span class="ot">&lt;-</span> sleep<span class="sc">$</span>extra[sleep<span class="sc">$</span>group <span class="sc">==</span> <span class="dv">2</span>]</span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a><span class="fu">t.test</span>(drug1, drug2, <span class="at">paired =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
 <pre><code>## 
-## Your parenting style is:</code></pre>
+##  Paired t-test
+## 
+## data:  drug1 and drug2
+## t = -4.0621, df = 9, p-value = 0.002833
+## alternative hypothesis: true mean difference is not equal to 0
+## 95 percent confidence interval:
+##  -2.4598858 -0.7001142
+## sample estimates:
+## mean difference 
+##           -1.58</code></pre>
+<p>We can see that the mean extra sleep time after using drug 1 is 0.75,
+and 2.33 for using drug 2. This differences was significant, t(9) =
+-4.06, p = .003. So, the effect of drug 2 is stronger than drug 1.</p>
+<p>Next, I want to use another way to calculate the same thing. First, a
+different formatting of the data is necessary.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a>sleep_wide <span class="ot">&lt;-</span> sleep <span class="sc">%&gt;%</span></span>
+<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> group, <span class="at">values_from =</span> extra, <span class="at">names_prefix =</span> <span class="st">&quot;drug&quot;</span>) </span>
+<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a>sleep_wide <span class="ot">&lt;-</span> sleep_wide <span class="sc">%&gt;%</span> </span>
+<span id="cb8-4"><a href="#cb8-4" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">diff =</span> drug1 <span class="sc">-</span> drug2)</span></code></pre></div>
+<p>Then, let’s run the analysis</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="fu">t.test</span>(sleep_wide<span class="sc">$</span>drug2, sleep_wide<span class="sc">$</span>drug1, <span class="at">paired =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<pre><code>## 
+##  Paired t-test
+## 
+## data:  sleep_wide$drug2 and sleep_wide$drug1
+## t = 4.0621, df = 9, p-value = 0.002833
+## alternative hypothesis: true mean difference is not equal to 0
+## 95 percent confidence interval:
+##  0.7001142 2.4598858
+## sample estimates:
+## mean difference 
+##            1.58</code></pre>
+<p>We got the same result. Finally, let’s plot this t-test.</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="fu">ggplot</span>(sleep, <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">factor</span>(group), <span class="at">y =</span> extra, <span class="at">fill =</span> <span class="fu">factor</span>(group))) <span class="sc">+</span></span>
+<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a>  <span class="fu">stat_summary</span>(<span class="at">fun =</span> mean, <span class="at">geom =</span> <span class="st">&quot;col&quot;</span>, <span class="at">width =</span> <span class="fl">0.6</span>) <span class="sc">+</span></span>
+<span id="cb11-3"><a href="#cb11-3" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Mean Extra Sleep Time by Drug&quot;</span>,</span>
+<span id="cb11-4"><a href="#cb11-4" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">&quot;Drug&quot;</span>,</span>
+<span id="cb11-5"><a href="#cb11-5" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;Mean Extra Sleep&quot;</span>) <span class="sc">+</span></span>
+<span id="cb11-6"><a href="#cb11-6" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">&quot;blue&quot;</span>, <span class="st">&quot;#fd8d3c&quot;</span>)) <span class="sc">+</span></span>
+<span id="cb11-7"><a href="#cb11-7" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div>
+<p><img src="p10_files/figure-html/plot-1.png" width="672" /></p>
 
 
 
